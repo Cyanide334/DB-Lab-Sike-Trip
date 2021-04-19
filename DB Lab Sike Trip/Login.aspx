@@ -25,23 +25,20 @@
                        <h4> Please Login Below</h4>
                     </div>
               </div>
-            <form id="LoginForm" form action="forms/login.js" method="get" role="form" class="php-email-form" runat="server">
+            <form action="forms/login.js" method="get" role="form" class="php-email-form" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-<%--                  <input type="text" name="name" class="form-control" id="username" placeholder="Username" required value="Username" onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' ">--%>
-                      <asp:TextBox ID="LoginName" placeholder="Username" runat="server" ></asp:TextBox>
+                  <asp:TextBox runat="server" class="form-control" id="username" placeholder="loginUsername"  value="Username" onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--              <asp:TextBox ID=":LoginPassword" TextMode="password" class="form-control" name="password" placeholder="Password" value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' " runat="server"></asp:TextBox>--%>
-          <asp:TextBox ID="LoginPassword" TextMode="password" placeholder="Password" runat="server"></asp:TextBox>
+                  <asp:TextBox runat="server" TextMode="password" class="form-control" id="loginPassword" placeholder="Password" value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></asp:TextBox>
                 </div>
                </div>
             <div class="row mt-3">
             <div class="col-md-6 text-center">
-               <%--<button type="submit">Login</button>--%>
-                <asp:Button ID="LoginButton" Text="Login" runat="server"></asp:Button>
+               <asp:Button ID="btnSave" Text="Save Form" runat="server" />
             </div>
             </div>
 

@@ -15,39 +15,30 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// LoginForm control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm LoginForm;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// LoginName control.
+        /// loginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginName;
+        protected global::System.Web.UI.WebControls.TextBox loginPassword;
 
         /// <summary>
-        /// LoginPassword control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginPassword;
-
-        /// <summary>
-        /// LoginButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }
