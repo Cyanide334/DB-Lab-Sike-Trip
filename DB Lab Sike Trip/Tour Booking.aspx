@@ -178,46 +178,64 @@
     <section class="tourbooking">
 
     <div class="testbox">
-    <form action="/">
+    <form id="TourBookingForm" form action="/" runat="server">
       <div class="banner">
         <h1>Tour Booking Form</h1>
       </div>
       <div class="item">
         <p>Passenger contact name</p>
         <div class="name-item">
-          <input type="text" name="name" placeholder="First" />
-          <input type="text" name="name" placeholder="Last" />
+<%--          <input type="text" name="name" placeholder="First" />
+          <input type="text" name="name" placeholder="Last" />--%>
+           <asp:TextBox ID="TourBookingFirst" placeholder="First" runat="server"></asp:TextBox>
+           <asp:TextBox ID="TourBookingLast" placeholder="Last" runat="server"></asp:TextBox>
         </div>
       </div>
       <div class="item">
         <p>Email</p>
-        <input type="email" name="email"/>
+<%--        <input type="email" name="email"/>--%>
+         <asp:TextBox ID="TourBookingEmail" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
       </div>
       <div class="item">
         <p>Phone</p>
-        <input type="text" name="phone" placeholder="### ### ####"/>
+<%--        <input type="text" name="phone" placeholder="### ### ####"/>--%>
+          <asp:TextBox ID="TourBookingPhone" placeholder="### ### ####" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Address</p>
-        <input type="text" name="name" placeholder="Street address" required/>
-        <input type="text" name="name" placeholder="Street address line 2" required/>
+<%--        <input type="text" name="name" placeholder="Street address" required/>
+        <input type="text" name="name" placeholder="Street address line 2" required/>--%>
+           <asp:TextBox ID="TourBookingStreet1" placeholder="Street address" runat="server"></asp:TextBox>
+           <asp:TextBox ID="TourBookingStreet2" placeholder="Street address line 2" runat="server"></asp:TextBox>
         <div class="city-item">
-          <input type="text" name="name" placeholder="City" required/>
+<%--          <input type="text" name="name" placeholder="City" required/>
           <input type="text" name="name" placeholder="Region" required/>
-          <input type="text" name="name" placeholder="Postal / Zip code" required/>
-          <select required>
+          <input type="text" name="name" placeholder="Postal / Zip code" required/>--%>
+           <asp:TextBox ID="TourBookingCity" placeholder="City" runat="server"></asp:TextBox>
+           <asp:TextBox ID="TourBookingRegion" placeholder="Region" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TourBookingPostalCode" placeholder="Postal / Zip Code" runat="server"></asp:TextBox>
+          <%--<select required>
             <option selected value="" disabled>Country</option>
             <option value="1">Russia</option>
             <option value="2">Germany</option>
             <option value="3">France</option>
             <option value="4">Armenia</option>
             <option value="5">USA</option>
-          </select>
+          </select>--%>
+         <asp:DropDownList ID="TourBookingCountry" runat="server">
+        <asp:ListItem Text="Select" Value="Select Country"></asp:ListItem>
+        <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
+        <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
+        <asp:ListItem Text="France" Value="3"></asp:ListItem>
+        <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
+        <asp:ListItem Text="Japan" Value="5"></asp:ListItem>
+        </asp:DropDownList>
         </div>
       </div>
       <div class="item">
         <p>Total number of adults</p>
-        <input type="text" name="adults"/>
+        <%--<input type="text" name="adults"/>--%>
+         <asp:TextBox ID="TourBookingAdults1" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Adults' names</p>
@@ -226,7 +244,8 @@
       </div>
       <div class="item">
         <p>Total number of children</p>
-        <input type="text" name="adults"/>
+<%--        <input type="text" name="adults"/>--%>
+         <asp:TextBox ID="TourBookingChildren" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Children names and ages</p>
@@ -234,7 +253,7 @@
       </div>
       <div class="item">
         <p>Type of travel</p>
-        <select required>
+        <%--<select required>
           <option value="">Business</option>
           <option value="1">Adventure</option>
           <option value="2">Cultural</option>
@@ -245,67 +264,91 @@
           <option value="7">Package tour</option>
           <option value="8">Creative trip</option>
           <option selected value="9">Honeymoon</option>
-        </select>
+        </select>--%>
+          <asp:DropDownList ID="TourBookingTravelType" runat="server">
+        <asp:ListItem Text="Select" Value="Select Type"></asp:ListItem>
+        <asp:ListItem Text="Business" Value="1"></asp:ListItem>
+        <asp:ListItem Text="Adventure" Value="2"></asp:ListItem>
+        <asp:ListItem Text="Cultural" Value="3"></asp:ListItem>
+        <asp:ListItem Text="Cruising" Value="4"></asp:ListItem>
+        <asp:ListItem Text="Active mobility" Value="5"></asp:ListItem>
+        <asp:ListItem Text="Quiet vacation" Value="6"></asp:ListItem>
+        <asp:ListItem Text="Package Tour" Value="7"></asp:ListItem>
+        <asp:ListItem Text="Creative Trip" Value="8"></asp:ListItem>
+        <asp:ListItem Text="Honeymoon" Value="9"></asp:ListItem>
+        </asp:DropDownList>
       </div>
       <div class="item">
         <p>Destination</p>
-        <input type="text" name="destination"/>
+<%--        <input type="text" name="destination"/>--%>
+         <asp:TextBox ID="TourBookingDestination" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Preferred hotel / resort</p>
-        <input type="text" name="hotel"/>
+        <%--<input type="text" name="hotel"/>--%>
+        <asp:TextBox ID="TourBookingHotel" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Number of rooms</p>
-        <input type="text" name="number"/>
+<%--        <input type="text" name="number"/>--%>
+        <asp:TextBox ID="TourBookingNumber" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>Size of group</p>
-        <input type="text" name="size"/>
+<%--        <input type="text" name="size"/>--%>
+        <asp:TextBox ID="TourBookingSize" runat="server"></asp:TextBox>
       </div>
       <div class="item">
         <p>King / double / suite / penthouse</p>
-        <input type="text" name="room"/>
+<%--        <input type="text" name="room"/>--%>
+        <asp:TextBox ID="TourBookingRoom" runat="server"></asp:TextBox>
       </div>
       <div class="question">
         <p>Transportation to and from hotel</p>
         <div class="question-answer">
           <div>
-            <input type="radio" value="none" id="radio_1" name="question1"/>
-            <label for="radio_1" class="radio"><span>Yes</span></label>
+<%--            <input type="radio" value="none" id="radio_1" name="question1"/>--%>
+<%--            <label for="radio_1" class="radio"><span>Yes</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioY1" GroupName="Question1" runat="server"/>
           </div>
           <div>
-            <input type="radio" value="none" id="radio_2" name="question1"/>
-            <label for="radio_2" class="radio"><span>No</span></label>
+<%--            <input type="radio" value="none" id="radio_2" name="question1"/>
+            <label for="radio_2" class="radio"><span>No</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioN1" GroupName="Question1" runat="server"/>
           </div>
         </div>
       </div>
       <div class="item">
         <p>Estimated trip amount</p>
-        <input type="number" name="amount" placeholder="USD 0.00"/>
+<%--        <input type="number" name="amount" placeholder="USD 0.00"/>--%>
+           <asp:TextBox ID="TourBookingAmount" placeholder="USD 0.00" runat="server"></asp:TextBox>
       </div>
       <div class="question">
         <p>Is anyone traveling over the Age of 55?</p>
         <div class="question-answer">
           <div>
-            <input type="radio" value="none" id="radio_3" name="question2"/>
-            <label for="radio_3" class="radio"><span>Yes</span></label>
+<%--            <input type="radio" value="none" id="radio_3" name="question2"/>
+            <label for="radio_3" class="radio"><span>Yes</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioY2" GroupName="Question2" runat="server"/>
           </div>
           <div>
-            <input type="radio" value="none" id="radio_4" name="question2"/>
-            <label for="radio_4" class="radio"><span>No</span></label>
+<%--            <input type="radio" value="none" id="radio_4" name="question2"/>
+            <label for="radio_4" class="radio"><span>No</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioN2" GroupName="Question2" runat="server"/>
           </div>
         </div>
         <div class="question">
           <p>Does anyone traveling have a military background?</p>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_5" name="question3"/>
-              <label for="radio_5" class="radio"><span>Yes</span></label>
+<%--              <input type="radio" value="none" id="radio_5" name="question3"/>
+              <label for="radio_5" class="radio"><span>Yes</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioY3" GroupName="Question3" runat="server"/>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_6" name="question3"/>
-              <label for="radio_6" class="radio"><span>No</span></label>
+<%--              <input type="radio" value="none" id="radio_6" name="question3"/>
+              <label for="radio_6" class="radio"><span>No</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioN3" GroupName="Question3" runat="server"/>
             </div>
           </div>
         </div>
@@ -321,17 +364,20 @@
           <p>Include travel insurance</p>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_7" name="question4"/>
-              <label for="radio_7" class="radio"><span>Yes</span></label>
+<%--              <input type="radio" value="none" id="radio_7" name="question4"/>
+              <label for="radio_7" class="radio"><span>Yes</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioY4" GroupName="Question4" runat="server"/>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_8" name="question4"/>
-              <label for="radio_8" class="radio"><span>No</span></label>
+<%--              <input type="radio" value="none" id="radio_8" name="question4"/>
+              <label for="radio_8" class="radio"><span>No</span></label>--%>
+            <asp:RadioButton ID="TourBookingRadioN4" GroupName="Question4" runat="server"/>
             </div>
           </div>
         </div>
         <div class="btn-block">
-          <button type="submit">Book</button>
+<%--          <button type="submit">Book</button>--%>
+            <asp:Button ID="TourBookingSubmitButton" Text="Submit" runat="server"></asp:Button>
         </div>
     </form>
     </div>

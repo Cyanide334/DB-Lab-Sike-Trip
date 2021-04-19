@@ -77,6 +77,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
+      <form id="ViewTourForm" form action="/" runat="server">
     <section class="viewProfile">
 
             <div class="container">
@@ -91,8 +92,10 @@
                       <h4>Sike! Tours</h4>
                       <p class="text-secondary mb-1">Service Provider</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
-                      <button class="btn btn-danger">Book</button>
-                      <button class="btn btn-outline-danger">Message</button>
+                    <%--  <button class="btn btn-danger">Book</button>
+                      <button class="btn btn-outline-danger">Message</button>--%>
+                    <asp:Button ID="ViewTourBookButton" Text="Book" runat="server"></asp:Button>
+                     <asp:Button ID="ViewTourMessageButton" Text="Message" runat="server"></asp:Button>
                     </div>
                   </div>
                 </div>
@@ -178,6 +181,6 @@
           </div>
         </div>
     </div>
-
     </section>
+    </form>
 </asp:Content>

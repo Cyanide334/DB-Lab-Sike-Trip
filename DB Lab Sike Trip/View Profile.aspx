@@ -76,6 +76,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
+      <form id="ViewProfileForm" form action="/" runat="server">
     <section class="viewProfile">
 
             <div class="container">
@@ -90,8 +91,10 @@
                       <h4>John Doe</h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-danger">Follow</button>
-                      <button class="btn btn-outline-danger">Message</button>
+                    <%--  <button class="btn btn-danger">Follow</button>
+                      <button class="btn btn-outline-danger">Message</button>--%>
+                         <asp:Button ID="ViewProfileFollowButton" Text="Follow" runat="server"></asp:Button>
+                     <asp:Button ID="ViewProfileMessageButton" Text="Message" runat="server"></asp:Button>
                     </div>
                   </div>
                 </div>
@@ -214,8 +217,8 @@
             </div>
           </div>
         </div>
-    </div>
-
+    </div>     
     </section>
+     </form>
 </asp:Content>
 
