@@ -49,6 +49,9 @@
     cursor: pointer;
     border: solid 1px #d9232d
 }
+
+
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
@@ -68,41 +71,48 @@
       </section>
 
     <section class="editProfile">
+    
     <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="assets\img\testimonials\testimonials-1.jpg"><span class="font-weight-bold">Sike! Tour</span><span class="text-black-50">serviceProvider@bbb.com</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
+            <form id ="editTourForm" runat ="server">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Edit Tour Service</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Name</label><input type="text" class="form-control" placeholder="Tour name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Service Provider</label><input type="text" class="form-control" value="" placeholder="Service Provider"></div>
+                    <div class="col-md-6"><label class="labels">Tour Name</label><asp:TextBox ID="editTourServiceName" runat="server" placeholder="Name"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Service Provider</label><asp:TextBox ID="txtName" runat="server" placeholder="Service Provider"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Departure</label><input type="text" class="form-control" placeholder="enter new Departure Location" value=""></div>
-                    <div class="col-md-12"><label class="labels">Destination</label><input type="text" class="form-control" placeholder="enter new Destination" value=""></div>
-                    <div class="col-md-12"><label class="labels">Price</label><input type="number" class="form-control" placeholder="enter Price" value=""></div>
-                    <div class="col-md-12"><label class="labels">Number of Days</label><input type="text" class="form-control" placeholder="Number of Days"value=""></div>
+                    <div class="col-md-6"><label class="labels">Departure</label><asp:TextBox ID="editTourServiceDeparture" runat="server" placeholder="departure"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Destination</label><asp:TextBox ID="editTourServiceDestination" runat="server" placeholder="destination"></asp:TextBox></div>
+                </div>
+                <div class="row mt-3">
+                    
+                    <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="editTourServiceNumberOfDays" runat="server" placeholder="Number of Days"></asp:TextBox></div>
+                    
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Departure Date</label><input type="date" class="form-control" value=""></div>
-                    <div class="col-md-6"><label class="labels">Arrival Date</label><input type="date" class="form-control" value=""></div>
+                    <div class="col-md-6"><label class="labels">Departure Date</label><asp:TextBox ID="TextBox1" runat="server" placeholder="Departure Date"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Arrival Date</label><asp:TextBox ID="TextBox2" runat="server" placeholder="Arrival Date"></asp:TextBox></div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Guide Name</label><input type="text" class="form-control" placeholder="Tour Guide" value=""></div>
-                    <div class="col-md-6"><label class="labels">Bus License Number</label><input type="text" class="form-control" value="" placeholder="Bus Number"></div>
+                    <div class="col-md-6"><label class="labels">Tour Guide Name</label><asp:TextBox ID="editTourServiceGuide" runat="server" placeholder="Tour Guide Name"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Bus License Number</label><asp:TextBox ID="editTourServiceBusLicense" runat="server" placeholder="Bus License Number"></asp:TextBox></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><asp:Button ID="editTourServiceSave" Text="Sav" runat="server" /></div>
             </div>
+                </form>
         </div>
         
     </div>
 </div>
+
 </section>
 </asp:Content>
 

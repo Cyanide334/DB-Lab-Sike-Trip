@@ -178,7 +178,13 @@
       }
       .testbox .city-item select {
       width: calc(50% - 8px);
+
       }
+
+
+    
+
+
       }
     </style>
 </asp:Content>
@@ -200,70 +206,75 @@
       <!-- End Breadcrumbs -->
     <section>
      <div class="testbox">
-      <form action="/">
+      <form ID ="BusBooking" runat="server">
         <div class="banner">
           <h1>Bus Booking Form</h1>
         </div>
         <div class="item">
           <p>Name</p>
           <div class="name-item">
-            <input type="text" name="name" placeholder="First" />
-            <input type="text" name="name" placeholder="Last" />
+            <asp:TextBox ID="F_Name" runat="server" placeholder ="First"></asp:TextBox>
+           <asp:TextBox ID="L_Name" runat="server" placeholder ="Last"></asp:TextBox>
           </div>
         </div>
         <div class="item">
           <p>Email</p>
-          <input type="text" name="name"/>
+          <asp:TextBox ID="email" runat="server"></asp:TextBox>
         </div>
         <div class="item">
           <p>Phone</p>
-          <input type="text" name="name"/>
+          <asp:TextBox ID="phone" runat="server"></asp:TextBox>
         </div>
         <div class="item">
           <p>Number of Passengers</p>
-          <input type="text" name="name"/>
+          <asp:TextBox ID="noOfPassengers" runat="server"></asp:TextBox>
         </div>
         <div class="item">
           <p>Contact Address</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
+         <asp:TextBox ID="StreetAddress" runat="server" placeholder ="Street Address"></asp:TextBox>
+         <asp:TextBox ID="StreetAddress2" runat="server" placeholder ="Street Address Line 2"></asp:TextBox>
           <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
+           <asp:TextBox ID="City" runat="server" placeholder ="City"></asp:TextBox>
+           <asp:TextBox ID="Region" runat="server" placeholder ="Region"></asp:TextBox>
+           <asp:TextBox ID="PostCode" runat="server" placeholder ="Post/ZIP Code"></asp:TextBox>
+            <asp:TextBox ID="TextBox10" runat="server" placeholder ="City"></asp:TextBox>
+             <asp:TextBox ID="TextBox11" runat="server" placeholder ="Region"></asp:TextBox>
+             <asp:TextBox ID="TextBox12" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
+            <asp:DropDownList  ID="DropDownList2" class="form-control"  runat="server" style ="">
+              <asp:ListItem Text="Country" Value=""></asp:ListItem>
+              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
+              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
+              <asp:ListItem Text="France" Value="3"></asp:ListItem>
+              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
+              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
+            </asp:DropDownList>
           </div>
         </div>
         <div class="question">
           <p>Vehicle</p>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_1" name="vehicle" />
-              <label for="radio_1" class="radio"><span>Limousine (8-12 person)</span></label>
+              <asp:RadioButton ID="radio_1" runat="server" style ="display:block" />
+              <label for="radio_" class="radio"><span>Limousine (10-12 person)</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_2" name="vehicle" />
+             
               <label for="radio_2" class="radio"><span>SUV (6-7 person)</span></label>
+             <asp:RadioButton ID="radio_2" runat="server"  />
+              
             </div>
             <div>
-              <input type="radio" value="none" id="radio_3" name="vehicle" />
-              <label for="radio_3" class="radio"><span>Van (12-15 person)</span></label>
+             <asp:RadioButton ID="radio_3" runat="server"  />  
+              <label for="radio_3" class="radio"><span>Van (10-12 person)</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_4" name="vehicle" />
+             <asp:RadioButton ID="radio_4" runat="server"  />  
               <label for="radio_4" class="radio"><span>Bus (50+ person)</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_5" name="vehicle" />
+              <asp:RadioButton ID="radio_5" runat="server"  />  
               <label for="radio_5" class="radio other"><span>other:</span></label>
-              <input class="other" type="text" name="name" />
+              <asp:TextBox ID="other" runat="server"></asp:TextBox>
             </div>
           </div>
         </div>
@@ -290,43 +301,48 @@
           <input type="text" name="name" placeholder="Street address" />
           <input type="text" name="name" placeholder="Street address line 2" />
           <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-           <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
+           <asp:TextBox ID="TextBox1" runat="server" placeholder ="City"></asp:TextBox>
+           <asp:TextBox ID="TextBox2" runat="server" placeholder ="Region"></asp:TextBox>
+           <asp:TextBox ID="TextBox3" runat="server" placeholder ="Post/ZIP Code"></asp:TextBox>
+           <asp:TextBox ID="TextBox7" runat="server" placeholder ="City"></asp:TextBox>
+           <asp:TextBox ID="TextBox8" runat="server" placeholder ="Region"></asp:TextBox>
+           <asp:TextBox ID="TextBox9" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
+
+            <asp:DropDownList  ID="DropDownList1" class="form-control"  runat="server" style ="">
+              <asp:ListItem Text="Country" Value=""></asp:ListItem>
+              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
+              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
+              <asp:ListItem Text="France" Value="3"></asp:ListItem>
+              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
+              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
+            </asp:DropDownList>
+
           </div>
         </div>
         <div class="item">
           <p>Destination</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
+         <asp:TextBox ID="StreetAddress1" runat="server" placeholder ="Street Address"></asp:TextBox>
+         <asp:TextBox ID="StreetAddressL2" runat="server" placeholder ="Street Address Line 2"></asp:TextBox>
           <div class="city-item">
-            <input type="text" name="name" placeholder="City" />
-            <input type="text" name="name" placeholder="Region" />
-            <input type="text" name="name" placeholder="Postal / Zip code" />
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
+             <asp:TextBox ID="TextBox4" runat="server" placeholder ="City"></asp:TextBox>
+             <asp:TextBox ID="TextBox5" runat="server" placeholder ="Region"></asp:TextBox>
+             <asp:TextBox ID="TextBox6" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
+            <asp:DropDownList  ID="txtSupplierCountry" class="form-control"  runat="server" style ="">
+              <asp:ListItem Text="Country" Value=""></asp:ListItem>
+              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
+              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
+              <asp:ListItem Text="France" Value="3"></asp:ListItem>
+              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
+              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
+            </asp:DropDownList>
           </div>
         </div>
         <div class="item">
           <p>Notes</p>
-          <textarea rows="3"></textarea>
+          <asp:TextBox id="TextArea1" TextMode="multiline"  Rows="3" runat="server" />
         </div>
         <div class="btn-block">
-          <button type="submit" href="/">SEND</button>
+          <asp:Button ID="btnSave" Text="Send" runat="server" />
         </div>
       </form>
     </div>
