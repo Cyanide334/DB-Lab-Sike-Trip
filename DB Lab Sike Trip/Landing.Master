@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Landing.Master.cs" Inherits="DB_Lab_Sike_Trip.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+ <head runat="server">
+        
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sike! Trip</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assetsLand/img/favicon.png" rel="icon">
+  <link href="assetsLand/img/sike-trip-icon.png" rel="sike-trip-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assetsLand/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assetsLand/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assetsLand/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assetsLand/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assetsLand/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assetsLand/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assetsLand/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">    
+    </div>
+  </header><!-- End Header -->
+
+  <asp:ContentPlaceHolder ID="HeroContent" runat="server">
+  </asp:ContentPlaceHolder>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assetsLand/vendor/aos/aos.js"></script>
+  <script src="assetsLand/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assetsLand/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assetsLand/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assetsLand/vendor/php-email-form/validate.js"></script>
+  <script src="assetsLand/vendor/purecounter/purecounter.js"></script>
+  <script src="assetsLand/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assetsLand/js/main.js"></script>
+
+</body>
+
+</html>
