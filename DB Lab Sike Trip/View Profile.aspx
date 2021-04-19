@@ -86,7 +86,8 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" alt="Admin" class="rounded-circle" width="150">
+<%--                    <img src="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" alt="Admin" class="rounded-circle" width="150">--%>
+                    <asp:Image ID="Image1" ImageUrl="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
                       <h4>John Doe</h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>

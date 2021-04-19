@@ -155,11 +155,12 @@
                                         <div
                                             class="col-lg-4 text-center order-1 order-lg-2"
                                         >
-                                            <img
+                                            <%--<img
                                                 src="assets/img/services/bus.png"
                                                 alt=""
                                                 class="img-fluid"
-                                            />
+                                            />--%>
+                                            <asp:Image ID="Image1" ImageUrl="assets/img/services/bus.png" runat="server" />
                                         </div>
                                     </div>
                                 </div>
@@ -189,11 +190,12 @@
                                         <div
                                             class="col-lg-4 text-center order-1 order-lg-2"
                                         >
-                                            <img
+                                            <%--<img
                                                 src="assets/img/services/hotel.png"
                                                 alt=""
                                                 class="img-fluid"
-                                            />
+                                            />--%>
+                                           <asp:Image ID="Image2" ImageUrl="assets/img/services/hotel.png" runat="server" />
                                         </div>
                                     </div>
                                 </div>
@@ -214,11 +216,12 @@
                                         <div
                                             class="col-lg-4 text-center order-1 order-lg-2"
                                         >
-                                            <img
+                                          <%--  <img
                                                 src="assets/img/services/food..png"
                                                 alt=""
                                                 class="img-fluid"
-                                            />
+                                            />--%>
+                                           <asp:Image ID="Image3" ImageUrl="assets/img/services/food..png" runat="server" />
                                         </div>
                                     </div>
                                 </div>
@@ -245,11 +248,12 @@
                                         <div
                                             class="col-lg-4 text-center order-1 order-lg-2"
                                         >
-                                            <img
+                                            <%--<img
                                                 src="assets/img/services/guide.png"
                                                 alt=""
                                                 class="img-fluid"
-                                            />
+                                            />--%>
+                                      <asp:Image ID="Image4" ImageUrl="assets/img/services/guide.png" runat="server" />
                                         </div>
                                     </div>
                                 </div>
@@ -270,11 +274,12 @@
                                         <div
                                             class="col-lg-4 text-center order-1 order-lg-2"
                                         >
-                                            <img
+                                            <%--<img
                                                 src="assets/img/services/discount.png"
                                                 alt=""
                                                 class="img-fluid"
-                                            />
+                                            />--%>
+                                      <asp:Image ID="Image5" ImageUrl="assets/img/services/discount.png" runat="server" />
                                         </div>
                                     </div>
                                 </div>

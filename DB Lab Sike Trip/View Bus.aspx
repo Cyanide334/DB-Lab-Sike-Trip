@@ -87,7 +87,8 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="assets\img\testimonials\testimonials-2.jpg" alt="Admin" class="rounded-circle" width="150">
+<%--                    <img src="assets\img\testimonials\testimonials-2.jpg" alt="Admin" class="rounded-circle" width="150">--%>
+                     <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-2.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
                       <h4>Sike! Bus</h4>
                       <p class="text-secondary mb-1">Service Provider</p>
