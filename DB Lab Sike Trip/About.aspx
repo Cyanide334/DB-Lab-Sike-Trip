@@ -71,11 +71,12 @@
                         <div class="col-lg-6">
                             <div class="member d-flex align-items-start">
                                 <div class="pic">
-                                    <img
+                                    <%--<img
                                         src="assets/img/team/team-1.jpg"
                                         class="img-fluid"
                                         alt=""
-                                    />
+                                    />--%>
+                     <asp:Image ID="Image1" ImageUrl="assets/img/team/team-1.jpg" class="rounded-circle" width="150" runat="server" />
                                 </div>
                                 <div class="member-info">
                                     <h4>Shenk Chan</h4>
@@ -105,11 +106,12 @@
                         <div class="col-lg-6 mt-4 mt-lg-0">
                             <div class="member d-flex align-items-start">
                                 <div class="pic">
-                                    <img
+                                    <%--<img
                                         src="assets/img/team/team-2.jpg"
                                         class="img-fluid"
                                         alt=""
-                                    />
+                                    />--%>
+                     <asp:Image ID="Image2" ImageUrl="assets/img/team/team-2.jpg" class="rounded-circle" width="150" runat="server" />
                                 </div>
                                 <div class="member-info">
                                     <h4>Muhammad Hasaan</h4>
@@ -136,11 +138,12 @@
                         <div class="col-lg-6 mt-4">
                             <div class="member d-flex align-items-start">
                                 <div class="pic">
-                                    <img
+                                    <%--<img
                                         src="assets/img/team/team-3.jpg"
                                         class="img-fluid"
                                         alt=""
-                                    />
+                                    />--%>
+                     <asp:Image ID="Image3" ImageUrl="assets/img/team/team-3.jpg" class="rounded-circle" width="150" runat="server" />
                                 </div>
                                 <div class="member-info">
                                     <h4>Ayesha Kanwal</h4>
@@ -169,11 +172,12 @@
                         <div class="col-lg-6 mt-4">
                             <div class="member d-flex align-items-start">
                                 <div class="pic">
-                                    <img
+                                    <%--<img
                                         src="assets/img/team/team-4.jpg"
                                         class="img-fluid"
                                         alt=""
-                                    />
+                                    />--%>
+                     <asp:Image ID="Image4" ImageUrl="assets/img/team/team-4.jpg" class="rounded-circle" width="150" runat="server" />
                                 </div>
                                 <div class="member-info">
                                     <h4>Hamas</h4>

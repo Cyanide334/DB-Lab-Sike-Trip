@@ -64,27 +64,33 @@
         <div class="row">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image1" ImageUrl="assets/img/clients/client-1.png" class="img-fluid" runat="server" />
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image2" ImageUrl="assets/img/clients/client-2.png" class="img-fluid" runat="server" />
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image3" ImageUrl="assets/img/clients/client-3.png" class="img-fluid" runat="server" />
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image4" ImageUrl="assets/img/clients/client-4.png" class="img-fluid" runat="server" />
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image5" ImageUrl="assets/img/clients/client-5.png" class="img-fluid" runat="server" />
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+<%--            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image6" ImageUrl="assets/img/clients/client-6.png" class="img-fluid" runat="server" />
           </div>
 
         </div>
@@ -101,7 +107,7 @@
       <div class="container">
           <div class="section-title">
                 <h2>Sike! Trips</h2>
-                 <p>Trips &amp; Tours</p>
+                 <p>Trips & Tours</p>
               </div>
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -118,7 +124,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image7" ImageUrl="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 1</h4>
                 <p>Type1</p>
@@ -132,7 +139,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image8" ImageUrl="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 3</h4>
                 <p>Type3</p>
@@ -146,7 +154,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image9" ImageUrl="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 2</h4>
                 <p>Type1</p>
@@ -160,7 +169,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image10" ImageUrl="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 6</h4>
                 <p>Type3</p>
@@ -174,7 +184,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image11" ImageUrl="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 4</h4>
                 <p>Type2</p>
@@ -188,7 +199,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image12" ImageUrl="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 5</h4>
                 <p>Type1</p>
@@ -202,7 +214,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image13" ImageUrl="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 7</h4>
                 <p>Type3</p>
@@ -216,7 +229,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image14" ImageUrl="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Tour 5</h4>
                 <p>Type3</p>
@@ -230,7 +244,8 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+<%--              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">--%>
+              <asp:Image ID="Image15" ImageUrl="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" runat="server" />
               <div class="portfolio-info">
                 <h4>Something</h4>
                 <p>Type2</p>
@@ -257,9 +272,10 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-1.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image16" ImageUrl="assets/img/portfolio/portfolio-4.jpg" class="catalogue-img" runat="server" />
               <h3>Richman Buses</h3>
-              <h4>Premium &amp; Luxorius</h4>
+              <h4>Premium & Luxorius</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
@@ -270,7 +286,8 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item mt-4 mt-lg-0">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-2.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image17" ImageUrl="assets/img/testimonials/testimonials-2.jpg" class="catalogue-img" runat="server" />
               <h3>Lahore to Multan</h3>
               <h4>Economy</h4>
               <p>
@@ -283,7 +300,8 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item mt-4">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-3.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image18" ImageUrl="assets/img/testimonials/testimonials-3.jpg" class="catalogue-img" runat="server" />
               <h3>Some Other Route</h3>
               <h4>Pretty Cheap Bus</h4>
               <p>
@@ -296,7 +314,8 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item mt-4">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-4.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image19" ImageUrl="assets/img/testimonials/testimonials-4.jpg" class="catalogue-img" runat="server" />
               <h3>Matt Brandon</h3>
               <h4>Freelancer</h4>
               <p>
@@ -309,7 +328,8 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item mt-4">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-5.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image20" ImageUrl="assets/img/testimonials/testimonials-5.jpg" class="catalogue-img" runat="server" />
               <h3>John Larson</h3>
               <h4>Entrepreneur</h4>
               <p>
@@ -322,7 +342,8 @@
 
           <div class="col-lg-6">
             <div class="catalogue-item mt-4">
-              <img src="assets/img/testimonials/testimonials-6.jpg" class="catalogue-img" alt="">
+<%--              <img src="assets/img/testimonials/testimonials-6.jpg" class="catalogue-img" alt="">--%>
+              <asp:Image ID="Image21" ImageUrl="assets/img/testimonials/testimonials-6.jpg" class="catalogue-img" runat="server" />
               <h3>Emily Harison</h3>
               <h4>Store Owner</h4>
               <p>
