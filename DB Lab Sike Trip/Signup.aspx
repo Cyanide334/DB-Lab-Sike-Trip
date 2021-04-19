@@ -24,66 +24,54 @@
                        <h4> Please Signup Below</h4>
                     </div>
               </div>
-            <form id="SignupForm" form action="forms/signup.js" method="get" role="form" class="php-email-form" runat="server">
+            <form action="forms/signup.js" method="get" role="form" class="php-email-form" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-<%--                  <input type="text" name="name" class="form-control" id="fullname" placeholder="Fullname" required>--%>
-                     <asp:TextBox ID="SIgnUpName"  placeholder="Fullname" runat="server"></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="fullname" placeholder="Fullname" ></asp:TextBox>
                 </div>
                   <div class="col-md-6 form-group">
-<%--                  <input type="text" name="name" class="form-control" id="username" placeholder="Username" required >--%>
-                      <asp:TextBox ID="SignUpUsername" placeholder="Username" runat="server"></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="TextBox1" placeholder="Username" ></asp:TextBox>
                 </div>
               </div>
                  <div class="row mt-3">
                 <div class="form-group">
-<%--                  <input type="email" name="email" class="form-control" id="email" placeholder="Email" required >--%>
-                    <asp:TextBox ID="SignUpEmail" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="TextBox2" placeholder="e-mail" ></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <%--<input type="password" class="form-control" name="password" id="password" placeholder="Password" required>--%>
-                    <asp:TextBox ID="SignUpPassword" TextMode="password" placeholder="Password" runat="server"></asp:TextBox>
+                 <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signupPassword" placeholder="Password" ></asp:TextBox>
                 </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--                <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password" required>--%>
-                    <asp:TextBox ID="SignUpPasswordConfirmation" TextMode="password" placeholder="Confirm Password" runat="server"></asp:TextBox>
+                  <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signupConfirmPassword" placeholder="Confirm Password" ></asp:TextBox>
                 </div>
                </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--                <input type="text" class="form-control" name="dob" id="dob" placeholder="Date of Birth (not required)" onfocus="(this.type='date')">--%>
-                    <asp:TextBox ID="SignUpDOB" TextMode="date" placeholder="Date of Birth (not required)"  runat="server"></asp:TextBox>
+                        <asp:TextBox runat=  "server" class="form-control" name="dob" id="dob" placeholder="Date of Birth (not required)" onfocus="(this.type='date')"></asp:TextBox>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--                <input type="text" class="form-control" name="country" id="country" placeholder="Country" required>--%>
-                   <asp:TextBox ID="SignUpCountry" placeholder="Country" runat="server"></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="TextBox3" placeholder="Country" ></asp:TextBox>
             </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--               <input type="text" class="form-control" name="city" id="city" placeholder="City" required>  --%>
-                  <asp:TextBox ID="SignUpCity" placeholder="City" runat="server"></asp:TextBox>
+                   <asp:TextBox  runat="server" class="form-control" id="TextBox4" placeholder="City" ></asp:TextBox>  
                 </div>
              </div>
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--             <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>--%>
-                 <asp:TextBox ID="SignUpPhone" placeholder="Phone Number" runat="server"></asp:TextBox>
-            </div>
+               <asp:TextBox  runat="server" class="form-control" id="signupPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-<%--              <input type="text" class="form-control" name="ccnum" id="ccnum" placeholder="Credit Card Number" required>  --%>
-                  <asp:TextBox ID="SignUpCreditCard" placeholder="Credit Card Number" runat="server"></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signupCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
                 </div>
              </div>
+                 </div>
             <div class="row mt-3">
             <div class="text-center">
-<%--           <button type="submit">Signup</button>--%>
-               <asp:Button ID="SignUpButton" Text="Signup" runat="server"></asp:Button>
+               <asp:Button ID="signupSave" Text="Sign Up" runat="server" />
             </div>
             </div>
-
             </form>
 
           </div>
