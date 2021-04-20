@@ -103,7 +103,7 @@
                     <div class="col-md-6"><label class="labels">Country</label><asp:TextBox ID="editProfileCountry" runat="server" placeholder="country" class="form-control"></asp:TextBox>
                     
                 </div>
-                <div class="mt-5 text-center"><asp:Button ID="editProfileSaveButton"  runat="server" Text="Save Profile" class="form-control" /></div>
+                <div class="mt-5 text-center"><asp:Button ID="editProfileSaveButton"  runat="server" Text="Save Profile" class="btn btn-primary profile-button" Width="130px" Height="40px" /></div>
             </div>
             </form>
         </div>

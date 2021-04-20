@@ -95,8 +95,8 @@
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
                     <%--  <button class="btn btn-danger">Book</button>
                       <button class="btn btn-outline-danger">Message</button>--%>
-                    <asp:Button ID="ViewTourBookButton" Text="Book" runat="server"></asp:Button>
-                     <asp:Button ID="ViewTourMessageButton" Text="Message" runat="server"></asp:Button>
+                    <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger"></asp:Button>
+                     <asp:Button ID="ViewTourMessageButton" Text="Message" runat="server" CssClass="btn btn-outline-danger"></asp:Button>
                     </div>
                   </div>
                 </div>

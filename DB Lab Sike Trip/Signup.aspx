@@ -61,15 +61,16 @@
              </div>
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="signupPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
+                    <asp:TextBox  runat="server" class="form-control" id="signupPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
+                   </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox  runat="server" class="form-control" id="signupCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signupCreditCardNumber" placeholder="CreditCardNumber" ></asp:TextBox>
                 </div>
              </div>
-                 </div>
+                 
             <div class="row mt-3">
             <div class="text-center">
-               <asp:Button ID="signupSave" Text="Sign Up" runat="server" />
+               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px"/>
             </div>
             </div>
             </form>
@@ -79,6 +80,6 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
 </asp:Content>
