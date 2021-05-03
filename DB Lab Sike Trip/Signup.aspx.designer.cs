@@ -15,6 +15,15 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
+        /// ItemGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ItemGrid;
+
+        /// <summary>
         /// fullname control.
         /// </summary>
         /// <remarks>
@@ -24,22 +33,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox fullname;
 
         /// <summary>
-        /// TextBox1 control.
+        /// signUpUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox signUpUsername;
 
         /// <summary>
-        /// TextBox2 control.
+        /// signUpEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox signUpEmail;
 
         /// <summary>
         /// signupPassword control.
@@ -69,22 +78,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox dob;
 
         /// <summary>
-        /// TextBox3 control.
+        /// signUpCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox signUpCountry;
 
         /// <summary>
-        /// TextBox4 control.
+        /// signUpCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox signUpCity;
 
         /// <summary>
         /// signupPhoneNumber control.

@@ -16,6 +16,11 @@
             </section>
       <!-- End Breadcrumbs -->
      <section id="contact" class="contact">
+         
+         <asp:GridView ID = "ItemGrid" runat ="server"></asp:GridView>
+
+
+
       <div class="container"> 
         <div class="row justify-content-center">
           <div class="col-lg-8 mt-lg-0">
@@ -30,12 +35,12 @@
                   <asp:TextBox  runat="server" class="form-control" id="fullname" placeholder="Fullname" ></asp:TextBox>
                 </div>
                   <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="TextBox1" placeholder="Username" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpUsername" placeholder="Username" ></asp:TextBox>
                 </div>
               </div>
                  <div class="row mt-3">
                 <div class="form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="TextBox2" placeholder="e-mail" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpEmail" placeholder="e-mail" ></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
@@ -53,10 +58,10 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="TextBox3" placeholder="Country" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signUpCountry" placeholder="Country" ></asp:TextBox>
             </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <asp:TextBox  runat="server" class="form-control" id="TextBox4" placeholder="City" ></asp:TextBox>  
+                   <asp:TextBox  runat="server" class="form-control" id="signUpCity" placeholder="City" ></asp:TextBox>  
                 </div>
              </div>
              <div class="row mt-3">
@@ -70,7 +75,7 @@
                  
             <div class="row mt-3">
             <div class="text-center">
-               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px"/>
+               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClick="signupSave_Click"/>
             </div>
             </div>
             </form>
