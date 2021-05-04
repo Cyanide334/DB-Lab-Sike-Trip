@@ -17,7 +17,7 @@
       <!-- End Breadcrumbs -->
      <section id="contact" class="contact">
          
-         <asp:GridView ID = "ItemGrid" runat ="server"></asp:GridView>
+         
 
 
 
@@ -29,7 +29,7 @@
                        <h4> Please Signup Below</h4>
                     </div>
               </div>
-            <form action="forms/signup.js" method="get" role="form" class="php-email-form" runat="server">
+            <form  ID ="SignUpForm" role="form" class="php-email-form_1" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
                   <asp:TextBox  runat="server" class="form-control" id="fullname" placeholder="Fullname" ></asp:TextBox>
@@ -75,7 +75,7 @@
                  
             <div class="row mt-3">
             <div class="text-center">
-               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClick="signupSave_Click"/>
+               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClickClient="signupSave_Click"/>
             </div>
             </div>
             </form>

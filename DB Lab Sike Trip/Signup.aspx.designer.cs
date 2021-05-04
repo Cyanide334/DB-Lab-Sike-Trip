@@ -15,13 +15,13 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// ItemGrid control.
+        /// SignUpForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ItemGrid;
+        protected global::System.Web.UI.HtmlControls.HtmlForm SignUpForm;
 
         /// <summary>
         /// fullname control.

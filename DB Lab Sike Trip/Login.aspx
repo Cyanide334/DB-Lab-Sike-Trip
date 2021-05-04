@@ -25,10 +25,10 @@
                        <h4> Please Login Below</h4>
                     </div>
               </div>
-            <form action="forms/login.js" method="get" role="form" class="php-email-form" runat="server">
+            <form ID ="logInForm" role="form" class="php-email-form_1" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <asp:TextBox runat="server" class="form-control" id="username" placeholder="Username"   onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></asp:TextBox>
+                  <asp:TextBox runat="server" class="form-control" id="logInUsername" placeholder="Username"   onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
@@ -38,7 +38,7 @@
                </div>
             <div class="row mt-3">
             <div class="col-md-6 text-center">
-               <asp:Button ID="btnSave" Text="Login" runat="server" CssClass="btn btn-danger" Width="100px"/>
+               <asp:Button ID="btnSave" Text="Login" runat="server"  CssClass="btn btn-danger" Width="100px"  OnClick="BtnSave_Click"/>
             </div>
             </div>
 
@@ -53,3 +53,8 @@
         
 
 </asp:Content>
+
+
+
+
+
