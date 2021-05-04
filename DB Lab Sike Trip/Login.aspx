@@ -33,7 +33,7 @@
               </div>
                <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox runat="server" TextMode="password" class="form-control" id="loginPassword" placeholder="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></asp:TextBox>
+                  <asp:TextBox runat="server" TextMode="password" class="form-control" id="logInPassword" placeholder="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></asp:TextBox>
                 </div>
                </div>
             <div class="row mt-3">

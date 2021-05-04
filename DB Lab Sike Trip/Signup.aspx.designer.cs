@@ -24,49 +24,49 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm SignUpForm;
 
         /// <summary>
-        /// fullname control.
+        /// signUpFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fullname;
+        protected global::System.Web.UI.WebControls.TextBox signUpFullName;
 
         /// <summary>
-        /// username control.
+        /// signUpUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox username;
+        protected global::System.Web.UI.WebControls.TextBox signUpUsername;
 
         /// <summary>
-        /// email control.
+        /// signUpEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox signUpEmail;
 
         /// <summary>
-        /// signupPassword control.
+        /// signUpPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupPassword;
+        protected global::System.Web.UI.WebControls.TextBox signUpPassword;
 
         /// <summary>
-        /// signupConfirmPassword control.
+        /// signUpConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupConfirmPassword;
+        protected global::System.Web.UI.WebControls.TextBox signUpConfirmPassword;
 
         /// <summary>
         /// dob control.
@@ -78,40 +78,40 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox dob;
 
         /// <summary>
-        /// signupcountry control.
+        /// signUpCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupcountry;
+        protected global::System.Web.UI.WebControls.TextBox signUpCountry;
 
         /// <summary>
-        /// signupcity control.
+        /// signUpCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupcity;
+        protected global::System.Web.UI.WebControls.TextBox signUpCity;
 
         /// <summary>
-        /// signupPhoneNumber control.
+        /// signUpPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupPhoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox signUpPhoneNumber;
 
         /// <summary>
-        /// signupCreditCardNumber control.
+        /// signUpCreditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signupCreditCardNumber;
+        protected global::System.Web.UI.WebControls.TextBox signUpCreditCardNumber;
 
         /// <summary>
         /// signupSave control.

@@ -33,13 +33,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox logInUsername;
 
         /// <summary>
-        /// password control.
+        /// logInPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox logInPassword;
 
         /// <summary>
         /// btnSave control.

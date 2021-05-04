@@ -25,7 +25,7 @@ namespace DB_Lab_Sike_Trip
         {
             //System.Diagnostics.Debug.WriteLine("hello world");
             string name = logInUsername.Text;
-            string password = loginPassword.Text;
+            string password = logInPassword.Text;
             bool s = true;
 
             myDAL obj = new myDAL();

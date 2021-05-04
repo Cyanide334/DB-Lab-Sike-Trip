@@ -33,23 +33,23 @@
             <form  ID ="SignUpForm" role="form" class="php-email-form_1" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="fullname" placeholder="Fullname" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpFullName" placeholder="Fullname" ></asp:TextBox>
                 </div>
                   <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="username" placeholder="Username" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpUsername" placeholder="Username" ></asp:TextBox>
                 </div>
               </div>
                  <div class="row mt-3">
                 <div class="form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="email" placeholder="E-mail" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpEmail" placeholder="E-mail" ></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                 <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signupPassword" placeholder="Password" ></asp:TextBox>
+                 <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpPassword" placeholder="Password" ></asp:TextBox>
                 </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signupConfirmPassword" placeholder="Confirm Password" ></asp:TextBox>
+                  <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password" ></asp:TextBox>
                 </div>
                </div>
             <div class="row mt-3">
@@ -59,17 +59,17 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="signupcountry" placeholder="Country" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signUpCountry" placeholder="Country" ></asp:TextBox>
             </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <asp:TextBox  runat="server" class="form-control" id="signupcity" placeholder="City" ></asp:TextBox>  
+                   <asp:TextBox  runat="server" class="form-control" id="signUpCity" placeholder="City" ></asp:TextBox>  
                 </div>
              </div>
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="signupPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox  runat="server" class="form-control" id="signupCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
                 </div>
              </div>
                  </div>

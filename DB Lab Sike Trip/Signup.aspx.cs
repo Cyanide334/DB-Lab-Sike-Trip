@@ -24,12 +24,12 @@ namespace DB_Lab_Sike_Trip
         protected void signupSave_Click(object sender, EventArgs e)
         {
 
-            string name = fullname.Text;
-            string password = signupPassword.Text;
-            string contact = signupPhoneNumber.Text;
+            string name = signUpFullName.Text;
+            string password = signUpPassword.Text;
+            string contact = signUpPhoneNumber.Text;
             string city = signUpCity.Text;
             string email = signUpEmail.Text;
-            string credit = signupCreditCardNumber.Text;
+            string credit = signUpCreditCardNumber.Text;
             string username = signUpUsername.Text;
             string country = signUpCountry.Text;
             string DOB = dob.Text;
@@ -39,19 +39,19 @@ namespace DB_Lab_Sike_Trip
             bool valid_input = true;
             if (name == "")
             {
-                fullname.Attributes.Add("PlaceHolder", "Your Full Name is needed");
+                signUpFullName.Attributes.Add("PlaceHolder", "Your Full Name is needed");
                 valid_input = false;
             }
 
             if (password == "")
             {
-                signupPassword.Attributes.Add("PlaceHolder", "Your Password is needed");
+                signUpPassword.Attributes.Add("PlaceHolder", "Your Password is needed");
                 valid_input = false;
             }
 
             if (contact == "")
             {
-                signupPhoneNumber.Attributes.Add("PlaceHolder", "Your Contact Number is needed");
+                signUpPhoneNumber.Attributes.Add("PlaceHolder", "Your Contact Number is needed");
                 valid_input = false;
             }
 
@@ -69,7 +69,7 @@ namespace DB_Lab_Sike_Trip
 
             if (credit == "")
             {
-                signupCreditCardNumber.Attributes.Add("PlaceHolder", "Your Credit Card Number is needed");
+                signUpCreditCardNumber.Attributes.Add("PlaceHolder", "Your Credit Card Number is needed");
                 valid_input = false;
             }
 
@@ -85,9 +85,9 @@ namespace DB_Lab_Sike_Trip
             }
 
 
-            if (signupPassword.Text != signupConfirmPassword.Text)
+            if (signUpPassword.Text != signUpConfirmPassword.Text)
             {
-                signupPassword.Attributes.Add("PlaceHolder", "Passwords do not match");
+                signUpPassword.Attributes.Add("PlaceHolder", "Passwords do not match");
                 valid_input = false;
             }
 
