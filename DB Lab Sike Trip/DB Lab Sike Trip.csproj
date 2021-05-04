@@ -288,6 +288,7 @@
     <Content Include="formLand\Readme.txt" />
     <Content Include="forms\contact.php" />
     <Content Include="forms\Readme.txt" />
+    <Content Include="loginscript.js" />
     <Content Include="noframework.waypoints.js" />
     <Content Include="Services.aspx" />
     <Content Include="Contact.aspx" />
@@ -309,6 +310,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="signupscript.js" />
     <Content Include="style.css" />
     <Content Include="Tour Booking.aspx" />
     <Content Include="View Bus.aspx" />

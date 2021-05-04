@@ -33,22 +33,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox fullname;
 
         /// <summary>
-        /// signUpUsername control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signUpUsername;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// signUpEmail control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signUpEmail;
+        protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
         /// signupPassword control.
@@ -78,22 +78,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox dob;
 
         /// <summary>
-        /// signUpCountry control.
+        /// signupcountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signUpCountry;
+        protected global::System.Web.UI.WebControls.TextBox signupcountry;
 
         /// <summary>
-        /// signUpCity control.
+        /// signupcity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox signUpCity;
+        protected global::System.Web.UI.WebControls.TextBox signupcity;
 
         /// <summary>
         /// signupPhoneNumber control.
