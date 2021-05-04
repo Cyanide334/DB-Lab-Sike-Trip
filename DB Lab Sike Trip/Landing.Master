@@ -15,8 +15,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assetsLand/img/favicon.png" rel="icon">
-  <link href="assetsLand/img/sike-trip-icon.png" rel="sike-trip-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/sike-trip-favicon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
   <!-- Google Fonts -->

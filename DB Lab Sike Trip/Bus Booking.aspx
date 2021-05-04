@@ -154,7 +154,7 @@
       margin-top: 10px;
       text-align: center;
       }
-      .testbox button {
+      .testbox .aspButton {
       width: 150px;
       padding: 10px;
       border: none;
@@ -164,7 +164,7 @@
       color: #fff;
       cursor: pointer;
       }
-      .testbox button:hover {
+      .testbox .aspButton:hover {
       box-shadow: 0 0 18px 0 #d9232d;
       }
       @media (max-width: 700px) {
@@ -240,7 +240,7 @@
             <asp:TextBox ID="TextBox10" runat="server" placeholder ="City"></asp:TextBox>
              <asp:TextBox ID="TextBox11" runat="server" placeholder ="Region"></asp:TextBox>
              <asp:TextBox ID="TextBox12" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
-            <asp:DropDownList  ID="DropDownList2" class="form-control"  runat="server" style ="">
+            <asp:DropDownList  ID="DropDownList2" runat="server" style ="">
               <asp:ListItem Text="Country" Value=""></asp:ListItem>
               <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
               <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
@@ -254,25 +254,26 @@
           <p>Vehicle</p>
           <div class="question-answer">
             <div>
-              <asp:RadioButton ID="radio_1" runat="server" style ="display:block" />
-              <label for="radio_" class="radio"><span>Limousine (10-12 person)</span></label>
+              <asp:RadioButton ID="radio_1" runat="server"  ClientIDMode="Static" GroupName="BusType" />
+              <label for="radio_1" class="radio"><span>Limousine (10-12 person)</span></label>
             </div>
             <div>
              
-              <label for="radio_2" class="radio"><span>SUV (6-7 person)</span></label>
-             <asp:RadioButton ID="radio_2" runat="server"  />
+             
+             <asp:RadioButton ID="radio_2" runat="server" ClientIDMode="Static"  GroupName="BusType" />
+             <label for="radio_2" class="radio"><span>SUV (6-7 person)</span></label>
               
             </div>
             <div>
-             <asp:RadioButton ID="radio_3" runat="server"  />  
+             <asp:RadioButton ID="radio_3" runat="server" ClientIDMode="Static"  GroupName="BusType" />  
               <label for="radio_3" class="radio"><span>Van (10-12 person)</span></label>
             </div>
             <div>
-             <asp:RadioButton ID="radio_4" runat="server"  />  
+             <asp:RadioButton ID="radio_4" runat="server"  ClientIDMode="Static"  GroupName="BusType"/>  
               <label for="radio_4" class="radio"><span>Bus (50+ person)</span></label>
             </div>
             <div>
-              <asp:RadioButton ID="radio_5" runat="server"  />  
+              <asp:RadioButton ID="radio_5" runat="server" ClientIDMode="Static" GroupName="BusType"  />  
               <label for="radio_5" class="radio other"><span>other:</span></label>
               <asp:TextBox ID="other" runat="server"></asp:TextBox>
             </div>
@@ -280,26 +281,19 @@
         </div>
         <div class="item">
           <p>Pick Up Date</p>
-          <input type="date" name="bdate" />
+          <asp:TextBox ID="TextBox13" runat="server" placeholder ="Date" Type="Date"></asp:TextBox>
           <i class="fas fa-calendar-alt"></i>
         </div>
         <div class="item">
           <p>Pick Up Time</p>
-          <input type="time" name="name" />
+          <asp:TextBox ID="TextBox14" runat="server" placeholder ="Time" Type="Time"></asp:TextBox>
           <i class="fas fa-clock"></i>
-        </div>
-        <div class="item">
-          <p>If pick up from the airport, please enter airport name</p>
-          <input type="text" name="name"/>
-        </div>
-        <div class="item">
-          <p>Flight Number</p>
-          <input type="text" name="name"/>
         </div>
         <div class="item">
           <p>Pick Up Point</p>
           <input type="text" name="name" placeholder="Street address" />
-          <input type="text" name="name" placeholder="Street address line 2" />
+          <asp:TextBox ID="TextBox15" runat="server" placeholder ="Street address"></asp:TextBox>
+          <asp:TextBox ID="TextBox16" runat="server" placeholder ="Street address line 2"></asp:TextBox>
           <div class="city-item">
            <asp:TextBox ID="TextBox1" runat="server" placeholder ="City"></asp:TextBox>
            <asp:TextBox ID="TextBox2" runat="server" placeholder ="Region"></asp:TextBox>
@@ -308,7 +302,7 @@
            <asp:TextBox ID="TextBox8" runat="server" placeholder ="Region"></asp:TextBox>
            <asp:TextBox ID="TextBox9" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
 
-            <asp:DropDownList  ID="DropDownList1" class="form-control"  runat="server" style ="">
+            <asp:DropDownList  ID="DropDownList1" runat="server" style ="">
               <asp:ListItem Text="Country" Value=""></asp:ListItem>
               <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
               <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
@@ -327,7 +321,7 @@
              <asp:TextBox ID="TextBox4" runat="server" placeholder ="City"></asp:TextBox>
              <asp:TextBox ID="TextBox5" runat="server" placeholder ="Region"></asp:TextBox>
              <asp:TextBox ID="TextBox6" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
-            <asp:DropDownList  ID="txtSupplierCountry" class="form-control"  runat="server" style ="">
+            <asp:DropDownList  ID="txtSupplierCountry" runat="server" style ="">
               <asp:ListItem Text="Country" Value=""></asp:ListItem>
               <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
               <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
@@ -342,10 +336,11 @@
           <asp:TextBox id="TextArea1" TextMode="multiline"  Rows="3" runat="server" />
         </div>
         <div class="btn-block">
-          <asp:Button ID="btnSave" Text="Send" runat="server" />
+          <asp:Button ID="btnSave" Text="Send" runat="server" CssClass="aspButton" />
         </div>
       </form>
     </div>
-  </body>
+ 
   </section>
 </asp:Content>
+ 

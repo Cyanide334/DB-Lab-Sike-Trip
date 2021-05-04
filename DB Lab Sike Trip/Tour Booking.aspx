@@ -129,7 +129,7 @@
       margin-top: 10px;
       text-align: center;
       }
-      .testbox button {
+      .testbox .aspButton {
       width: 150px;
       padding: 10px;
       border: none;
@@ -139,7 +139,7 @@
       color: #fff;
       cursor: pointer;
       }
-     .testbox  button:hover {
+     .testbox  .aspButton:hover {
       box-shadow: 0 0 18px 0 #d9232d;
       }
       @media (max-width: 700px) {
@@ -178,7 +178,7 @@
     <section class="tourbooking">
 
     <div class="testbox">
-    <form id="TourBookingForm" form action="/" runat="server">
+    <form id="TourBookingForm" action="/" runat="server">
       <div class="banner">
         <h1>Tour Booking Form</h1>
       </div>
@@ -240,7 +240,6 @@
       <div class="item">
         <p>Adults' names</p>
         <textarea rows="3"></textarea>
-        Yes
       </div>
       <div class="item">
         <p>Total number of children</p>
@@ -308,13 +307,15 @@
         <div class="question-answer">
           <div>
 <%--            <input type="radio" value="none" id="radio_1" name="question1"/>--%>
-<%--            <label for="radio_1" class="radio"><span>Yes</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioY1" GroupName="Question1" runat="server"/>
+            
+            <asp:RadioButton ID="TourBookingRadioY1" GroupName="Question1" runat="server" value="none" ClientIDMode="Static"/>
+            <label for="TourBookingRadioY1" class="radio"><span>Yes</span></label>
           </div>
           <div>
-<%--            <input type="radio" value="none" id="radio_2" name="question1"/>
-            <label for="radio_2" class="radio"><span>No</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioN1" GroupName="Question1" runat="server"/>
+<%--            <input type="radio" value="none" id="radio_2" name="question1"/>--%>
+            
+            <asp:RadioButton ID="TourBookingRadioN1" GroupName="Question1" runat="server" ClientIDMode="Static"/>
+              <label for="TourBookingRadioN1" class="radio"><span>No</span></label>
           </div>
         </div>
       </div>
@@ -327,28 +328,32 @@
         <p>Is anyone traveling over the Age of 55?</p>
         <div class="question-answer">
           <div>
-<%--            <input type="radio" value="none" id="radio_3" name="question2"/>
-            <label for="radio_3" class="radio"><span>Yes</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioY2" GroupName="Question2" runat="server"/>
+<%--            <input type="radio" value="none" id="radio_3" name="question2"/>--%>
+           
+            <asp:RadioButton ID="TourBookingRadioY2" GroupName="Question2" runat="server" ClientIDMode="Static"/>
+               <label for="TourBookingRadioY2" class="radio"><span>Yes</span></label>
           </div>
           <div>
-<%--            <input type="radio" value="none" id="radio_4" name="question2"/>
-            <label for="radio_4" class="radio"><span>No</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioN2" GroupName="Question2" runat="server"/>
+<%--            <input type="radio" value="none" id="radio_4" name="question2"/>--%>
+            
+            <asp:RadioButton ID="TourBookingRadioN2" GroupName="Question2" runat="server" ClientIDMode="Static"/>
+              <label for="TourBookingRadioN2" class="radio"><span>No</span></label>
           </div>
         </div>
         <div class="question">
           <p>Does anyone traveling have a military background?</p>
           <div class="question-answer">
             <div>
-<%--              <input type="radio" value="none" id="radio_5" name="question3"/>
-              <label for="radio_5" class="radio"><span>Yes</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioY3" GroupName="Question3" runat="server"/>
+<%--              <input type="radio" value="none" id="radio_5" name="question3"/>--%>
+             
+            <asp:RadioButton ID="TourBookingRadioY3" GroupName="Question3" runat="server" ClientIDMode="Static"/>
+                <label for="TourBookingRadioY3" class="radio"><span>Yes</span></label>
             </div>
             <div>
-<%--              <input type="radio" value="none" id="radio_6" name="question3"/>
-              <label for="radio_6" class="radio"><span>No</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioN3" GroupName="Question3" runat="server"/>
+<%--              <input type="radio" value="none" id="radio_6" name="question3"/>--%>
+             
+            <asp:RadioButton ID="TourBookingRadioN3" GroupName="Question3" runat="server" ClientIDMode="Static"/>
+                 <label for="TourBookingRadioN3" class="radio"><span>No</span></label>
             </div>
           </div>
         </div>
@@ -364,20 +369,22 @@
           <p>Include travel insurance</p>
           <div class="question-answer">
             <div>
-<%--              <input type="radio" value="none" id="radio_7" name="question4"/>
-              <label for="radio_7" class="radio"><span>Yes</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioY4" GroupName="Question4" runat="server"/>
+<%--              <input type="radio" value="none" id="radio_7" name="question4"/>--%>
+              
+            <asp:RadioButton ID="TourBookingRadioY4" GroupName="Question4" runat="server" ClientIDMode="Static"/>
+                <label for="TourBookingRadioY4" class="radio"><span>Yes</span></label>
             </div>
             <div>
-<%--              <input type="radio" value="none" id="radio_8" name="question4"/>
-              <label for="radio_8" class="radio"><span>No</span></label>--%>
-            <asp:RadioButton ID="TourBookingRadioN4" GroupName="Question4" runat="server"/>
+<%--              <input type="radio" value="none" id="radio_8" name="question4"/>--%>
+              
+            <asp:RadioButton ID="TourBookingRadioN4" GroupName="Question4" runat="server" ClientIDMode="Static"/>
+                <label for="TourBookingRadioN4" class="radio"><span>No</span></label>
             </div>
           </div>
         </div>
         <div class="btn-block">
 <%--          <button type="submit">Book</button>--%>
-            <asp:Button ID="TourBookingSubmitButton" Text="Submit" runat="server"></asp:Button>
+            <asp:Button ID="TourBookingSubmitButton" Text="Book" runat="server" CssClass="aspButton"></asp:Button>
         </div>
     </form>
     </div>

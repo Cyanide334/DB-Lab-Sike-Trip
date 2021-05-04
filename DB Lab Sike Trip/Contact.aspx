@@ -71,7 +71,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><asp:Button CssClass="btn btn-danger" Text="Send Message" runat="server"></asp:Button></div>
             </form>
 
           </div>

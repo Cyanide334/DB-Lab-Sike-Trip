@@ -69,7 +69,7 @@
       </section>
 
     <section class="editProfile">
-        <form id="EBsForm" runat="server">
+        <form id="EBSForm" runat="server">
             <div class="container rounded bg-white mt-5 mb-5">
             <div class="row">
                 <div class="col-md-3 border-right">
@@ -92,7 +92,7 @@
                             <div class="col-md-12"><label class="labels">Capacity</label><asp:TextBox ID="EBSCapacity" runat="server" class="form-control" placeholder="enter new Capacity" value=""></asp:TextBox></div>
                             <div class="col-md-12"><label class="labels">Price</label><asp:TextBox ID="EBSPrice" runat="server" class="form-control" placeholder="enter new Price" value=""></asp:TextBox></div>
                         </div>
-                        <div class="mt-5 text-center"><asp:Button ID="EBSSaveProfile" runat="server" class="btn btn-primary profile-button" Text="Save Profile" /></div>
+                        <div class="mt-5 text-center"><asp:Button ID="EBSSaveProfile" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px" /></div>
                     </div>
                 </div>
         
