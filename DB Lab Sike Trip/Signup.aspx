@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="DB_Lab_Sike_Trip.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
+     <script type="text/javascript" src="signupscript.js"></script>
     <!-- ======= Breadcrumbs ======= -->
             <section id="breadcrumbs" class="breadcrumbs">
                 <div class="container">
@@ -24,18 +25,19 @@
                        <h4> Please Signup Below</h4>
                     </div>
               </div>
-            <form action="forms/signup.js" method="get" role="form" class="php-email-form" runat="server">
+               <div id="signuperror"></div>
+            <form id="signupform" action="forms/signup.js" method="get" role="form" class="php-email-form" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
                   <asp:TextBox  runat="server" class="form-control" id="fullname" placeholder="Fullname" ></asp:TextBox>
                 </div>
                   <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="TextBox1" placeholder="Username" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="username" placeholder="Username" ></asp:TextBox>
                 </div>
               </div>
                  <div class="row mt-3">
                 <div class="form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="TextBox2" placeholder="e-mail" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="email" placeholder="E-mail" ></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
@@ -53,10 +55,10 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="TextBox3" placeholder="Country" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signupcountry" placeholder="Country" ></asp:TextBox>
             </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                   <asp:TextBox  runat="server" class="form-control" id="TextBox4" placeholder="City" ></asp:TextBox>  
+                   <asp:TextBox  runat="server" class="form-control" id="signupcity" placeholder="City" ></asp:TextBox>  
                 </div>
              </div>
              <div class="row mt-3">
