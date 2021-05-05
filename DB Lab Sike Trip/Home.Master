@@ -86,16 +86,19 @@
                                 <li><a href="Tour Booking.aspx">Tour Booking</a></li>
                             </ul>
                          </li>
-                        <li><a href="Login.aspx">Log In</a></li>
+                        <li><a id="MasterLoginReference" href="Login.aspx" runat="server">Log In</a></li>
                         <li>
-                            <a href="Signup.aspx" class="getstarted"
-                                >Sign up</a
-                            >
+                            <a href="Signup.aspx" class="getstarted" runat="server" id="MasterSignUp">Sign up</a>
                         </li>
+
+                         <li>
+                              <a href="View Profile.aspx" class="getstarted" id ="MasterYourProfile" visible="false" runat="server" > </a>
+                        </li>
+
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
-               
+             
             </div>
         </header>
         <!-- End Header -->

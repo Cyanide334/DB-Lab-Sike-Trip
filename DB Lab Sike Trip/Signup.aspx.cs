@@ -95,7 +95,8 @@ namespace DB_Lab_Sike_Trip
             if (valid_input == true)
             {
                 obj.sign_up(name, username, password, email, country, city, contact, credit, DOB);
-                Response.Redirect("View Profile.aspx");
+                Session["Username"] = username;
+                Response.Redirect("Home.aspx");
             }
 
         }

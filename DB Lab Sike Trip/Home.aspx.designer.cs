@@ -15,6 +15,15 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
+        /// welcomespan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl welcomespan;
+
+        /// <summary>
         /// Image1 control.
         /// </summary>
         /// <remarks>

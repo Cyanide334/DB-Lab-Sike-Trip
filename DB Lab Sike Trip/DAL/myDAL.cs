@@ -105,23 +105,19 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
 
-        public void log_in(string username, string password, ref bool success)
+        public void log_in(string username, string password, ref bool success, ref string outputString)
         {
 
             SqlConnection con = new SqlConnection(conString);
-            
-
-
             try
             {
                 string uid = username;
                 string pass = password;
                 con.Open();
                 string qry = "select * from Users where Username='" + uid + "' and Password='" + pass + "'";
-                //string qry = "select * from Users where Username= 'Cyan ' and Password='mashedpotatoes'" ; for checking
 
                 SqlCommand cmd = new SqlCommand(qry, con);
-                
+
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.Read())
                 {
@@ -138,7 +134,49 @@ namespace DB_Lab_Sike_Trip.DAL
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
             }
+
+            //SqlConnection con = new SqlConnection(conString);
+            //try
+            //{
+
+
+
+
+            //    con.Open();
+
+
+            //    SqlCommand cmd = new SqlCommand("dbo.login", con);
+            //    cmd.CommandType = CommandType.StoredProcedure;
+
+
+            //    cmd.Parameters.Add("@Username", SqlDbType.VarChar, 30);
+            //    cmd.Parameters.Add("@Password", SqlDbType.VarChar, 30);
+            //    cmd.Parameters.Add("@output", SqlDbType.Int);
+
+
+            //    cmd.Parameters["@Username"].Value = username;
+            //    cmd.Parameters["@Password"].Value = password;
+            //    cmd.Parameters["@output"].Value = 0;
+            //    cmd.Parameters["@output"].Direction = ParameterDirection.ReturnValue;
+
+
+            //    cmd.ExecuteNonQuery();
+
+            //    int retval = (int)cmd.Parameters["@output"].Value;
+            //    con.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    System.Web.HttpContext.Current.Response.Write(ex.Message);
+            //}
+
+
         }
+
+
+
+
+
 
 
     }

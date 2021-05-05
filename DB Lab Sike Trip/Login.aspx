@@ -27,10 +27,12 @@
           <div class="col-lg-8 mt-lg-0">
               <div class="row mt-3">
                     <div class="col-md-6 text-center">
-                       <h4> Please Login Below</h4>
+                       <h4 id = "LoginInstruction" runat="server"> Please Login Below</h4>
+                        
                     </div>
               </div>
             <form ID ="logInForm" class="php-email-form_1" runat="server">
+                <div id ="NotLoggedIn" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
                    <asp:Label ID="loginError" ForeColor="Red" runat="server" ></asp:Label>
@@ -53,8 +55,25 @@
             </div>
             </div>
 
+            </div>
+                <div id ="showLogOutButton" runat="server" visible ="false">
+                
+                       <div class="col-md-6 text-center">
+                           <h4 id = "AlreadyLoggedIn" runat="server" > You are logged in from an account</h4>
+                            <br />
+                            <br />
+                           <h4 id = "ID1" runat="server" > Do you want to log out?</h4>
+                            <br />
+                            <br />
+                           <br />
+                      <asp:Button ID="LogOutButton" Text="Log Out" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogOutButton_Click" />
+                    </div>
+                  
+                 </div>
             </form>
-
+              
+              
+              
           </div>
 
         </div>

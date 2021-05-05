@@ -11,7 +11,14 @@ namespace DB_Lab_Sike_Trip
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] != null)
+            {
+                MasterYourProfile.Visible = true;
+                MasterSignUp.Visible = false;
+                MasterYourProfile.InnerText = (Session["Username"].ToString());
+                MasterLoginReference.InnerText = "Log Out";
+                
+            }
         }
     }
 }
