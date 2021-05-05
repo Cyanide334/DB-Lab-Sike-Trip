@@ -21,7 +21,7 @@ namespace DB_Lab_Sike_Trip
 
 
 
-        protected void signupSave_Click(object sender, EventArgs e)
+        protected void SignupSave_Click(object sender, EventArgs e)
         {
 
             string name = signUpFullName.Text;
@@ -95,6 +95,7 @@ namespace DB_Lab_Sike_Trip
             if (valid_input == true)
             {
                 obj.sign_up(name, username, password, email, country, city, contact, credit, DOB);
+                Response.Redirect("View Profile.aspx");
             }
 
         }

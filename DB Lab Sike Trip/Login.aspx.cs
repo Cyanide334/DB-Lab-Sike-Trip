@@ -12,6 +12,7 @@ using DB_Lab_Sike_Trip.DAL;
 
 
 
+
 namespace DB_Lab_Sike_Trip
 {
     public partial class LogIn : System.Web.UI.Page
@@ -23,23 +24,20 @@ namespace DB_Lab_Sike_Trip
 
         public void BtnSave_Click(object sender, EventArgs e)
         {
-            //System.Diagnostics.Debug.WriteLine("hello world");
             string name = logInUsername.Text;
             string password = logInPassword.Text;
             bool s = true;
-
+            
             myDAL obj = new myDAL();
             obj.log_in(name, password, ref s);
-
-
             if (s == false)
             {
                 logInUsername.Text = "";
-                logInUsername.Attributes.Add("Placeholder", "Invalid");
+                logInPassword.Text = "";
+                loginError.Text = "Invalid username or Password";
             }
             else {
-                logInUsername.Text = "";
-                logInUsername.Attributes.Add("Placeholder", "Success");
+                Response.Redirect("View Profile.aspx");
             }
         }
         

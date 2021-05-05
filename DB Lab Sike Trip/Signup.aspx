@@ -1,4 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="DB_Lab_Sike_Trip.WebForm5" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="scripts" runat="server">
+    <script src="signupscript.js"></script>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HomeContent" runat="server">
      <script type="text/javascript" src="signupscript.js"></script>
     <!-- ======= Breadcrumbs ======= -->
@@ -18,9 +23,6 @@
       <!-- End Breadcrumbs -->
      <section id="contact" class="contact">
          
-         
-
-
 
       <div class="container"> 
         <div class="row justify-content-center">
@@ -30,7 +32,7 @@
                        <h4> Please Signup Below</h4>
                     </div>
               </div>
-            <form  ID ="SignUpForm" role="form" class="php-email-form_1" runat="server">
+            <form  ID ="SignUpForm" class="php-email-form_1" runat="server">
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
                   <asp:TextBox  runat="server" class="form-control" id="signUpFullName" placeholder="Fullname" ></asp:TextBox>
@@ -68,20 +70,26 @@
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
+                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
                 </div>
              </div>
-                 </div>
+            
             <div class="row mt-3">
-            <div class="text-center">
-               <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClickClient="signupSave_Click"/>
+                <div class="form-group text-center" id="signUpError" style="color:red">
+                
+                </div>
             </div>
+            <div class="row mt-3">
+                <div class="text-center">
+                   <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClick="SignupSave_Click" OnClientClick="return validate()"/>
+                </div>
             </div>
             </form>
 
           </div>
-
+            
         </div>
 
       </div>

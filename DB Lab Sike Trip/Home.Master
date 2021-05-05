@@ -182,7 +182,7 @@
                         <div class="col-lg-4 col-md-6 footer-newsletter">
                             <h4>Search</h4>
                         
-                            <form action="" method="post">
+                            <form method="post">
                                 <input type="email" name="email" /><input
                                     type="submit"
                                     value="Search"
@@ -219,5 +219,7 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+         <asp:ContentPlaceHolder ID="scripts" runat="server">
+        </asp:ContentPlaceHolder>
     </body>
 </html>

@@ -311,7 +311,6 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="signupscript.js" />
-    <Content Include="style.css" />
     <Content Include="Tour Booking.aspx" />
     <Content Include="View Bus.aspx" />
     <Content Include="View Tour.aspx" />
