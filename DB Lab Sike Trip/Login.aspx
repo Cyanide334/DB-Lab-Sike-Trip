@@ -66,7 +66,7 @@
                             <br />
                             <br />
                            <br />
-                      <asp:Button ID="LogOutButton" Text="Log Out" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogOutButton_Click" />
+                      <asp:Button ID="LogOutButton" Text="Logout" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogOutButton_Click" />
                     </div>
                   
                  </div>

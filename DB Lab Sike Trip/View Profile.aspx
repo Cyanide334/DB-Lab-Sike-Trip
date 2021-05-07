@@ -239,7 +239,7 @@
                             <br />
                             <br />
                            <br />
-                      <asp:Button ID="LogInButton" Text="Log In" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogInButton_Click"/>
+                      <asp:Button ID="LogInButton" Text="Login" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogInButton_Click" PostBackUrl="Login.aspx"/>
                     </div>
                   
                  </div>

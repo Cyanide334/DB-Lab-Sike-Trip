@@ -15,7 +15,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
         public void sign_up(string name, string username, string password, string email, string country, string city,
-    string contact, string credit, string DOB)
+    string contact, string credit, string DOB, ref int rtn)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -28,22 +28,23 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd = new SqlCommand("dbo.signup", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-               
+
                 cmd.Parameters.Add("@UsertType", SqlDbType.Int);
                 cmd.Parameters.Add("@FullName", SqlDbType.VarChar, 40);
                 cmd.Parameters.Add("@Username", SqlDbType.VarChar, 40);
                 cmd.Parameters.Add("@Email", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@Password", SqlDbType.VarChar, 40);
-                cmd.Parameters.Add("@DateOfBirth", SqlDbType.VarChar,20);
+                cmd.Parameters.Add("@DateOfBirth", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@ContactNo", SqlDbType.VarChar, 12);
                 cmd.Parameters.Add("@CreditCardNo", SqlDbType.VarChar, 16);
                 cmd.Parameters.Add("@City", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@Country", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@TotalBusServicesProvided", SqlDbType.Int);
                 cmd.Parameters.Add("@TotalTourServicesProvided", SqlDbType.Int);
-                
 
-                
+
+
+
                 cmd.Parameters["@UsertType"].Value = 1;
                 cmd.Parameters["@FullName"].Value = name;
                 cmd.Parameters["@Username"].Value = username;
@@ -56,17 +57,24 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@Country"].Value = country;
                 cmd.Parameters["@TotalBusServicesProvided"].Value = 0;
                 cmd.Parameters["@TotalTourServicesProvided"].Value = 0;
-               
+
+
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
 
 
 
                 cmd.ExecuteNonQuery();
+                rtn = (int)cmd.Parameters["@ReturnVal"].Value;
                 con.Close();
             }
 
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
+
             }
 
         }
@@ -195,12 +203,11 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
 
-    
 
 
-  
-        
-        
 
 
-   
+
+
+
+
