@@ -62,6 +62,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
 
      <!-- ======= Breadcrumbs ======= -->
+   
             <section id="breadcrumbs" class="breadcrumbs">
                 <div class="container">
                     <div
@@ -75,12 +76,13 @@
                     </div>
                 </div>
             </section>
+
       <!-- End Breadcrumbs -->
       <form id="ViewProfileForm" form action="/" runat="server">
-    <section class="viewProfile">
-
+    <section class="viewProfile" runat="server" id="DisplayProfileSection" visible="true">
+        
             <div class="container">
-    <div class="main-body">
+    <div class="main-body" >
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -89,9 +91,10 @@
 <%--                    <img src="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" alt="Admin" class="rounded-circle" width="150">--%>
                     <asp:Image ID="Image1" ImageUrl="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
-                      <h4>John Doe</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+
+                     <asp:textBox runat="server" id="display_username" style="border: none"></asp:textBox>
+
+                      <p class="text-muted font-size-sm" id="City_And_Country_display"></p>
                     <%--  <button class="btn btn-danger">Follow</button>
                       <button class="btn btn-outline-danger">Message</button>--%>
                          <asp:Button ID="ViewProfileFollowButton" Text="Follow" runat="server" class="btn btn-danger"></asp:Button>
@@ -109,7 +112,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                      <asp:textBox runat="server" id="display_name" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -118,7 +121,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                     <asp:textBox runat="server" id="display_email" style="border: none" ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -127,38 +130,41 @@
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
+                       <asp:textBox runat="server" id="display_phone" style="border: none" ReadOnly="True"></asp:textBox>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
+                      <h6 class="mb-0">City</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      <asp:textBox runat="server" id="display_city" style="border: none" ReadOnly="True"></asp:textBox>
                     </div>
                   </div>
-                  <hr>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Country</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <asp:textBox runat="server" id="display_country" style="border: none" ReadOnly="True"></asp:textBox>
+                    </div>
+                  </div>
+                    <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Date of Birth</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      dd-mm-yyyy
+                      <asp:textBox runat="server" id="display_dob" style="border: none" ReadOnly="True"></asp:textBox>
                     </div>
                   </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">User Type</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      Premium
-                    </div>
-                  </div>
+
                 </div>
               </div>
+            </div>
+           
               <!--<div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
@@ -218,8 +224,32 @@
             </div>
           </div>
         </div>
-    </div>     
+        
     </section>
+           <section id="contact" class="contact">
+      <div class="container"> 
+        <div class="row ms-5 justify-content-center">
+
+          <div class="col-lg-8 mt-lg-0">
+           <div id ="showLogInButton" runat="server" visible ="true">
+                
+                       <div class="col-md-6 text-center">
+                           <h4 id = "NotAlreadyLoggedIn" runat="server" > You are not logged in from an account</h4>
+                            <br />
+                            <br />
+                           <h4 id = "ID1" runat="server" > Login From an account</h4>
+                            <br />
+                            <br />
+                           <br />
+                      <asp:Button ID="LogInButton" Text="Login" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogInButton_Click" PostBackUrl="Login.aspx"/>
+                    </div>
+                  
+                 </div>
+               </div>
+             </div>
+           </div>
+          </section>
+
      </form>
 </asp:Content>
 

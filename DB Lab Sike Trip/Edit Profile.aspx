@@ -80,7 +80,7 @@
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
 <%--                <img class="rounded-circle mt-5" src="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg">--%>
                         <asp:Image ID="Image1" ImageUrl="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" class="rounded-circle" runat="server" />
-                <span class="font-weight-bold">Amelly</span><span class="text-black-50">amelly12@bbb.com</span><span> </span></div>
+                <span class="font-weight-bold" runat="server" id="editProfileUsername"></span><span class="text-black-50" runat="server" id="editProfileEmail"></span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
             <form runat="server">
@@ -90,20 +90,23 @@
                     <h4 class="text-right">Edit Profile</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><asp:TextBox ID="editProfileName" runat="server" placeholder="name" class="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Username</label><asp:TextBox ID="editProfileUsername" runat="server" placeholder="username" class="form-control"></asp:TextBox></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Password</label><asp:TextBox ID="editProfilePassword" runat="server" placeholder="enter new password" class="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">PhoneNumber</label><asp:TextBox ID="editProfilePhone" runat="server" placeholder="enter phone number" class="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">Email ID</label><asp:TextBox ID="editProfileEmail" runat="server" placeholder="enter email id" class="form-control"></asp:TextBox></div>
-                    <div class="col-md-12"><label class="labels">Date of Birth</label><asp:TextBox ID="editProfileDateOfBirth" placeholder="Date of Birth" runat="server" class="form-control"></asp:TextBox></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><asp:TextBox ID="editProfileCountry" runat="server" placeholder="country" class="form-control"></asp:TextBox>
+                    <div class="col-md-12"><label class="labels"><h6>Name</h6></label><asp:TextBox ID="editProfileName" runat="server"  class="form-control"></asp:TextBox></div>
                     
+                     
                 </div>
-                <div class="mt-5 text-center"><asp:Button ID="editProfileSaveButton"  runat="server" Text="Save Profile" class="btn btn-primary profile-button" Width="130px" Height="40px" /></div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels"><h6>Password</h6></label><asp:TextBox ID="editProfilePassword" runat="server"  class="form-control" TextMode="password" placeholder="Enter Password"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels"><h6>Confirm Password</h6></label><asp:TextBox ID="editProfileConfirmPassword" runat="server"  class="form-control" TextMode="password" placeholder="Confirm Password"></asp:TextBox></div>
+                    <div class="col-md-12"><label class="labels"><h6>Phone Number</h6></label><asp:TextBox ID="editProfilePhone" runat="server"  class="form-control"></asp:TextBox></div>
+                    <div class="col-md-12"><label class="labels"><h6>Credit Card </h6></label><asp:TextBox ID="editProfileCredit" runat="server"  class="form-control"></asp:TextBox></div>
+                </div>
+                <div class="row mt-3">
+                     <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels"><h6>City</h6></label><asp:TextBox ID="editProfileCity" runat="server"  class="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels"><h6>Country</h6></label><asp:TextBox ID="editProfileCountry" runat="server"  class="form-control"></asp:TextBox></div>
+                </div>
+                <div class="mt-5 text-center"><asp:Button ID="editProfileSaveButton"  runat="server" Text="Save Profile" class="btn btn-primary profile-button" Width="130px" Height="40px"
+                   OnClick="editProfileSaveButton_Click" /></div>
             </div>
             </form>
         </div>

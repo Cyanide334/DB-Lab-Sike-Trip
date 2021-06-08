@@ -24,6 +24,24 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
+        /// editProfileUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl editProfileUsername;
+
+        /// <summary>
+        /// editProfileEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl editProfileEmail;
+
+        /// <summary>
         /// editProfileName control.
         /// </summary>
         /// <remarks>
@@ -31,15 +49,6 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox editProfileName;
-
-        /// <summary>
-        /// editProfileUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editProfileUsername;
 
         /// <summary>
         /// editProfilePassword control.
@@ -51,6 +60,15 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox editProfilePassword;
 
         /// <summary>
+        /// editProfileConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox editProfileConfirmPassword;
+
+        /// <summary>
         /// editProfilePhone control.
         /// </summary>
         /// <remarks>
@@ -60,22 +78,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox editProfilePhone;
 
         /// <summary>
-        /// editProfileEmail control.
+        /// editProfileCredit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editProfileEmail;
+        protected global::System.Web.UI.WebControls.TextBox editProfileCredit;
 
         /// <summary>
-        /// editProfileDateOfBirth control.
+        /// editProfileCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editProfileDateOfBirth;
+        protected global::System.Web.UI.WebControls.TextBox editProfileCity;
 
         /// <summary>
         /// editProfileCountry control.
