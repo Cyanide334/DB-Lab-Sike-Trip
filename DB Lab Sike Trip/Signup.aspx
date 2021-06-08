@@ -33,6 +33,15 @@
                     </div>
               </div>
             <form  ID ="SignUpForm" class="php-email-form_1" runat="server">
+                <div class="row mt-3">
+                <div class="col-md-6 form-group">
+                    <div class="row mt-3">
+                    <div class="col-md-6 form-group">
+                    <header style ="color:Red" id="signuperror" runat="server"></header>
+                    </div>
+                    </div>
+                </div>
+              </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
                   <asp:TextBox  runat="server" class="form-control" id="signUpFullName" placeholder="Fullname" ></asp:TextBox>
@@ -75,12 +84,13 @@
                   <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
                 </div>
              </div>
-            
             <div class="row mt-3">
-                <div class="form-group text-center" id="signUpError" style="color:red">
-                
+                <div class="form-group text-center" id="signUpError1" style="color:red">
+         
                 </div>
             </div>
+           
+
             <div class="row mt-3">
                 <div class="text-center">
                    <asp:Button ID="signupSave" Text="Sign Up" runat="server" CssClass="btn btn-danger" Width="150px" OnClick="SignupSave_Click" OnClientClick="return validate()"/>

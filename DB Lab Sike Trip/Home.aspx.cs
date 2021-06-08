@@ -11,7 +11,10 @@ namespace DB_Lab_Sike_Trip
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] != null)
+            {
+                welcomespan.InnerText = "SIKE! TRIP, " + Session["Username"].ToString() + '!';
+            }
         }
     }
 }

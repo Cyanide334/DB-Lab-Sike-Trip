@@ -11,7 +11,22 @@ namespace DB_Lab_Sike_Trip
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null)
+            {
+                DisplayProfileSection.Visible = false;
+             
+            }
+            if (Session["Username"] != null)
+            {
+                showLogInButton.Visible = false;
+            }
+        }
 
+     
+
+        protected void LogInButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

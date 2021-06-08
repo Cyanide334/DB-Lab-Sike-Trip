@@ -62,6 +62,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
 
      <!-- ======= Breadcrumbs ======= -->
+   
             <section id="breadcrumbs" class="breadcrumbs">
                 <div class="container">
                     <div
@@ -75,12 +76,13 @@
                     </div>
                 </div>
             </section>
+
       <!-- End Breadcrumbs -->
       <form id="ViewProfileForm" form action="/" runat="server">
-    <section class="viewProfile">
-
+    <section class="viewProfile" runat="server" id="DisplayProfileSection" visible="true">
+        
             <div class="container">
-    <div class="main-body">
+    <div class="main-body" >
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -159,6 +161,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+           
               <!--<div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
@@ -218,8 +222,32 @@
             </div>
           </div>
         </div>
-    </div>     
+        
     </section>
+           <section id="contact" class="contact">
+      <div class="container"> 
+        <div class="row ms-5 justify-content-center">
+
+          <div class="col-lg-8 mt-lg-0">
+           <div id ="showLogInButton" runat="server" visible ="true">
+                
+                       <div class="col-md-6 text-center">
+                           <h4 id = "NotAlreadyLoggedIn" runat="server" > You are not logged in from an account</h4>
+                            <br />
+                            <br />
+                           <h4 id = "ID1" runat="server" > Login From an account</h4>
+                            <br />
+                            <br />
+                           <br />
+                      <asp:Button ID="LogInButton" Text="Login" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="LogInButton_Click" PostBackUrl="Login.aspx"/>
+                    </div>
+                  
+                 </div>
+               </div>
+             </div>
+           </div>
+          </section>
+
      </form>
 </asp:Content>
 

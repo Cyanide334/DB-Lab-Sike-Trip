@@ -12,7 +12,7 @@
         <div class="carousel-item active" style="background-image: url(assets/img/home1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>SIKE! TRIP</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span id="welcomespan" runat="server">SIKE! TRIP</span></h2>
               <p class="animate__animated animate__fadeInUp">We will provide the best tour packages!</p>
               <a href="Tour Booking.aspx" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
             </div>

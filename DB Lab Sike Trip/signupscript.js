@@ -1,4 +1,4 @@
-﻿var errorsignup = document.getElementById('signUpError');
+﻿var errorsignup = document.getElementById('signUpError1');
 var usernamechar = /^[a-zA-Z0-9._][a-zA-Z]+[0-9]*$/;
 /*
  [a-zA-Z0-9_] to match alphanumerics and the underscore
