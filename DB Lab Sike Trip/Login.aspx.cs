@@ -48,7 +48,7 @@ namespace DB_Lab_Sike_Trip
             else
             {
                 Session["Username"] = name;
-                Response.Redirect("Home.aspx");
+                Response.Redirect("View Profile.aspx");
             }
 
 

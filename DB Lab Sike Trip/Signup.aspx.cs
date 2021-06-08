@@ -84,6 +84,7 @@ namespace DB_Lab_Sike_Trip
             string username = signUpUsername.Text;
             string country = signUpCountry.Text;
             string DOB = dob.Text;
+
             myDAL obj = new myDAL();
 
             // checks
@@ -149,7 +150,6 @@ namespace DB_Lab_Sike_Trip
                 int rtn = 10;
                 obj.sign_up(name, username, password, email, country, city, contact, credit, DOB, ref rtn);
                 displayString(rtn, ref outputString, username);
-
             }
 
         }
