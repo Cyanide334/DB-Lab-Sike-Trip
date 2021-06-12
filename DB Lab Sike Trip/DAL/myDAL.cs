@@ -460,7 +460,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "update Users set Password = '" + new_name + "' where Password = '" + username + "'";
+                string qry = "update Users set Password = '" + new_name + "' where Username = '" + username + "'";
 
                 cmd = new SqlCommand(qry, con);
                 cmd.ExecuteNonQuery();
@@ -519,27 +519,7 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
 
-        public void update_credit(string username, string new_credit)
-        {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cmd;
-
-            try
-            {
-                string qry = "update Users set CreditCardNo = '" + new_credit + "' where Username = '" + username + "'";
-
-                cmd = new SqlCommand(qry, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-
-            catch (Exception ex)
-            {
-                System.Web.HttpContext.Current.Response.Write(ex.Message);
-
-            }
-        }
+       
 
         public void update_phone(string username, string new_phone)
         {
@@ -563,7 +543,126 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
+
+        public int update_credit(string username, string new_credit)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.updateCredit", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@newCredit", SqlDbType.VarChar, 13);
+                cmd.Parameters.Add("@Username", SqlDbType.VarChar, 30);
+
+                cmd.Parameters["@newCredit"].Value = new_credit;
+                cmd.Parameters["@Username"].Value = username;
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+
+
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+           
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return 2;
+
+            }
+        }
+
+
+
+        public int update_username(string username, string new_username)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.updateUsername", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@newUsername", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@CurrentUsername", SqlDbType.VarChar, 30);
+
+                cmd.Parameters["@newUsername"].Value = new_username;
+                cmd.Parameters["@currentUsername"].Value = username;
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+
+
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return 2;
+
+            }
+        }
+
+
+        public int update_email(string username, string new_email)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.updateEmail", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@newEmail", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@Username", SqlDbType.VarChar, 30);
+
+                cmd.Parameters["@newEmail"].Value = new_email;
+                cmd.Parameters["@Username"].Value = username;
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+
+
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return 2;
+
+            }
+        }
+
     }
+
+
+
+
 
 
 

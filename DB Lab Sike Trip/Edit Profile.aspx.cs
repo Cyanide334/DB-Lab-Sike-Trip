@@ -74,6 +74,8 @@ namespace DB_Lab_Sike_Trip
                 editProfileCredit.Attributes.Add("placeholder", get_credit());
                 editProfileName.Attributes.Add("placeholder", get_name());
                 editProfilePhone.Attributes.Add("placeholder", get_phone());
+                editProfileUsernameForm.Attributes.Add("placeholder", Session["Username"].ToString());
+                editProfileEmailForm.Attributes.Add("placeholder", get_email());
             }
         }
 
@@ -84,43 +86,84 @@ namespace DB_Lab_Sike_Trip
 
         protected void editProfileSaveButton_Click(object sender, EventArgs e)
         {
-            if (editProfileName.Text != "")
+            bool success = true;
+            myDAL obj = new myDAL();
+            if (editProfileUsernameForm.Text != "")
             {
-                myDAL obj = new myDAL();
-                obj.update_name(Session["Username"].ToString(), editProfileName.Text);
-            }
-
-            if (editProfileCity.Text != "")
-            {
-                myDAL obj = new myDAL();
-                obj.update_city(Session["Username"].ToString(), editProfileCity.Text);
-            }
-
-            if (editProfileCountry.Text != "")
-            {
-                myDAL obj = new myDAL();
-                obj.update_country(Session["Username"].ToString(), editProfileCountry.Text);
-            }
-
-            if (editProfilePhone.Text != "")
-            {
-                myDAL obj = new myDAL();
-                obj.update_phone(Session["Username"].ToString(), editProfilePhone.Text);
+                string val = editProfileUsernameForm.Text;
+                if (obj.update_username(Session["Username"].ToString(), editProfileUsernameForm.Text) != 0)
+                {
+                    // print error
+                    error.InnerText = "Username already in use!";
+                    success = false;
+                }
+                else 
+                {
+                    Session["Username"] = val;
+                }
             }
 
             if (editProfileCredit.Text != "")
             {
-                myDAL obj = new myDAL();
-                obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text);
+                if (obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text) != 0)
+                {
+                    // print error
+                    success = false;
+                    error.InnerText = "Credit Card already in use!";
+                }
             }
 
-            if (editProfilePassword.Text != "")
+            if (editProfileEmailForm.Text != "")
             {
-                myDAL obj = new myDAL();
-                obj.update_password(Session["Username"].ToString(), editProfilePassword.Text);
+                if (obj.update_email(Session["Username"].ToString(), editProfileEmailForm.Text) != 0)
+                {
+                    // print error
+                    error.InnerText = "Email already in use!";
+                    success = false;
+                }
             }
 
-            Response.Redirect("View Profile.aspx");
+
+            if (success == true)
+            {
+                if (editProfileName.Text != "")
+                {
+                   // myDAL obj = new myDAL();
+                    obj.update_name(Session["Username"].ToString(), editProfileName.Text);
+                }
+
+                if (editProfileCity.Text != "")
+                {
+                    //myDAL obj = new myDAL();
+                    obj.update_city(Session["Username"].ToString(), editProfileCity.Text);
+                }
+
+                if (editProfileCountry.Text != "")
+                {
+                    //myDAL obj = new myDAL();
+                    obj.update_country(Session["Username"].ToString(), editProfileCountry.Text);
+                }
+
+                if (editProfilePhone.Text != "")
+                {
+                    //myDAL obj = new myDAL();
+                    obj.update_phone(Session["Username"].ToString(), editProfilePhone.Text);
+                }
+
+                if (editProfileCredit.Text != "")
+                {
+                    //myDAL obj = new myDAL();
+                    obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text);
+                }
+
+                if (editProfilePassword.Text != "")
+                {
+                   // myDAL obj = new myDAL();
+                    obj.update_password(Session["Username"].ToString(), editProfilePassword.Text);
+                }
+
+                Response.Redirect("View Profile.aspx");
+            }
         }
     }
 }
