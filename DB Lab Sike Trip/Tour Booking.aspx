@@ -143,17 +143,18 @@
       box-shadow: 0 0 18px 0 #d9232d;
       }
       @media (max-width: 700px) {
-      .testbox .name-item, .city-item {
+      .testbox .tour-id, .city-item {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       }
-      .testbox .name-item input, .city-item input {
+      .testbox .tour-id input, .city-item input {
       width: calc(50% - 20px);
       }
      .testbox  .city-item select {
       width: calc(50% - 8px);
       }
+
       }
     </style>
 </asp:Content>
@@ -175,218 +176,134 @@
             </section>
       <!-- End Breadcrumbs -->
 
-    <section class="tourbooking">
-
+   <section class="tourbooking">
+<div>
     <div class="testbox">
-    <form id="TourBookingForm" action="/" runat="server">
+    <form id="Form1" action="/" runat="server">
       <div class="banner">
         <h1>Tour Booking Form</h1>
       </div>
-      <div class="item">
-        <p>Passenger contact name</p>
-        <div class="name-item">
-<%--          <input type="text" name="name" placeholder="First" />
-          <input type="text" name="name" placeholder="Last" />--%>
-           <asp:TextBox ID="TourBookingFirst" placeholder="First" runat="server"></asp:TextBox>
-           <asp:TextBox ID="TourBookingLast" placeholder="Last" runat="server"></asp:TextBox>
-        </div>
-      </div>
-      <div class="item">
-        <p>Email</p>
-<%--        <input type="email" name="email"/>--%>
-         <asp:TextBox ID="TourBookingEmail" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Phone</p>
-<%--        <input type="text" name="phone" placeholder="### ### ####"/>--%>
-          <asp:TextBox ID="TourBookingPhone" placeholder="### ### ####" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Address</p>
-<%--        <input type="text" name="name" placeholder="Street address" required/>
-        <input type="text" name="name" placeholder="Street address line 2" required/>--%>
-           <asp:TextBox ID="TourBookingStreet1" placeholder="Street address" runat="server"></asp:TextBox>
-           <asp:TextBox ID="TourBookingStreet2" placeholder="Street address line 2" runat="server"></asp:TextBox>
-        <div class="city-item">
-<%--          <input type="text" name="name" placeholder="City" required/>
-          <input type="text" name="name" placeholder="Region" required/>
-          <input type="text" name="name" placeholder="Postal / Zip code" required/>--%>
-           <asp:TextBox ID="TourBookingCity" placeholder="City" runat="server"></asp:TextBox>
-           <asp:TextBox ID="TourBookingRegion" placeholder="Region" runat="server"></asp:TextBox>
-            <asp:TextBox ID="TourBookingPostalCode" placeholder="Postal / Zip Code" runat="server"></asp:TextBox>
-          <%--<select required>
-            <option selected value="" disabled>Country</option>
-            <option value="1">Russia</option>
-            <option value="2">Germany</option>
-            <option value="3">France</option>
-            <option value="4">Armenia</option>
-            <option value="5">USA</option>
-          </select>--%>
-         <asp:DropDownList ID="TourBookingCountry" runat="server">
-        <asp:ListItem Text="Select" Value="Select Country"></asp:ListItem>
-        <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
-        <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
-        <asp:ListItem Text="France" Value="3"></asp:ListItem>
-        <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
-        <asp:ListItem Text="Japan" Value="5"></asp:ListItem>
-        </asp:DropDownList>
-        </div>
-      </div>
-      <div class="item">
-        <p>Total number of adults</p>
-        <%--<input type="text" name="adults"/>--%>
-         <asp:TextBox ID="TourBookingAdults1" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Adults' names</p>
-        <textarea rows="3"></textarea>
-      </div>
-      <div class="item">
-        <p>Total number of children</p>
-<%--        <input type="text" name="adults"/>--%>
-         <asp:TextBox ID="TourBookingChildren" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Children names and ages</p>
-        <textarea rows="3"></textarea>
-      </div>
-      <div class="item">
-        <p>Type of travel</p>
-        <%--<select required>
-          <option value="">Business</option>
-          <option value="1">Adventure</option>
-          <option value="2">Cultural</option>
-          <option value="3">Cruising</option>
-          <option value="4">Active mobility</option>
-          <option value="5">Active vacation</option>
-          <option value="6">Quiet vacation</option>
-          <option value="7">Package tour</option>
-          <option value="8">Creative trip</option>
-          <option selected value="9">Honeymoon</option>
-        </select>--%>
-          <asp:DropDownList ID="TourBookingTravelType" runat="server">
-        <asp:ListItem Text="Select" Value="Select Type"></asp:ListItem>
-        <asp:ListItem Text="Business" Value="1"></asp:ListItem>
-        <asp:ListItem Text="Adventure" Value="2"></asp:ListItem>
-        <asp:ListItem Text="Cultural" Value="3"></asp:ListItem>
-        <asp:ListItem Text="Cruising" Value="4"></asp:ListItem>
-        <asp:ListItem Text="Active mobility" Value="5"></asp:ListItem>
-        <asp:ListItem Text="Quiet vacation" Value="6"></asp:ListItem>
-        <asp:ListItem Text="Package Tour" Value="7"></asp:ListItem>
-        <asp:ListItem Text="Creative Trip" Value="8"></asp:ListItem>
-        <asp:ListItem Text="Honeymoon" Value="9"></asp:ListItem>
-        </asp:DropDownList>
-      </div>
-      <div class="item">
-        <p>Destination</p>
-<%--        <input type="text" name="destination"/>--%>
-         <asp:TextBox ID="TourBookingDestination" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Preferred hotel / resort</p>
-        <%--<input type="text" name="hotel"/>--%>
-        <asp:TextBox ID="TourBookingHotel" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Number of rooms</p>
-<%--        <input type="text" name="number"/>--%>
-        <asp:TextBox ID="TourBookingNumber" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>Size of group</p>
-<%--        <input type="text" name="size"/>--%>
-        <asp:TextBox ID="TourBookingSize" runat="server"></asp:TextBox>
-      </div>
-      <div class="item">
-        <p>King / double / suite / penthouse</p>
-<%--        <input type="text" name="room"/>--%>
-        <asp:TextBox ID="TourBookingRoom" runat="server"></asp:TextBox>
-      </div>
-      <div class="question">
-        <p>Transportation to and from hotel</p>
-        <div class="question-answer">
-          <div>
-<%--            <input type="radio" value="none" id="radio_1" name="question1"/>--%>
-            
-            <asp:RadioButton ID="TourBookingRadioY1" GroupName="Question1" runat="server" value="none" ClientIDMode="Static"/>
-            <label for="TourBookingRadioY1" class="radio"><span>Yes</span></label>
-          </div>
-          <div>
-<%--            <input type="radio" value="none" id="radio_2" name="question1"/>--%>
-            
-            <asp:RadioButton ID="TourBookingRadioN1" GroupName="Question1" runat="server" ClientIDMode="Static"/>
-              <label for="TourBookingRadioN1" class="radio"><span>No</span></label>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <p>Estimated trip amount</p>
-<%--        <input type="number" name="amount" placeholder="USD 0.00"/>--%>
-           <asp:TextBox ID="TourBookingAmount" placeholder="USD 0.00" runat="server"></asp:TextBox>
-      </div>
-      <div class="question">
-        <p>Is anyone traveling over the Age of 55?</p>
-        <div class="question-answer">
-          <div>
-<%--            <input type="radio" value="none" id="radio_3" name="question2"/>--%>
-           
-            <asp:RadioButton ID="TourBookingRadioY2" GroupName="Question2" runat="server" ClientIDMode="Static"/>
-               <label for="TourBookingRadioY2" class="radio"><span>Yes</span></label>
-          </div>
-          <div>
-<%--            <input type="radio" value="none" id="radio_4" name="question2"/>--%>
-            
-            <asp:RadioButton ID="TourBookingRadioN2" GroupName="Question2" runat="server" ClientIDMode="Static"/>
-              <label for="TourBookingRadioN2" class="radio"><span>No</span></label>
-          </div>
-        </div>
-        <div class="question">
-          <p>Does anyone traveling have a military background?</p>
-          <div class="question-answer">
-            <div>
-<%--              <input type="radio" value="none" id="radio_5" name="question3"/>--%>
-             
-            <asp:RadioButton ID="TourBookingRadioY3" GroupName="Question3" runat="server" ClientIDMode="Static"/>
-                <label for="TourBookingRadioY3" class="radio"><span>Yes</span></label>
-            </div>
-            <div>
-<%--              <input type="radio" value="none" id="radio_6" name="question3"/>--%>
-             
-            <asp:RadioButton ID="TourBookingRadioN3" GroupName="Question3" runat="server" ClientIDMode="Static"/>
-                 <label for="TourBookingRadioN3" class="radio"><span>No</span></label>
-            </div>
-          </div>
-        </div>
         <div class="item">
-          <p>Special instructions</p>
-          <textarea rows="3"></textarea>
-        </div>
+        <p>Number of Travellers</p>
+           <asp:TextBox ID="TourBookingTravellers" placeholder="Enter Number of Travellers" runat="server"></asp:TextBox>
+      </div>
         <div class="item">
-          <p>Activities: spa, golf, excursion, event ticket, shows, etc.</p>
-          <textarea rows="3"></textarea>
-        </div>
-        <div class="question">
-          <p>Include travel insurance</p>
-          <div class="question-answer">
-            <div>
-<%--              <input type="radio" value="none" id="radio_7" name="question4"/>--%>
-              
-            <asp:RadioButton ID="TourBookingRadioY4" GroupName="Question4" runat="server" ClientIDMode="Static"/>
-                <label for="TourBookingRadioY4" class="radio"><span>Yes</span></label>
-            </div>
-            <div>
-<%--              <input type="radio" value="none" id="radio_8" name="question4"/>--%>
-              
-            <asp:RadioButton ID="TourBookingRadioN4" GroupName="Question4" runat="server" ClientIDMode="Static"/>
-                <label for="TourBookingRadioN4" class="radio"><span>No</span></label>
-            </div>
-          </div>
-        </div>
+        <p>Credit Card Information</p>
+           <asp:TextBox ID="TourBookingCCnumber" placeholder="Enter Credit Card Number" runat="server"></asp:TextBox>
+      </div>
+        <hr>
+              <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Tour ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    1
+                    </div>
+                  </div>
+             <hr>
+              <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Price</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     p*n has to be calculated by formula
+                    </div>
+                  </div>
+            <hr>
+              <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Departure</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Lahore
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Destination</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Murree
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Departure Date</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      dd-mm-yyyy
+                    </div>
+                  </div>
+                     <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Departure Time</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      hh:mm am/pm
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Arrival Time</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                         hh:mm am/pm
+                    </div>
+                  </div>
+                      <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Return Date</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     dd-mm-yyyy 
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Price per Person</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    1500
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Number of Days</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    2
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Bus Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     LEX-1234
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Tour Guide Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     Sikander
+                    </div>
+                  </div>       
         <div class="btn-block">
-<%--          <button type="submit">Book</button>--%>
-            <asp:Button ID="TourBookingSubmitButton" Text="Book" runat="server" CssClass="aspButton"></asp:Button>
+            <asp:Button ID="Button1" Text="Book" runat="server" CssClass="aspButton"></asp:Button>
         </div>
     </form>
+    </div>
     </div>
   </section>
 </asp:Content>

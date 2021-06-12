@@ -87,16 +87,13 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-<%--                    <img src="assets\img\testimonials\testimonials-3.jpg" alt="Admin" class="rounded-circle" width="150">--%>
                         <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-3.jpg" class="rounded-circle" width="150" runat="server" />
                       <div class="mt-3">
-                      <h4>Sike! Tours</h4>
-                      <p class="text-secondary mb-1">Service Provider</p>
+                      <h4>Tour Details</h4>
+                      <p class="text-secondary mb-1">Press Book to Proceed</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
-                    <%--  <button class="btn btn-danger">Book</button>
-                      <button class="btn btn-outline-danger">Message</button>--%>
                     <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger"></asp:Button>
-                     <asp:Button ID="ViewTourMessageButton" Text="Message" runat="server" CssClass="btn btn-outline-danger"></asp:Button>
+<%--                     <asp:Button ID="ViewTourMessageButton" Text="Message" runat="server" CssClass="btn btn-outline-danger"></asp:Button>--%>
                     </div>
                   </div>
                 </div>
@@ -131,31 +128,58 @@
                       dd-mm-yyyy
                     </div>
                   </div>
-                  <hr>
+                     <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Arrival Date</h6>
+                      <h6 class="mb-0">Departure Time</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        dd-mm-yyyy
+                      hh:mm am/pm
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Booking Price</h6>
+                      <h6 class="mb-0">Arrival Time</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Rs. 15000
+                         hh:mm am/pm
                     </div>
                   </div>
-                  <hr>
+                      <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Tour Rating Points</h6>
+                      <h6 class="mb-0">Return Date</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                     10
+                     dd-mm-yyyy 
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Reservation Count</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    10
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Price</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    1500
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Number of Days</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    2
                     </div>
                   </div>
                     <hr>
@@ -173,7 +197,7 @@
                       <h6 class="mb-0">Tour Guide Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                     None Assigned
+                     Sikander
                     </div>
                   </div>
                 </div>
