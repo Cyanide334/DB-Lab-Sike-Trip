@@ -94,7 +94,7 @@ namespace DB_Lab_Sike_Trip
                 if (obj.update_username(Session["Username"].ToString(), editProfileUsernameForm.Text) != 0)
                 {
                     // print error
-                    error.InnerText = "Username already in use!";
+                    EditProfileError.InnerText = "Username already in use!";
                     success = false;
                 }
                 else 
@@ -109,7 +109,7 @@ namespace DB_Lab_Sike_Trip
                 {
                     // print error
                     success = false;
-                    error.InnerText = "Credit Card already in use!";
+                    EditProfileError.InnerText = "Credit Card already in use!";
                 }
             }
 
@@ -118,7 +118,7 @@ namespace DB_Lab_Sike_Trip
                 if (obj.update_email(Session["Username"].ToString(), editProfileEmailForm.Text) != 0)
                 {
                     // print error
-                    error.InnerText = "Email already in use!";
+                    EditProfileError.InnerText = "Email already in use!";
                     success = false;
                 }
             }

@@ -42,13 +42,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl editProfileEmail;
 
         /// <summary>
-        /// error control.
+        /// EditProfileError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl error;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl EditProfileError;
 
         /// <summary>
         /// editProfileName control.

@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Edit Profile.aspx.cs" Inherits="DB_Lab_Sike_Trip.Edit_Profile" %>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script src="editprofilescript.js"></script>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
     <style type="text/css">
 .editProfile {
      background-image: url("assets/img/home3.jpg");  
@@ -85,7 +89,7 @@
         <div class="col-md-5 border-right">
             <form runat="server">
             <div class="p-3 py-5">
-                 <header style ="color:Red" id="error" runat="server"></header>
+                 <header style ="color:Red" id="EditProfileError" runat="server"></header>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 
                     <h4 class="text-right">Edit Profile</h4>
@@ -109,7 +113,7 @@
                     <div class="col-md-6"><label class="labels"><h6>Country</h6></label><asp:TextBox ID="editProfileCountry" runat="server"  class="form-control"></asp:TextBox></div>
                 </div>
                 <div class="mt-5 text-center"><asp:Button ID="editProfileSaveButton"  runat="server" Text="Save Profile" class="btn btn-primary profile-button" Width="130px" Height="40px"
-                   OnClick="editProfileSaveButton_Click" /></div>
+                   OnClick="editProfileSaveButton_Click" OnClientClick="return validate()"/></div>
             </div>
             </form>
         </div>
