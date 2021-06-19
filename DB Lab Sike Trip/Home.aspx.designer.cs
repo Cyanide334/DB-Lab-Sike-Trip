@@ -78,85 +78,40 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.Image Image6;
 
         /// <summary>
-        /// Image7 control.
+        /// portfolio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image7;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl portfolio;
 
         /// <summary>
-        /// Image8 control.
+        /// trips control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image8;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl trips;
 
         /// <summary>
-        /// Image9 control.
+        /// Section1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image9;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Section1;
 
         /// <summary>
-        /// Image10 control.
+        /// buses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image10;
-
-        /// <summary>
-        /// Image11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image11;
-
-        /// <summary>
-        /// Image12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image12;
-
-        /// <summary>
-        /// Image13 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image13;
-
-        /// <summary>
-        /// Image14 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image14;
-
-        /// <summary>
-        /// Image15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image15;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl buses;
 
         /// <summary>
         /// Image16 control.

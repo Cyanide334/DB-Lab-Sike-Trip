@@ -658,6 +658,93 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
+
+        //returns number of available tours
+        public int get_tours_from_db()
+        {
+
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.available_tours", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return -1;
+            }
+
+        }
+        public SqlDataReader get_tours()
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.selectTours", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                return reader;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+        public SqlDataReader get_buses()
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.selectBuses", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                return reader;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+            }
+        }
+
     }
 
 

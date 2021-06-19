@@ -102,9 +102,9 @@
     <!-- ======= Catalogue Section ======= -->
 
        <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio" runat="server">
         
-      <div class="container">
+      <div class="container" >
           <div class="section-title">
                 <h2>Sike! Trips</h2>
                  <p>Trips & Tours</p>
@@ -113,154 +113,28 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Type1</li>
-              <li data-filter=".filter-card">Type2</li>
-              <li data-filter=".filter-web">Type3</li>
             </ul>
           </div>
         </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image7" ImageUrl="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 1</h4>
-                <p>Type1</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image8" ImageUrl="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 3</h4>
-                <p>Type3</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image9" ImageUrl="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 2</h4>
-                <p>Type1</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image10" ImageUrl="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 6</h4>
-                <p>Type3</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image11" ImageUrl="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 4</h4>
-                <p>Type2</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image12" ImageUrl="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 5</h4>
-                <p>Type1</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image13" ImageUrl="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 7</h4>
-                <p>Type3</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image14" ImageUrl="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Tour 5</h4>
-                <p>Type3</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-<%--              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">--%>
-              <asp:Image ID="Image15" ImageUrl="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" runat="server" />
-              <div class="portfolio-info">
-                <h4>Something</h4>
-                <p>Type2</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="View Tour.aspx" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        
+        <div class="row portfolio-container" runat="server" id="trips">
         </div>
-
+      
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+      <!-- buses section -->
+          <section id="Section1" class="portfolio" runat="server">
+        
+      <div class="container" >
+          <div class="section-title">
+                 <p>Buses</p>
+              </div>  
+        <div class="row portfolio-container" runat="server" id="buses">
+        </div>
+      
+      </div>
+    </section>
+          <!-- End Portfolio Section -->
 
          <section id="catalogue" class="catalogue">
       <div class="container">
