@@ -969,9 +969,10 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
-    }
-
+        //view bus functions
+        //bus make
         //get bus number
+
         public string return_bus_number_from_db(string _tid)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1000,39 +1001,6 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
-        //get tour guide name
-         public string return_tour_guide_name_from_db(string _tid)
-        {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cmd;
-            int tid = Convert.ToInt16(_tid);
-
-            try
-            {
-                string qry = "select TourGuideName from Tours where TourID = '" + tid + "'";
-
-                cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
-                con.Close();
-
-                return value;
-
-            }
-
-            catch (Exception ex)
-            {
-                System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
-
-            }
-
-        }
-
-
-
-        //view bus functions
-        //bus make
         public string return_bus_make_from_db(string _bid)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1206,7 +1174,49 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
+        //get tour guide name
+        public string return_tour_guide_name_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select TourGuideName from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
     }
+
+
+
+
+
+
+
+    
+
+
+
+
+
 }
 
 
