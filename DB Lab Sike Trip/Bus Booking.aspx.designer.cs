@@ -15,58 +15,94 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// display_busmake control.
+        /// DisplayBusBooking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_busmake;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayBusBooking;
 
         /// <summary>
-        /// display_licensenumber control.
+        /// BusBookingDestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_licensenumber;
+        protected global::System.Web.UI.WebControls.TextBox BusBookingDestination;
 
         /// <summary>
-        /// display_registrationnumber control.
+        /// BusBookingDeparture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_registrationnumber;
+        protected global::System.Web.UI.WebControls.TextBox BusBookingDeparture;
 
         /// <summary>
-        /// display_capacity control.
+        /// BusBookingCCnumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_capacity;
+        protected global::System.Web.UI.WebControls.TextBox BusBookingCCnumber;
 
         /// <summary>
-        /// display_priceperkm control.
+        /// display_booking_busmake control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_priceperkm;
+        protected global::System.Web.UI.WebControls.TextBox display_booking_busmake;
 
         /// <summary>
-        /// display_bus_reservation_count control.
+        /// display_booking_licensenumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_bus_reservation_count;
+        protected global::System.Web.UI.WebControls.TextBox display_booking_licensenumber;
+
+        /// <summary>
+        /// display_booking_registrationnumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_booking_registrationnumber;
+
+        /// <summary>
+        /// display_booking_capacity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_booking_capacity;
+
+        /// <summary>
+        /// display_booking_priceperkm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_booking_priceperkm;
+
+        /// <summary>
+        /// display_booking_bus_reservation_count control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_booking_bus_reservation_count;
 
         /// <summary>
         /// showBookingButton control.

@@ -320,6 +320,7 @@
     <Content Include="Login.aspx" />
     <Content Include="signupscript.js" />
     <Content Include="Tour Booking.aspx" />
+    <Content Include="tourbookingscript.js" />
     <Content Include="View Bus.aspx" />
     <Content Include="View Tour.aspx" />
     <Content Include="View Profile.aspx" />
