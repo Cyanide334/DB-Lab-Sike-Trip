@@ -54,8 +54,6 @@ namespace DB_Lab_Sike_Trip
 
         }
 
-  
-
         protected void LogOutButton_Click(object sender, EventArgs e)
         {
             Session["Username"] = null;

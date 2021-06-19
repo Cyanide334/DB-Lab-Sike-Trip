@@ -108,11 +108,6 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
 
-
-
-
-
-
         public void log_in(string username, string password, ref bool success, ref string outputString)
         {
 
@@ -142,41 +137,6 @@ namespace DB_Lab_Sike_Trip.DAL
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
             }
-
-            //SqlConnection con = new SqlConnection(conString);
-            //try
-            //{
-
-
-
-
-            //    con.Open();
-
-
-            //    SqlCommand cmd = new SqlCommand("dbo.login", con);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-
-
-            //    cmd.Parameters.Add("@Username", SqlDbType.VarChar, 30);
-            //    cmd.Parameters.Add("@Password", SqlDbType.VarChar, 30);
-            //    cmd.Parameters.Add("@output", SqlDbType.Int);
-
-
-            //    cmd.Parameters["@Username"].Value = username;
-            //    cmd.Parameters["@Password"].Value = password;
-            //    cmd.Parameters["@output"].Value = 0;
-            //    cmd.Parameters["@output"].Direction = ParameterDirection.ReturnValue;
-
-
-            //    cmd.ExecuteNonQuery();
-
-            //    int retval = (int)cmd.Parameters["@output"].Value;
-            //    con.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    System.Web.HttpContext.Current.Response.Write(ex.Message);
-            //}
 
 
         }
@@ -518,9 +478,6 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
-
-       
-
         public void update_phone(string username, string new_phone)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -580,7 +537,6 @@ namespace DB_Lab_Sike_Trip.DAL
 
             }
         }
-
 
 
         public int update_username(string username, string new_username)
@@ -658,6 +614,274 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
+
+        //view tour functions
+        public string return_departure_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select Departure from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //destination
+        public string return_destination_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select Destination from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //departure date
+        public string return_departure_date_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select DepartureDate from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //departure time
+        public string return_departure_time_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select DepartureTime from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //arrival time
+        public string return_arrival_time_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select ArrivalTime from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //return date
+        public string return_return_date_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select ReturnDate from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //reservation count
+        public string return_reservation_count_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select ReservationCount from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //price of tour
+        public string return_price_of_tour_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select Price from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //number of days
+        public string return_number_of_days_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select NumberOfDays from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
 
         //returns number of available tours
         public int get_tours_from_db()
@@ -747,15 +971,242 @@ namespace DB_Lab_Sike_Trip.DAL
 
     }
 
+        //get bus number
+        public string return_bus_number_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select BusNumber from Tours where ToursID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //get tour guide name
+         public string return_tour_guide_name_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select TourGuideName from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
 
 
 
+        //view bus functions
+        //bus make
+        public string return_bus_make_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
 
+            try
+            {
+                string qry = "select BusMake from Buses where BusID = '" + bid + "'";
 
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
 
+                return value;
 
+            }
 
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
 
+            }
+
+        }
+
+        //license number
+        public string return_bus_license_number_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
+
+            try
+            {
+                string qry = "select LicenseNumber from Buses where BusID = '" + bid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //Registration number
+        public string return_bus_registration_number_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
+
+            try
+            {
+                string qry = "select RegistrationNo from Buses where BusID = '" + bid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //capacity
+        public string return_bus_capacity_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
+
+            try
+            {
+                string qry = "select Capacity from Buses where BusID = '" + bid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //PricePerKm
+        public string return_bus_priceperkm_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
+
+            try
+            {
+                string qry = "select PricePerKm from Buses where BusID = '" + bid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        //Reservation Count
+        public string return_bus_reservation_count_from_db(string _bid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int bid = Convert.ToInt16(_bid);
+
+            try
+            {
+                string qry = "select ReservationCount from Buses where BusID = '" + bid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+    }
 }
 
 

@@ -79,8 +79,6 @@ namespace DB_Lab_Sike_Trip
                
             }
         }
-
-     
         
         // if user not logged in, show login table
         protected void LogInButton_Click(object sender, EventArgs e)

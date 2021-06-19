@@ -24,6 +24,15 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm ViewTourForm;
 
         /// <summary>
+        /// DisplayTourSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayTourSection;
+
+        /// <summary>
         /// Image1 control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
+        /// showBookTourButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookTourButton;
+
+        /// <summary>
         /// ViewTourBookButton control.
         /// </summary>
         /// <remarks>
@@ -40,5 +58,104 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ViewTourBookButton;
+
+        /// <summary>
+        /// display_departure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_departure;
+
+        /// <summary>
+        /// display_destination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_destination;
+
+        /// <summary>
+        /// display_departure_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_departure_date;
+
+        /// <summary>
+        /// display_departure_time control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_departure_time;
+
+        /// <summary>
+        /// display_arrival_time control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_arrival_time;
+
+        /// <summary>
+        /// display_return_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_return_date;
+
+        /// <summary>
+        /// display_reservation_count control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_reservation_count;
+
+        /// <summary>
+        /// display_price_of_tour control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_price_of_tour;
+
+        /// <summary>
+        /// dsiplay_number_of_days control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dsiplay_number_of_days;
+
+        /// <summary>
+        /// display_bus_number control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_bus_number;
+
+        /// <summary>
+        /// display_tour_guide control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_tour_guide;
     }
 }

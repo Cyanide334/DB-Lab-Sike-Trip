@@ -77,7 +77,8 @@
             </section>
       <!-- End Breadcrumbs -->
         <form id="ViewBusForm" form action="/" runat="server">
-
+            <%--have to fix this--%>
+<%--    <section id ="DisplayBus" class="viewProfile" visible = "true" runat ="server">--%> 
     <section class="viewProfile">
 
             <div class="container">
@@ -91,12 +92,17 @@
                      <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-2.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
                       <h4>Sike! Bus</h4>
-                      <p class="text-secondary mb-1">Service Provider</p>
+                      <p class="text-secondary mb-1">Press Book to Proceed</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
-                      <%--button class="btn btn-danger">Book</button>
-                      <button class="btn btn-outline-danger">Message</button>--%>
-                       <asp:Button ID="ViewBusBookButton" Text="Book" runat="server" class="btn btn-danger"></asp:Button>
-                     <asp:Button ID="ViewBusMessageButton" Text="Message" runat="server" class="btn btn-outline-danger"></asp:Button>
+
+                          <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
+                          <section id="contact" class="contact">      
+                 <div id ="showBookButton" runat="server" visible ="true">
+                           <p class="text-secondary mb-1"> You have not booked any buses</p>
+                       <asp:Button ID="ViewBusBookButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"></asp:Button>
+                     </div>          
+            </section>
+
                     </div>
                   </div>
                 </div>
@@ -110,7 +116,7 @@
                       <h6 class="mb-0">Bus Make</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Toyota
+                      <asp:textBox runat="server" id="display_busmake" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -119,7 +125,7 @@
                       <h6 class="mb-0">License Number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      LEE-1234
+                      <asp:textBox runat="server" id="display_licensenumber" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -128,7 +134,7 @@
                       <h6 class="mb-0">Registration Number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      1111-22222-44444
+                      <asp:textBox runat="server" id="display_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -137,25 +143,24 @@
                       <h6 class="mb-0">Capacity</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      25
+                      <asp:textBox runat="server" id="display_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Booking Price</h6>
+                      <h6 class="mb-0">Price per km</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Rs. 5000
+                      <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
-                  <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Bus Rating Points</h6>
+                      <h6 class="mb-0">Reservation Count</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                     10
+                      <asp:textBox runat="server" id="display_bus_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                 </div>
