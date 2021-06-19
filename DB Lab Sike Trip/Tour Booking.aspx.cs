@@ -81,21 +81,21 @@ namespace DB_Lab_Sike_Trip
         }
 
         //get reservation count
-        protected string get_reservation_count()
+        protected int get_reservation_count()
         {
             myDAL obj = new myDAL();
             return obj.return_reservation_count_from_db(Session["TourId"].ToString());
         }
 
         //get price of tour
-        protected string get_price_of_tour()
+        protected int get_price_of_tour()
         {
             myDAL obj = new myDAL();
             return obj.return_price_of_tour_from_db(Session["TourId"].ToString());
         }
 
         //get number of days
-        protected string get_number_of_days()
+        protected int get_number_of_days()
         {
             myDAL obj = new myDAL();
             return obj.return_number_of_days_from_db(Session["TourId"].ToString());
@@ -133,8 +133,8 @@ namespace DB_Lab_Sike_Trip
                 display_departure_time.Text = get_departure_time();
                 display_arrival_time.Text = get_arrival_time();
                 display_return_date.Text = get_return_date();
-                display_price_of_tour.Text = get_price_of_tour();
-                dsiplay_number_of_days.Text = get_number_of_days();
+                display_price_of_tour.Text = get_price_of_tour().ToString();
+                dsiplay_number_of_days.Text = get_number_of_days().ToString();
                 display_bus_number.Text = get_bus_number();
                 display_tour_guide.Text = get_tour_guide_name();
             }

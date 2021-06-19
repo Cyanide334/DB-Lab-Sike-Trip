@@ -160,16 +160,16 @@
                     <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Reservation Count</h6>
+                      <h6 class="mb-0">Available Seats</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    <asp:textBox runat="server" id="display_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox>
+                    <asp:textBox runat="server" id="display_available_seats" style="border: none"  ReadOnly="True"></asp:textBox>
                     </div>
                   </div>
                     <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Price</h6>
+                      <h6 class="mb-0">Price per Seat</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                     <asp:textBox runat="server" id="display_price_of_tour" style="border: none"  ReadOnly="True"></asp:textBox> 

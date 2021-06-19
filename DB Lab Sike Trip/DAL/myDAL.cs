@@ -625,7 +625,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select Departure from Tours where ToursID = '" + tid + "'";
+                string qry = "select Departure from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();
@@ -655,7 +655,7 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select Destination from Tours where ToursID = '" + tid + "'";
+                string qry = "select Destination from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();
@@ -685,20 +685,20 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select DepartureDate from Tours where ToursID = '" + tid + "'";
+                string qry = "select DepartureDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                string value = cmd.ExecuteScalar().ToString();
                 con.Close();
 
-                return value;
+                return value.ToString();
 
             }
 
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
+                return "";
 
             }
 
@@ -715,10 +715,10 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select DepartureTime from Tours where ToursID = '" + tid + "'";
+                string qry = "select DepartureTime from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                string value = cmd.ExecuteScalar().ToString();
                 con.Close();
 
                 return value;
@@ -745,10 +745,10 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select ArrivalTime from Tours where ToursID = '" + tid + "'";
+                string qry = "select ArrivalTime from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                string value = cmd.ExecuteScalar().ToString();
                 con.Close();
 
                 return value;
@@ -775,10 +775,10 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select ReturnDate from Tours where ToursID = '" + tid + "'";
+                string qry = "select ReturnDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                string value =cmd.ExecuteScalar().ToString();
                 con.Close();
 
                 return value;
@@ -795,7 +795,7 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
         //reservation count
-        public string return_reservation_count_from_db(string _tid)
+        public int return_reservation_count_from_db(string _tid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -805,10 +805,10 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select ReservationCount from Tours where ToursID = '" + tid + "'";
+                string qry = "select ReservationCount from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                int value = (int)cmd.ExecuteScalar();
                 con.Close();
 
                 return value;
@@ -818,14 +818,14 @@ namespace DB_Lab_Sike_Trip.DAL
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
+                return -1;
 
             }
 
         }
 
         //price of tour
-        public string return_price_of_tour_from_db(string _tid)
+        public int return_price_of_tour_from_db(string _tid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -835,10 +835,10 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                string qry = "select Price from Tours where ToursID = '" + tid + "'";
+                string qry = "select Price from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                int value = (int)cmd.ExecuteScalar();
                 con.Close();
 
                 return value;
@@ -848,14 +848,14 @@ namespace DB_Lab_Sike_Trip.DAL
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
+                return -1;
 
             }
 
         }
 
         //number of days
-        public string return_number_of_days_from_db(string _tid)
+        public int return_number_of_days_from_db(string _tid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -864,10 +864,10 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select NumberOfDays from Tours where ToursID = '" + tid + "'";
+                string qry = "select NumberOfDays from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
+                int value = (int)cmd.ExecuteScalar();
                 con.Close();
 
                 return value;
@@ -877,11 +877,43 @@ namespace DB_Lab_Sike_Trip.DAL
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
+                return -1;
 
             }
 
         }
+
+
+
+
+        public int return_total_capacity_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select TotalCapacity from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                int value = (int)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return -1;
+
+            }
+
+        }
+
 
         //returns number of available tours
         public int get_tours_from_db()
@@ -982,7 +1014,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select BusNumber from Tours where ToursID = '" + tid + "'";
+                string qry = "select bus_number from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();
@@ -1184,7 +1216,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select TourGuideName from Tours where TourID = '" + tid + "'";
+                string qry = "select tourguide from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();

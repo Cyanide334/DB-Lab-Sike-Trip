@@ -114,13 +114,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox display_return_date;
 
         /// <summary>
-        /// display_reservation_count control.
+        /// display_available_seats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_reservation_count;
+        protected global::System.Web.UI.WebControls.TextBox display_available_seats;
 
         /// <summary>
         /// display_price_of_tour control.
