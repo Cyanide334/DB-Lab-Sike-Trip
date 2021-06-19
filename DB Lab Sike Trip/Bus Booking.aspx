@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <style>
+<style>
       .testbox body, div, form, input, select, textarea, p { 
       padding: 0;
       margin: 0;
@@ -176,17 +176,12 @@
       .testbox .name-item input, .city-item input {
       width: calc(50% - 20px);
       }
-      .testbox .city-item select {
-      width: calc(50% - 8px);
-
+      .testbox .city-item select
+      {
+        width: calc(50% - 8px);
       }
-
-
-    
-
-
-      }
-    </style>
+}
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
     <!-- ======= Breadcrumbs ======= -->
@@ -211,133 +206,42 @@
           <h1>Bus Booking Form</h1>
         </div>
         <div class="item">
-          <p>Name</p>
-          <div class="name-item">
-            <asp:TextBox ID="F_Name" runat="server" placeholder ="First"></asp:TextBox>
-           <asp:TextBox ID="L_Name" runat="server" placeholder ="Last"></asp:TextBox>
-          </div>
+          <p>Bus Make</p>
+              <asp:textBox runat="server" id="display_busmake" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Email</p>
-          <asp:TextBox ID="email" runat="server"></asp:TextBox>
+          <p>License Number</p>
+          <asp:textBox runat="server" id="display_licensenumber" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Phone</p>
-          <asp:TextBox ID="phone" runat="server"></asp:TextBox>
+          <p>Registration Number</p>
+         <asp:textBox runat="server" id="display_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Number of Passengers</p>
-          <asp:TextBox ID="noOfPassengers" runat="server"></asp:TextBox>
+          <p>Capacity</p>
+          <asp:textBox runat="server" id="display_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Contact Address</p>
-         <asp:TextBox ID="StreetAddress" runat="server" placeholder ="Street Address"></asp:TextBox>
-         <asp:TextBox ID="StreetAddress2" runat="server" placeholder ="Street Address Line 2"></asp:TextBox>
-          <div class="city-item">
-           <asp:TextBox ID="City" runat="server" placeholder ="City"></asp:TextBox>
-           <asp:TextBox ID="Region" runat="server" placeholder ="Region"></asp:TextBox>
-           <asp:TextBox ID="PostCode" runat="server" placeholder ="Post/ZIP Code"></asp:TextBox>
-            <asp:TextBox ID="TextBox10" runat="server" placeholder ="City"></asp:TextBox>
-             <asp:TextBox ID="TextBox11" runat="server" placeholder ="Region"></asp:TextBox>
-             <asp:TextBox ID="TextBox12" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
-            <asp:DropDownList  ID="DropDownList2" runat="server" style ="">
-              <asp:ListItem Text="Country" Value=""></asp:ListItem>
-              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
-              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
-              <asp:ListItem Text="France" Value="3"></asp:ListItem>
-              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
-              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
-            </asp:DropDownList>
-          </div>
-        </div>
-        <div class="question">
-          <p>Vehicle</p>
-          <div class="question-answer">
-            <div>
-              <asp:RadioButton ID="radio_1" runat="server"  ClientIDMode="Static" GroupName="BusType" />
-              <label for="radio_1" class="radio"><span>Limousine (10-12 person)</span></label>
-            </div>
-            <div>
-             
-             
-             <asp:RadioButton ID="radio_2" runat="server" ClientIDMode="Static"  GroupName="BusType" />
-             <label for="radio_2" class="radio"><span>SUV (6-7 person)</span></label>
-              
-            </div>
-            <div>
-             <asp:RadioButton ID="radio_3" runat="server" ClientIDMode="Static"  GroupName="BusType" />  
-              <label for="radio_3" class="radio"><span>Van (10-12 person)</span></label>
-            </div>
-            <div>
-             <asp:RadioButton ID="radio_4" runat="server"  ClientIDMode="Static"  GroupName="BusType"/>  
-              <label for="radio_4" class="radio"><span>Bus (50+ person)</span></label>
-            </div>
-            <div>
-              <asp:RadioButton ID="radio_5" runat="server" ClientIDMode="Static" GroupName="BusType"  />  
-              <label for="radio_5" class="radio other"><span>other:</span></label>
-              <asp:TextBox ID="other" runat="server"></asp:TextBox>
-            </div>
-          </div>
+          <p>Price Per Km</p>
+          <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Pick Up Date</p>
-          <asp:TextBox ID="TextBox13" runat="server" placeholder ="Date" Type="Date"></asp:TextBox>
-          <i class="fas fa-calendar-alt"></i>
+          <p>Reservation Count</p>
+        <asp:textBox runat="server" id="display_bus_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
-        <div class="item">
-          <p>Pick Up Time</p>
-          <asp:TextBox ID="TextBox14" runat="server" placeholder ="Time" Type="Time"></asp:TextBox>
-          <i class="fas fa-clock"></i>
-        </div>
-        <div class="item">
-          <p>Pick Up Point</p>
-          <input type="text" name="name" placeholder="Street address" />
-          <asp:TextBox ID="TextBox15" runat="server" placeholder ="Street address"></asp:TextBox>
-          <asp:TextBox ID="TextBox16" runat="server" placeholder ="Street address line 2"></asp:TextBox>
-          <div class="city-item">
-           <asp:TextBox ID="TextBox1" runat="server" placeholder ="City"></asp:TextBox>
-           <asp:TextBox ID="TextBox2" runat="server" placeholder ="Region"></asp:TextBox>
-           <asp:TextBox ID="TextBox3" runat="server" placeholder ="Post/ZIP Code"></asp:TextBox>
-           <asp:TextBox ID="TextBox7" runat="server" placeholder ="City"></asp:TextBox>
-           <asp:TextBox ID="TextBox8" runat="server" placeholder ="Region"></asp:TextBox>
-           <asp:TextBox ID="TextBox9" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
-
-            <asp:DropDownList  ID="DropDownList1" runat="server" style ="">
-              <asp:ListItem Text="Country" Value=""></asp:ListItem>
-              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
-              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
-              <asp:ListItem Text="France" Value="3"></asp:ListItem>
-              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
-              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
-            </asp:DropDownList>
-
-          </div>
-        </div>
-        <div class="item">
-          <p>Destination</p>
-         <asp:TextBox ID="StreetAddress1" runat="server" placeholder ="Street Address"></asp:TextBox>
-         <asp:TextBox ID="StreetAddressL2" runat="server" placeholder ="Street Address Line 2"></asp:TextBox>
-          <div class="city-item">
-             <asp:TextBox ID="TextBox4" runat="server" placeholder ="City"></asp:TextBox>
-             <asp:TextBox ID="TextBox5" runat="server" placeholder ="Region"></asp:TextBox>
-             <asp:TextBox ID="TextBox6" runat="server" placeholder ="Postal/Zip Code"></asp:TextBox>
-            <asp:DropDownList  ID="txtSupplierCountry" runat="server" style ="">
-              <asp:ListItem Text="Country" Value=""></asp:ListItem>
-              <asp:ListItem Text="Russia" Value="1"></asp:ListItem>
-              <asp:ListItem Text="Germany" Value="2"></asp:ListItem>
-              <asp:ListItem Text="France" Value="3"></asp:ListItem>
-              <asp:ListItem Text="Armenia" Value="4"></asp:ListItem>
-              <asp:ListItem Text="USA" Value="5"></asp:ListItem>
-            </asp:DropDownList>
-          </div>
-        </div>
-        <div class="item">
-          <p>Notes</p>
-          <asp:TextBox id="TextArea1" TextMode="multiline"  Rows="3" runat="server" />
-        </div>
-        <div class="btn-block">
+          <%--<div class="btn-block" id="busbookingbutton">
           <asp:Button ID="btnSave" Text="Send" runat="server" CssClass="aspButton" />
-        </div>
+        </div>--%>
+
+           <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
+                <section id="bbb" class="btn-block">      
+                 <div id ="showBookingButton" runat="server" visible ="true">
+                           <p class="text-secondary mb-1"> You have not booked any buses</p>
+                       <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"></asp:Button>
+                     </div>          
+            </section>
+
+            </div> 
       </form>
     </div>
  

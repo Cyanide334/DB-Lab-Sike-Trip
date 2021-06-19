@@ -180,6 +180,8 @@
 <div>
     <div class="testbox">
     <form id="Form1" action="/" runat="server">
+            <section id ="DisplayViewTour" class="viewProfile" visible = "true" runat ="server"> <%--it disappers bcz of this--%>
+         <header style ="color:Red" id="tourbookingerror" runat="server"></header>
       <div class="banner">
         <h1>Tour Booking Form</h1>
       </div>
@@ -196,8 +198,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Tour ID</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                    1
+                    <div class="col-sm-9 text-secondary" id="TourId">
+                <asp:textBox runat="server" id="display_tourid" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
              <hr>
@@ -205,8 +207,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Price</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                     p*n has to be calculated by formula
+                    <div class="col-sm-9 text-secondary" id="TourPrice">
+                <asp:textBox runat="server" id="display_calculated_price" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
             <hr>
@@ -214,8 +216,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Departure</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      Lahore
+                    <div class="col-sm-9 text-secondary" id="TourDeparture">
+                <asp:textBox runat="server" id="display_departure" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -223,8 +225,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Destination</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      Murree
+                    <div class="col-sm-9 text-secondary" id="TourDestination">
+                <asp:textBox runat="server" id="display_destination" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -232,8 +234,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Departure Date</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      dd-mm-yyyy
+                    <div class="col-sm-9 text-secondary" id="TourDepartureDate">
+                      <asp:textBox runat="server" id="display_departure_date" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                      <hr>
@@ -241,8 +243,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Departure Time</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                      hh:mm am/pm
+                    <div class="col-sm-9 text-secondary" id="TourDepartureTime">
+                      <asp:textBox runat="server" id="display_departure_time" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -250,8 +252,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Arrival Time</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                         hh:mm am/pm
+                    <div class="col-sm-9 text-secondary" id="TourArrivalTime">
+                      <asp:textBox runat="server" id="display_arrival_time" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                       <hr>
@@ -259,8 +261,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Return Date</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                     dd-mm-yyyy 
+                    <div class="col-sm-9 text-secondary" id="TourReturnDate">
+                      <asp:textBox runat="server" id="display_return_date" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                     <hr>
@@ -268,8 +270,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Price per Person</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                    1500
+                    <div class="col-sm-9 text-secondary" id="TourPricePerPerson">
+                      <asp:textBox runat="server" id="display_price_of_tour" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                     <hr>
@@ -277,8 +279,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Number of Days</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                    2
+                    <div class="col-sm-9 text-secondary" id="TourNumberOfDays">
+                      <asp:textBox runat="server" id="dsiplay_number_of_days" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                     <hr>
@@ -286,8 +288,8 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Bus Number</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                     LEX-1234
+                    <div class="col-sm-9 text-secondary" id="TourBusNumber">
+                      <asp:textBox runat="server" id="display_bus_number" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                     <hr>
@@ -295,13 +297,18 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Tour Guide Name</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">
-                     Sikander
+                    <div class="col-sm-9 text-secondary" id="TourGuideName">
+                      <asp:textBox runat="server" id="display_tour_guide" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
-                  </div>       
-        <div class="btn-block">
-            <asp:Button ID="Button1" Text="Book" runat="server" CssClass="aspButton"></asp:Button>
-        </div>
+                  </div>  
+                 </section> 
+
+                <section id="btn" class="testbox">  
+                       <div id ="showBookTourButton" runat="server" visible ="true">
+                           <p class="text-secondary mb-1"> You have not booked any tours</p>
+                    <asp:Button ID="TourBookingButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="TourBookingButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
+                </div>
+                </section>
     </form>
     </div>
     </div>
