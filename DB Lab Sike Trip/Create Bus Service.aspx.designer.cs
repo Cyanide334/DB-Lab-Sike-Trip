@@ -11,7 +11,7 @@ namespace DB_Lab_Sike_Trip
 {
 
 
-    public partial class Edit_Bus_Service
+    public partial class Create_Bus_Service
     {
 
         /// <summary>
@@ -22,15 +22,6 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm EBSForm;
-
-        /// <summary>
-        /// Image2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
 
         /// <summary>
         /// EditBusError control.

@@ -11,17 +11,8 @@ namespace DB_Lab_Sike_Trip
 {
 
 
-    public partial class Edit_Tour_Service
+    public partial class Create_Tour_Service
     {
-
-        /// <summary>
-        /// Image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// editTourForm control.
@@ -40,6 +31,15 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl EditTourError;
+
+        /// <summary>
+        /// TourName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TourName;
 
         /// <summary>
         /// Departure control.
@@ -132,13 +132,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox TotalSeats;
 
         /// <summary>
-        /// PPS control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PPS;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
         /// TourGuide control.
@@ -168,12 +168,12 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox ReferenceImage;
 
         /// <summary>
-        /// editTourServiceSave control.
+        /// createTourServiceSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button editTourServiceSave;
+        protected global::System.Web.UI.WebControls.Button createTourServiceSave;
     }
 }

@@ -289,6 +289,8 @@
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
     <Content Include="assets\vendor\waypoints\noframework.waypoints.js" />
     <Content Include="Bus Booking.aspx" />
+    <Content Include="Create Bus Service.aspx" />
+    <Content Include="Create Tour Service.aspx" />
     <Content Include="Edit Bus Service.aspx" />
     <Content Include="Edit Profile.aspx" />
     <Content Include="Edit Tour Service.aspx" />
@@ -444,6 +446,20 @@
     </Compile>
     <Compile Include="Bus Booking.aspx.designer.cs">
       <DependentUpon>Bus Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create Bus Service.aspx.cs">
+      <DependentUpon>Create Bus Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create Bus Service.aspx.designer.cs">
+      <DependentUpon>Create Bus Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create Tour Service.aspx.cs">
+      <DependentUpon>Create Tour Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create Tour Service.aspx.designer.cs">
+      <DependentUpon>Create Tour Service.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\myDAL.cs" />
     <Compile Include="Edit Bus Service.aspx.cs">

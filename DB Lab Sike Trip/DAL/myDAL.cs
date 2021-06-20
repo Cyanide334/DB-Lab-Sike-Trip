@@ -500,7 +500,6 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
-
         public int update_credit(string username, string new_credit)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -537,6 +536,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             }
         }
+
 
 
         public int update_username(string username, string new_username)
@@ -615,7 +615,533 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
 
-        //view tour functions
+
+
+        // UPDATE BUS FUNCTIONS
+        public void update_bus_manufacturer(string busID, string new_manufacturer)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Buses set Manufacturer = '" + new_manufacturer + "' where BusID = '" + Convert.ToInt32(busID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+        }
+        public void update_bus_model(string busID, string new_model)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Buses set Model = '" + new_model + "' where BusID = '" + Convert.ToInt32(busID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+        }
+        public void update_bus_capacity(string busID, string new_capacity)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Buses set Capacity = '" + Convert.ToInt32(new_capacity) + "' where BusID = '" + Convert.ToInt32(busID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+        }
+        public void update_bus_pricePerDay(string busID, string new_price)
+        {
+
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Buses set PricePerDay = '" + Convert.ToInt32(new_price) + "' where BusID = '" + Convert.ToInt32(busID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+        }
+        public void update_bus_referenceImage(string busID, string new_image)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Buses set ReferenceImage = '" + new_image + "' where BusID = '" + Convert.ToInt32(busID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+        }
+        public int update_bus_license(string busID, string new_license)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.updateBusLicense", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@newLicense", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@BusID", SqlDbType.Int);
+
+                cmd.Parameters["@newLicense"].Value = new_license;
+                cmd.Parameters["@BusID"].Value = Convert.ToInt32(busID);
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return 2;
+
+            }
+        }
+        public int update_bus_registration(string busID, string new_reg)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("dbo.updateBusRegistration", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@newReg", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@BusID", SqlDbType.Int);
+
+                cmd.Parameters["@newReg"].Value = new_reg;
+                cmd.Parameters["@BusID"].Value = Convert.ToInt32(busID);
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+                cmd.ExecuteNonQuery();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return 2;
+
+            }
+        }
+
+        //  UPDATE TOUR FUNCTIONS
+
+        public void update_tour_departure(string tourID, string new_departure)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set Departure = '" + new_departure + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+        public void update_tour_destination(string tourID, string new_dest)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set Destination = '" + new_dest + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+
+        public void update_tour_departure_date(string tourID, string new_departure_date)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set DepartureDate = '" + new_departure_date + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+        public void update_tour_departure_time(string tourID, string new_departure_time)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set DepartureTime = '" + new_departure_time + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+        public void update_tour_arrival_date(string tourID, string new_arrival_date)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set ArrivalDate = '" + new_arrival_date + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+        }
+
+        public void update_tour_arrival_time(string tourID, string new_arrival_time)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set ArrivalTime = '" + new_arrival_time + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+        public void update_tour_return_date(string tourID, string new_return_date)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set ReturnDate = '" + new_return_date + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+
+        public void update_tour_return_time(string tourID, string new_return_time)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set ReturnTime = '" + new_return_time + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+        public void update_tour_price(string tourID, string new_price)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set Price = '" + Convert.ToInt32(new_price) + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+        public void update_tour_numberOfDays(string tourID, string new_number_of_days)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set NumberOfDays = '" + Convert.ToInt32(new_number_of_days) + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+
+        public void update_tour_tour_guide(string tourID, string new_tourguide)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set tourguide = '" + new_tourguide + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+
+        public void update_tour_bus_number(string tourID, string new_number)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set bus_number = '" + new_number + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+        public void update_tour_TotalCapacity(string tourID, string new_capacity)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set TotalCapacity = '" + Convert.ToInt32(new_capacity) + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+        public void update_tour_reference_image(string tourID, string new_image)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+            try
+            {
+                string qry = "update Tours set ReferenceImage = '" + new_image + "' where TourID = '" + Convert.ToInt32(tourID) + "'";
+
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+        }
+
+
+        //Tour getters
         public string return_departure_from_db(string _tid)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -853,6 +1379,67 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
+
+
+        //get tour guide name
+        public string return_tour_guide_name_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select tourguide from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+        // tour reference image
+
+        public string return_tour_reference_image_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+                string qry = "select ReferenceImage from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
 
         //number of days
         public int return_number_of_days_from_db(string _tid)
@@ -1119,7 +1706,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
-
+        // bus model
         public string return_bus_model_from_db(string _bid)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1206,8 +1793,8 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
-        //Reservation Count
-        public string return_bus_reservation_count_from_db(string _bid)
+        // Bus refrence image
+        public string return_bus_reference_image_from_db(string _bid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -1216,36 +1803,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select ReservationCount from Buses where BusID = '" + bid + "'";
-
-                cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
-                con.Close();
-
-                return value;
-
-            }
-
-            catch (Exception ex)
-            {
-                System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
-
-            }
-
-        }
-
-        //get tour guide name
-        public string return_tour_guide_name_from_db(string _tid)
-        {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cmd;
-            int tid = Convert.ToInt16(_tid);
-
-            try
-            {
-                string qry = "select tourguide from Tours where TourID = '" + tid + "'";
+                string qry = "select ReferenceImage from Buses where BusID = '" + bid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();
@@ -1265,8 +1823,7 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
 
-
-
+        //LOG UPDATE FUNCTIONS
         public void busBooking(string username, string busID, string startdate, string days) 
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1302,8 +1859,6 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
-
-
         public void TourBooking(string username, string TourID, string tickets)
         {
             SqlConnection con = new SqlConnection(conString);
