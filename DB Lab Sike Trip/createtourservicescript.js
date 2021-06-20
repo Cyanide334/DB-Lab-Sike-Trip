@@ -1,5 +1,6 @@
 ﻿var createtourservice = document.getElementById('HomeContent_CreateTourServiceError');
-var names = /^[a-zA-Z]+ [a-zA-Z]+$/;
+//var names = /^[a-zA-Z ]+ [a-zA-Z]+$/;
+var names = /^[a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
 var dateformat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;//dd/mm/yyyy
 var timeformat = /^(\d{1,2}):(\d{2})([ap]m)?$/;//hh:mm a/pm
@@ -116,7 +117,7 @@ function validate() {
     //tourguide can have only alphabets
     if (tourguide != "") {
         if (!tourguide.match(names)) {
-            createtourservice.innerText = 'Please enter alphabets only in the tour guide name.';
+            createtourservice.innerText = 'Please enter alphabets only (1 word) in the tour guide name.';
             return false;
         }
     }
