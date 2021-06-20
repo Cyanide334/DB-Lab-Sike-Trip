@@ -13,7 +13,7 @@ namespace DB_Lab_Sike_Trip
     public partial class View_Bus : System.Web.UI.Page
     {
         // get bus make
-        protected string get_bus_make()
+        protected string get_bus_manufacturer()
         {
             myDAL obj = new myDAL();
             return obj.return_bus_make_from_db(Session["BusID"].ToString());
@@ -34,17 +34,17 @@ namespace DB_Lab_Sike_Trip
         }
 
         //get capacity
-        protected string get_bus_capacity()
+        protected int get_bus_capacity()
         {
             myDAL obj = new myDAL();
-            return obj.return_bus_capacity_from_db(Session["TourId"].ToString());
+            return obj.return_bus_capacity_from_db(Session["BusID"].ToString());
         }
 
         //get PricePerKm
-        protected string get_bus_priceperkm()
+        protected int get_bus_priceperday()
         {
             myDAL obj = new myDAL();
-            return obj.return_bus_priceperkm_from_db(Session["BusID"].ToString());
+            return obj.return_bus_priceperday_from_db(Session["BusID"].ToString());
 
         }
         //Reservation Count
@@ -52,6 +52,13 @@ namespace DB_Lab_Sike_Trip
         {
             myDAL obj = new myDAL();
             return obj.return_bus_reservation_count_from_db(Session["BusID"].ToString());
+        }
+
+        //get bus model 
+        protected string get_bus_model()
+        {
+            myDAL obj = new myDAL();
+            return obj.return_bus_model_from_db(Session["BusID"].ToString());
         }
 
 
@@ -65,13 +72,13 @@ namespace DB_Lab_Sike_Trip
             // if a bus is clicked then display appropriate info of it
             if (Session["BusID"] != null)
             {
-                ViewBusBookButton.Visible = false;
-                display_busmake.Text = get_bus_make();
-                display_licensenumber.Text = get_bus_license();
+                //ViewBusBookButton.Visible = true;
+                display_manufacturer.Text = get_bus_manufacturer();
+                display_model.Text = get_bus_model();
                 display_registrationnumber.Text = get_bus_registration_number();
-                display_capacity.Text = get_bus_capacity();
-                display_priceperkm.Text = get_bus_priceperkm();
-                display_bus_reservation_count.Text = get_bus_reservation_count();
+                display_capacity.Text = get_bus_capacity().ToString();
+                display_priceperkm.Text = get_bus_priceperday().ToString();
+                //display_bus_reservation_count.Text = get_bus_reservation_count();
                
             }
         }

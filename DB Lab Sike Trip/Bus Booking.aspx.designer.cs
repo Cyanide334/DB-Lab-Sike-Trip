@@ -15,58 +15,22 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// DisplayBusBooking control.
+        /// display_manufacturer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayBusBooking;
+        protected global::System.Web.UI.WebControls.TextBox display_manufacturer;
 
         /// <summary>
-        /// BusBookingDestination control.
+        /// display_model control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BusBookingDestination;
-
-        /// <summary>
-        /// BusBookingDeparture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BusBookingDeparture;
-
-        /// <summary>
-        /// BusBookingCCnumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BusBookingCCnumber;
-
-        /// <summary>
-        /// display_booking_busmake control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_booking_busmake;
-
-        /// <summary>
-        /// display_booking_licensenumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_booking_licensenumber;
+        protected global::System.Web.UI.WebControls.TextBox display_model;
 
         /// <summary>
         /// display_booking_registrationnumber control.
@@ -96,22 +60,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox display_booking_priceperkm;
 
         /// <summary>
-        /// display_booking_bus_reservation_count control.
+        /// bus_booking_days control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_booking_bus_reservation_count;
+        protected global::System.Web.UI.WebControls.TextBox bus_booking_days;
 
         /// <summary>
-        /// showBookingButton control.
+        /// bus_booking_date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookingButton;
+        protected global::System.Web.UI.WebControls.TextBox bus_booking_date;
 
         /// <summary>
         /// ViewBusBookingButton control.

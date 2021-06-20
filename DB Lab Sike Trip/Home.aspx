@@ -102,6 +102,7 @@
     <!-- ======= Catalogue Section ======= -->
 
        <!-- ======= Portfolio Section ======= -->
+    <form runat="server">
     <section id="portfolio" class="portfolio" runat="server">
         
       <div class="container" >
@@ -116,10 +117,13 @@
             </ul>
           </div>
         </div>
-        
+       
         <div class="row portfolio-container" runat="server" id="trips">
-        </div>
+            
       
+          
+        </div>
+     
       </div>
     </section>
       <!-- buses section -->
@@ -129,11 +133,13 @@
           <div class="section-title">
                  <p>Buses</p>
               </div>  
+        
         <div class="row portfolio-container" runat="server" id="buses">
         </div>
-      
+       
       </div>
     </section>
+        </form>
           <!-- End Portfolio Section -->
 
          <section id="catalogue" class="catalogue">

@@ -33,31 +33,40 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayViewBus;
 
         /// <summary>
-        /// Image1 control.
+        /// book_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Button book_btn;
 
         /// <summary>
-        /// display_busmake control.
+        /// showBookButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_busmake;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookButton;
 
         /// <summary>
-        /// display_licensenumber control.
+        /// display_manufacturer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_licensenumber;
+        protected global::System.Web.UI.WebControls.TextBox display_manufacturer;
+
+        /// <summary>
+        /// display_model control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_model;
 
         /// <summary>
         /// display_registrationnumber control.
@@ -85,32 +94,5 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox display_priceperkm;
-
-        /// <summary>
-        /// display_bus_reservation_count control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_bus_reservation_count;
-
-        /// <summary>
-        /// showBookButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookButton;
-
-        /// <summary>
-        /// ViewBusBookButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewBusBookButton;
     }
 }

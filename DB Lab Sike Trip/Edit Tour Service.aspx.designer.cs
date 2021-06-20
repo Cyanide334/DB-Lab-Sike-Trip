@@ -33,85 +33,148 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm editTourForm;
 
         /// <summary>
-        /// editTourServiceName control.
+        /// TourName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceName;
+        protected global::System.Web.UI.WebControls.TextBox TourName;
 
         /// <summary>
-        /// txtName control.
+        /// Departure control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox Departure;
 
         /// <summary>
-        /// editTourServiceDeparture control.
+        /// Destination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceDeparture;
+        protected global::System.Web.UI.WebControls.TextBox Destination;
 
         /// <summary>
-        /// editTourServiceDestination control.
+        /// Ddate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceDestination;
+        protected global::System.Web.UI.WebControls.TextBox Ddate;
 
         /// <summary>
-        /// editTourServiceNumberOfDays control.
+        /// Dtime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceNumberOfDays;
+        protected global::System.Web.UI.WebControls.TextBox Dtime;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Adate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Adate;
 
         /// <summary>
-        /// TextBox2 control.
+        /// Atime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Atime;
 
         /// <summary>
-        /// editTourServiceGuide control.
+        /// Rdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceGuide;
+        protected global::System.Web.UI.WebControls.TextBox Rdate;
 
         /// <summary>
-        /// editTourServiceBusLicense control.
+        /// Rtime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editTourServiceBusLicense;
+        protected global::System.Web.UI.WebControls.TextBox Rtime;
+
+        /// <summary>
+        /// numDays control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox numDays;
+
+        /// <summary>
+        /// AvailableSeats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AvailableSeats;
+
+        /// <summary>
+        /// PPS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PPS;
+
+        /// <summary>
+        /// ReservationCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ReservationCount;
+
+        /// <summary>
+        /// TourGuide control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TourGuide;
+
+        /// <summary>
+        /// BusNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BusNum;
+
+        /// <summary>
+        /// ReferenceImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ReferenceImage;
 
         /// <summary>
         /// editTourServiceSave control.

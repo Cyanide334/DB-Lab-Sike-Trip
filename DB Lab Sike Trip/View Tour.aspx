@@ -62,7 +62,7 @@
                     <div
                         class="d-flex justify-content-between align-items-center"
                     >
-                    >
+                    
                         <h2>View Tour</h2>
                         <ol>
                             <li><a href="Home.aspx">Home</a></li>
@@ -72,7 +72,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
-      <form id="ViewTourForm" form action="/" runat="server">
+      <form id="ViewTourForm"  runat="server">
       <section class="viewProfile" runat="server" id="DisplayTourSection" visible="true"> <%--it disappers bcz of this--%>
     <%--<section class="viewProfile">--%>
             <div class="container">
@@ -87,15 +87,12 @@
                       <h4>Tour Details</h4>
                       <p class="text-secondary mb-1">Press Book to Proceed</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
-
+                        <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click"  Width="100px"/>
                           <%--have to get it to its position and do smthn about not showing the tours if none is chosen--%>
                           <section id="contact" class="contact">      
-                 <div id ="showBookTourButton" runat="server" visible ="true">
-                           <p class="text-secondary mb-1"> You have not booked any tours</p>
-                     <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
-                     </div>          
+                  
             </section>
-
+                          
                     </div>
                   </div>
                 </div>
@@ -160,16 +157,16 @@
                     <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Reservation Count</h6>
+                      <h6 class="mb-0">Available Seats</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    <asp:textBox runat="server" id="display_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox>
+                    <asp:textBox runat="server" id="display_available_seats" style="border: none"  ReadOnly="True"></asp:textBox>
                     </div>
                   </div>
                     <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Price</h6>
+                      <h6 class="mb-0">Price per Seat</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                     <asp:textBox runat="server" id="display_price_of_tour" style="border: none"  ReadOnly="True"></asp:textBox> 
@@ -196,7 +193,7 @@
                     <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Tour Guide Name</h6>
+                      <h6 class="mb-0">Tour Guide</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                      <asp:textBox runat="server" id="display_tour_guide" style="border: none"  ReadOnly="True"></asp:textBox> 
