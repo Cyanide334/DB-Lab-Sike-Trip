@@ -65,12 +65,12 @@ namespace DB_Lab_Sike_Trip
             if (Session["TourId"] != null)
             {
                 //ViewBusBookButton.Visible = false;
-                display_busmake.Text = get_bus_make();
-                display_licensenumber.Text = get_bus_license();
-                display_registrationnumber.Text = get_bus_registration_number();
-                display_capacity.Text = get_bus_capacity();
-                display_priceperkm.Text = get_bus_priceperkm();
-                display_bus_reservation_count.Text = get_bus_reservation_count();
+                //display_busmake.Text = get_bus_make();
+                //display_licensenumber.Text = get_bus_license();
+                //display_registrationnumber.Text = get_bus_registration_number();
+                //display_capacity.Text = get_bus_capacity();
+                //display_priceperkm.Text = get_bus_priceperkm();
+                //display_bus_reservation_count.Text = get_bus_reservation_count();
 
             }
         }

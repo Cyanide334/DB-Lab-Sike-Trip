@@ -241,7 +241,6 @@
                      </div>          
             </section>
 
-            </div> 
       </form>
     </div>
  
