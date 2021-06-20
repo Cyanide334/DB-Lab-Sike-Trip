@@ -15,6 +15,15 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
+        /// DisplayBusBooking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayBusBooking;
+
+        /// <summary>
         /// display_manufacturer control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox display_booking_priceperkm;
+
+        /// <summary>
+        /// creditcard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox creditcard;
 
         /// <summary>
         /// bus_booking_days control.

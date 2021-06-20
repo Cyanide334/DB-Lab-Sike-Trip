@@ -211,20 +211,6 @@
           <h1>Bus Booking Form</h1>
         </div>
 
-           <div class="item">
-        <p>Destination</p>
-           <asp:TextBox ID="BusBookingDestination" placeholder="Enter Destination" runat="server"></asp:TextBox>
-      </div>
-           <div class="item">
-        <p>Destination</p>
-           <asp:TextBox ID="BusBookingDeparture" placeholder="Enter Departure" runat="server"></asp:TextBox>
-      </div>
-        <div class="item">
-        <p>Credit Card Information</p>
-           <asp:TextBox ID="BusBookingCCnumber" placeholder="Enter Credit Card Number" runat="server"></asp:TextBox>
-      </div>
-
-
         <div class="item">
           <p>Bus Make</p>
               <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
@@ -245,6 +231,12 @@
           <p>Price Per Km</p>
           <asp:textBox runat="server" id="display_booking_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
+
+         <div class="item">
+          <p>Credit Card</p>
+          <asp:textBox runat="server" id="creditcard" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+
         <div class="item">
           <p>Number of days you need the bus booked for? </p>
         <asp:textBox runat="server" id="bus_booking_days" style="border: none"  ReadOnly="False"></asp:textBox> 
@@ -265,7 +257,7 @@
                       <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" ></asp:Button>
                               
             </section>
-
+         </section>
       </form>
     </div>
  
