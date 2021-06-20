@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="form-group text-center" id="HomeContent_EditTourServiceError" style="color:red"></div>
-                <div class="mt-5 text-center"><asp:Button ID="editTourServiceSave" Text="Save Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClientClick="return validate()"/></div><%--OnClick="editTourSaveButton_Click"--%>
+                <div class="mt-5 text-center"><asp:Button ID="editTourServiceSave" Text="Save Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClientClick="return validate()" OnClick="editTourSaveButton_Click"/></div>
             </div>
                 </form>
         </div>
