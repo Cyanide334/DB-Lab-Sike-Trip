@@ -115,18 +115,26 @@ namespace DB_Lab_Sike_Trip
             return obj.return_tour_guide_name_from_db(Session["TourId"].ToString());
         }
 
+        protected string get_credit_card()
+        {
+            myDAL obj = new myDAL();
+           return obj.return_credit_from_db(Session["Username"].ToString());
+            
+
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["TourId"] == null)
             {
-                DisplayViewTour.Visible = false;
+               // DisplayViewTour.Visible = false;
 
             }
             // if a tout is clicked then display appropriate info of it
             if (Session["TourId"] != null)
             {
                 //showBookTourButton.Visible = false;
+                display_credit.Text = get_credit_card();
                 display_departure.Text = get_departure();
                 display_destination.Text = get_destination();
                 display_departure_date.Text = get_departure_date();

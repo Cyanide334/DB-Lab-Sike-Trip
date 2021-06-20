@@ -195,28 +195,15 @@
       </div>
   
         <hr>
-                <div class="item">
-        <p>Credit Card Number</p>
-           <asp:TextBox ID="CreditCardNo" placeholder="Enter Your Credit Card Number" runat="server"></asp:TextBox>
-      </div>
-             <hr>
-              <div class="row">
+         <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Tour ID</h6>
+                      <h6 class="mb-0">Credit Card</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="TourId">
-                <asp:textBox runat="server" id="display_tourid" style="border: none" ReadOnly="True"></asp:textBox> 
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                <asp:textBox runat="server" id="display_credit" style="border: none" ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
-             <hr>
-              <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Price</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary" id="TourPrice">
-                <asp:textBox runat="server" id="display_calculated_price" style="border: none" OnClick="return display_calculated_price()" ReadOnly="True"></asp:textBox> 
-                    </div>
-                  </div>
+         
             <hr>
               <div class="row">
                     <div class="col-sm-3">

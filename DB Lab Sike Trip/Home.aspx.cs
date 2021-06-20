@@ -101,9 +101,6 @@ namespace DB_Lab_Sike_Trip
 
             buses.Controls.Add(new LiteralControl("</div></div></div></div>"));
 
-
-
-
         }
 
         protected void load_tours_catalogue()

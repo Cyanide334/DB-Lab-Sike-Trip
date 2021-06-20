@@ -26,16 +26,16 @@ namespace DB_Lab_Sike_Trip
             string atime = Atime.Text;
             string rdate = Rdate.Text;
             string rtime = Rtime.Text;
-            //int number_of_days = Convert.ToInt32(numDays.Text);
-            //int total_seats = Convert.ToInt32(TotalSeats.Text);
-            //int pps = Convert.ToInt32(PPS.Text);
+            string number_of_days = numDays.Text;
+            string total_seats = TotalSeats.Text;
+            string pps = PPS.Text;
             string tourguide = TourGuide.Text;
             string busnumber = BusNum.Text;
             string reference_image = ReferenceImage.Text;
-
+            
             myDAL obj = new myDAL();
 
-            //obj.create_tour(departure, destination, ddate, dtime, adate, atime, rdate,rtime, number_of_days, total_seats, pps, tourguide, busnumber, reference_image);
+            obj.create_tour(departure, destination, ddate, dtime, adate, atime, rdate, rtime, pps, number_of_days, tourguide, busnumber, total_seats, reference_image);
 
 
         }
