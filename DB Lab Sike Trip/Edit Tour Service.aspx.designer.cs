@@ -42,15 +42,6 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl EditTourError;
 
         /// <summary>
-        /// TourName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TourName;
-
-        /// <summary>
         /// Departure control.
         /// </summary>
         /// <remarks>
@@ -141,13 +132,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox TotalSeats;
 
         /// <summary>
-        /// TextBox1 control.
+        /// PPS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox PPS;
 
         /// <summary>
         /// TourGuide control.

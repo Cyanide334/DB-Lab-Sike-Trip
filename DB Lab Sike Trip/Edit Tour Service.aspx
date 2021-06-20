@@ -87,9 +87,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Edit Tour Service</h4>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Name</label><asp:TextBox ID="TourName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox></div>
-                </div>
+
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Departure</label><asp:TextBox ID="Departure" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
                     <div class="col-md-6"><label class="labels">Destination</label><asp:TextBox ID="Destination" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
@@ -109,7 +107,7 @@
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="numDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
                     <div class="col-md-6"><label class="labels">Total Seats</label><asp:TextBox ID="TotalSeats" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>     
-                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="TextBox1" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="PPS" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
 
                 </div>     
                 <div class="row mt-2">

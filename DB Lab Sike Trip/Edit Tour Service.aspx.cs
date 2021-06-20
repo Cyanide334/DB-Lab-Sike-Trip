@@ -99,7 +99,6 @@ namespace DB_Lab_Sike_Trip
             if (Session["TourID"] != null)
             {
 
-                TourName.Attributes.Add("placeholder", get_tour_name());
                 Departure.Attributes.Add("placeholder", get_tour_departure());
                 Destination.Attributes.Add("placeholder", get_tour_destination());
                 Ddate.Attributes.Add("placeholder", get_tour_departure_date());
