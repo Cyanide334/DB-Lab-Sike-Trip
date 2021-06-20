@@ -76,7 +76,7 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_price_of_tour_from_db(Session["TourID"].ToString());
         }
-       
+
         protected string get_tour_tour_guide()
         {
             myDAL obj = new myDAL();
@@ -111,17 +111,17 @@ namespace DB_Lab_Sike_Trip
                 TotalSeats.Attributes.Add("placeholder", get_tour_total_seats().ToString());
                 PPS.Attributes.Add("placeholder", get_tour_price_per_seat().ToString());
                 TourGuide.Attributes.Add("placeholder", get_tour_tour_guide());
-                BusNum.Attributes.Add("placeholder",get_tour_bus_number());
+                BusNum.Attributes.Add("placeholder", get_tour_bus_number());
                 ReferenceImage.Attributes.Add("placeholder", get_tour_reference_image());
             }
         }
 
-       
+
         protected void editTourSaveButton_Click(object sender, EventArgs e)
         {
             bool success = true;
             myDAL obj = new myDAL();
-           
+
 
             if (TotalSeats.Text != "")
             {
@@ -134,46 +134,47 @@ namespace DB_Lab_Sike_Trip
             }
 
 
-        //    if (success == true)
-        //    {
-        //        if (editProfileName.Text != "")
-        //        {
-        //            // myDAL obj = new myDAL();
-        //            obj.update_name(Session["Username"].ToString(), editProfileName.Text);
-        //        }
+            //    if (success == true)
+            //    {
+            //        if (editProfileName.Text != "")
+            //        {
+            //            // myDAL obj = new myDAL();
+            //            obj.update_name(Session["Username"].ToString(), editProfileName.Text);
+            //        }
 
-        //        if (editProfileCity.Text != "")
-        //        {
-        //            //myDAL obj = new myDAL();
-        //            obj.update_city(Session["Username"].ToString(), editProfileCity.Text);
-        //        }
+            //        if (editProfileCity.Text != "")
+            //        {
+            //            //myDAL obj = new myDAL();
+            //            obj.update_city(Session["Username"].ToString(), editProfileCity.Text);
+            //        }
 
-        //        if (editProfileCountry.Text != "")
-        //        {
-        //            //myDAL obj = new myDAL();
-        //            obj.update_country(Session["Username"].ToString(), editProfileCountry.Text);
-        //        }
+            //        if (editProfileCountry.Text != "")
+            //        {
+            //            //myDAL obj = new myDAL();
+            //            obj.update_country(Session["Username"].ToString(), editProfileCountry.Text);
+            //        }
 
-        //        if (editProfilePhone.Text != "")
-        //        {
-        //            //myDAL obj = new myDAL();
-        //            obj.update_phone(Session["Username"].ToString(), editProfilePhone.Text);
-        //        }
+            //        if (editProfilePhone.Text != "")
+            //        {
+            //            //myDAL obj = new myDAL();
+            //            obj.update_phone(Session["Username"].ToString(), editProfilePhone.Text);
+            //        }
 
-        //        if (editProfileCredit.Text != "")
-        //        {
-        //            //myDAL obj = new myDAL();
-        //            obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text);
-        //        }
+            //        if (editProfileCredit.Text != "")
+            //        {
+            //            //myDAL obj = new myDAL();
+            //            obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text);
+            //        }
 
-        //        if (editProfilePassword.Text != "")
-        //        {
-        //            // myDAL obj = new myDAL();
-        //            obj.update_password(Session["Username"].ToString(), editProfilePassword.Text);
-        //        }
+            //        if (editProfilePassword.Text != "")
+            //        {
+            //            // myDAL obj = new myDAL();
+            //            obj.update_password(Session["Username"].ToString(), editProfilePassword.Text);
+            //        }
 
-        //        Response.Redirect("View Profile.aspx");
-        //    }
-        //}
+            //        Response.Redirect("View Profile.aspx");
+            //    }
+            //}
+        }
     }
 }

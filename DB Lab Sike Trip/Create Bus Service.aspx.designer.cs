@@ -24,13 +24,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm EBSForm;
 
         /// <summary>
-        /// EditBusError control.
+        /// CreateBusError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl EditBusError;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CreateBusError;
 
         /// <summary>
         /// BusManufacturer control.
@@ -96,12 +96,12 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox ReferenceImage;
 
         /// <summary>
-        /// editBusSaveButton control.
+        /// createBusSaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button editBusSaveButton;
+        protected global::System.Web.UI.WebControls.Button createBusSaveButton;
     }
 }

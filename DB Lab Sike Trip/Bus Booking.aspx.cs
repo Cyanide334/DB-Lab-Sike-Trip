@@ -51,7 +51,8 @@ namespace DB_Lab_Sike_Trip
         protected string get_bus_reservation_count()
         {
             myDAL obj = new myDAL();
-            return obj.return_bus_reservation_count_from_db(Session["BusId"].ToString());
+            //return obj.return_bus_reservation_count_from_db(Session["BusId"].ToString());
+            return "";
         }
 
 

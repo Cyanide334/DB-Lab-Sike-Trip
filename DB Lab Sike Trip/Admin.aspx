@@ -134,7 +134,12 @@
                               <!-- End Portfolio Section -->
               </div>
               <div class="panel" id="create_services-panel">
-                <div class="panel-title">Create a New Tour</div>
+                <div class="panel-title">Create a New Service</div>
+                  <div class="row mt-2">
+                      <div class="mt-5 text-center"><asp:Button ID="createTour" runat="server" class="btn btn-primary profile-button" Text="Create Tour Service" Width="130px" Height="40px" OnClick="goto_create_tour" /></div>
+                      <div class="mt-5 text-center"><asp:Button ID="createBus" runat="server" class="btn btn-primary profile-button" Text="Create Bus Service" Width="130px" Height="40px" OnClick="goto_create_bus" /></div>
+                  </div>
+                        
                 <p>We recommend that you complete Learn HTML before learning CSS.</p>
               </div> 
           </div>

@@ -77,12 +77,9 @@
         <div class="col-md-5 border-right">
             <form id ="editTourForm" runat ="server">
             <div class="p-3 py-5">
-                <header style ="color:Red" id="EditTourError" runat="server"></header>
+                <header style ="color:Red" id="CreateTourError" runat="server"></header>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Create Tour Service</h4>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Name</label><asp:TextBox ID="TourName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Departure</label><asp:TextBox ID="Departure" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
@@ -103,7 +100,7 @@
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="numDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
                     <div class="col-md-6"><label class="labels">Total Seats</label><asp:TextBox ID="TotalSeats" runat="server" placeholder="Total Seats Available" CssClass="form-control"></asp:TextBox></div>     
-                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="TextBox1" runat="server" placeholder="Price of Tour" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="PPS" runat="server" placeholder="Price of Tour" CssClass="form-control"></asp:TextBox></div>
 
                 </div>     
                 <div class="row mt-2">
@@ -113,7 +110,7 @@
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Reference Image Path</label><asp:TextBox ID="ReferenceImage" runat="server" placeholder="Relative Path of Image" CssClass="form-control"></asp:TextBox></div>
                 </div>
-                <div class="mt-5 text-center"><asp:Button ID="createTourServiceSave" Text="Create Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClick="createTourSaveButton_Click"/></div>
+                <div class="mt-5 text-center"><asp:Button ID="createTourSaveButton" Text="Create Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClick="createTourSaveButton_Click"/></div>
             </div>
                 </form>
         </div>
