@@ -108,7 +108,7 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
 
-        public void log_in(string username, string password, ref bool success, ref string outputString)
+        public void log_in(string username, string password, ref bool success, ref string outputString, ref bool admin)
         {
 
             SqlConnection con = new SqlConnection(conString);
@@ -125,6 +125,15 @@ namespace DB_Lab_Sike_Trip.DAL
                 if (sdr.Read())
                 {
                     success = true;
+                    int usertype = sdr.GetInt32(1);
+                    if (usertype == 1)
+                    {
+                        admin = true;
+                    }
+                    else
+                    {
+                        admin = false;
+                    }
                 }
                 else
                 {
@@ -296,7 +305,7 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
-
+     
         public string return_credit_from_db(string username)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1614,11 +1623,8 @@ namespace DB_Lab_Sike_Trip.DAL
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
                 return null;
+                
             }
-
-
-
-
 
         }
 
@@ -2063,16 +2069,33 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
+
+        public DataSet get_service_log()
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("select * from serviceLog", con);
+                cmd.CommandType = CommandType.Text;
+                using(SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(ds);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                con.Close();
+                return null;
+            }
+            return ds;
+        }
     }
-
-
-
-
-
-
-
-    
-
 
 
 

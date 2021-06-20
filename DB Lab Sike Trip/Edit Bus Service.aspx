@@ -104,7 +104,7 @@
                             <div class="col-md-6"><label class="labels">Reference Image</label><asp:TextBox ID="ReferenceImage" runat="server" class="form-control" placeholder="Bus Make" value=""></asp:TextBox></div>
                         </div>
                         <div class="form-group text-center" id="HomeContent_EditBusServiceError" style="color:red"></div>
-                        <div class="mt-5 text-center"><asp:Button ID="editBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px"  OnClientClick="return validate()" /></div><%--OnClick="editBusSaveButton_Click"--%>
+                        <div class="mt-5 text-center"><asp:Button ID="editBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px"  OnClientClick="return validate()" OnClick="editBusSaveButton_Click" /></div>
                     </div>
                 </div>
         

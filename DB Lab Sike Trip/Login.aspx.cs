@@ -36,9 +36,9 @@ namespace DB_Lab_Sike_Trip
             string password = logInPassword.Text;
             bool s = true;
             string outputString = "";
-
+            bool a = false;
             myDAL obj = new myDAL();
-            obj.log_in(name, password, ref s, ref outputString);
+            obj.log_in(name, password, ref s, ref outputString, ref a);
             if (s == false)
             {
                 logInUsername.Text = "";
@@ -50,7 +50,14 @@ namespace DB_Lab_Sike_Trip
                 Session["Username"] = name;
                 Response.Redirect("View Profile.aspx");
             }
-
+            if (a == true)
+            {
+                Session["Admin"] = name;
+            }
+            else
+            {
+                Session["Admin"] = null;
+            }
 
         }
 

@@ -156,9 +156,20 @@ namespace DB_Lab_Sike_Trip
 
         }
 
+        protected void load_service_log()
+        {
+            myDAL obj = new myDAL();
+
+
+            
+            LogTable.DataSource = obj.get_service_log();
+            LogTable.DataBind();
+
+
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] == null && Session["Admin"] == null)
+            if (Session["Admin"] == null)
             {
                 Response.Redirect("Home.aspx");
             }
@@ -166,7 +177,9 @@ namespace DB_Lab_Sike_Trip
             {
                 load_tours_catalogue();
                 load_buses_catalogue();
+                load_service_log();
             }
+            
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
