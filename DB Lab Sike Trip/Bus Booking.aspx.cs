@@ -47,60 +47,60 @@ namespace DB_Lab_Sike_Trip
             return obj.return_bus_priceperday_from_db(Session["BusId"].ToString());
 
         }
-        //Reservation Count
-        protected string get_bus_reservation_count()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_bus_reservation_count_from_db(Session["BusId"].ToString());
-        }
+        ////Reservation Count
+        //protected string get_bus_reservation_count()
+        //{
+        //    myDAL obj = new myDAL();
+        //    return obj.return_bus_reservation_count_from_db(Session["BusId"].ToString());
+        //}
 
 
 
-        protected string get_bus_manufacturer()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_bus_make_from_db(Session["BusId"].ToString());
-        }
+        //protected string get_bus_manufacturer()
+        //{
+        //    myDAL obj = new myDAL();
+        //    return obj.return_bus_make_from_db(Session["BusId"].ToString());
+        //}
 
 
-        protected string get_bus_model()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_bus_model_from_db(Session["BusId"].ToString());
-        }
+        //protected string get_bus_model()
+        //{
+        //    myDAL obj = new myDAL();
+        //    return obj.return_bus_model_from_db(Session["BusId"].ToString());
+        //}
 
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (Session["BusId"] == null)
-            {
-               // DisplayBusBooking.Visible = false;
+        //protected void Page_Load(object sender, EventArgs e)
+        //{
+        //    if (Session["BusId"] == null)
+        //    {
+        //       // DisplayBusBooking.Visible = false;
 
-            }
-            // if a bus is clicked then display appropriate info of it
-            if (Session["BusId"] != null)
-            {
-                //ViewBusBookButton.Visible = false;
-                display_manufacturer.Text = get_bus_manufacturer();
-                display_model.Text = get_bus_model();
-                display_booking_registrationnumber.Text = get_bus_registration_number();
-               display_booking_capacity.Text = get_bus_capacity().ToString();
-                display_booking_priceperkm.Text = get_bus_priceperday().ToString();
-                //display_bus_reservation_count.Text = get_bus_reservation_count();
-            }
-        }
+        //    }
+        //    // if a bus is clicked then display appropriate info of it
+        //    if (Session["BusId"] != null)
+        //    {
+        //        //ViewBusBookButton.Visible = false;
+        //        display_manufacturer.Text = get_bus_manufacturer();
+        //        display_model.Text = get_bus_model();
+        //        display_booking_registrationnumber.Text = get_bus_registration_number();
+        //       display_booking_capacity.Text = get_bus_capacity().ToString();
+        //        display_booking_priceperkm.Text = get_bus_priceperday().ToString();
+        //        //display_bus_reservation_count.Text = get_bus_reservation_count();
+        //    }
+        //}
 
-        protected void BookButton_Click(object sender, EventArgs e)
-        {
+        //protected void BookButton_Click(object sender, EventArgs e)
+        //{
             
-            string username = Session["Username"].ToString();
-            string busID = Session["busID"].ToString();
-            string startdate = bus_booking_date.Text;
-            string number_of_days = bus_booking_days.Text;
+        //    string username = Session["Username"].ToString();
+        //    string busID = Session["busID"].ToString();
+        //    string startdate = bus_booking_date.Text;
+        //    string number_of_days = bus_booking_days.Text;
 
-            myDAL obj = new myDAL();
-            obj.busBooking(username, busID, startdate, number_of_days);
-        }
+        //    myDAL obj = new myDAL();
+        //    obj.busBooking(username, busID, startdate, number_of_days);
+        //}
 
     }
 }

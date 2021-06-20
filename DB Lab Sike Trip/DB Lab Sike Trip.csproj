@@ -294,6 +294,7 @@
     <Content Include="Edit Bus Service.aspx" />
     <Content Include="Edit Profile.aspx" />
     <Content Include="Edit Tour Service.aspx" />
+    <Content Include="editbusservice.js" />
     <Content Include="editprofilescript.js" />
     <Content Include="edittourservicescript.js" />
     <Content Include="formLand\contact.php" />

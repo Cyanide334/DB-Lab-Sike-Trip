@@ -24,7 +24,6 @@ function validate() {
     var busnumber = document.getElementById('HomeContent_BusNum').value;//busformat
 
     erroredittour.hidden = false;
-    console.log(tourname);
 
     //departure can have only alphabets
     if (departure != "") {
