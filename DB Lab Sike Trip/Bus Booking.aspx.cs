@@ -74,7 +74,7 @@ namespace DB_Lab_Sike_Trip
         {
             if (Session["BusId"] == null)
             {
-                DisplayBusBooking.Visible = false;
+               // DisplayBusBooking.Visible = false;
 
             }
             // if a bus is clicked then display appropriate info of it
@@ -83,9 +83,9 @@ namespace DB_Lab_Sike_Trip
                 //ViewBusBookButton.Visible = false;
                 display_manufacturer.Text = get_bus_manufacturer();
                 display_model.Text = get_bus_model();
-                display_registrationnumber.Text = get_bus_registration_number();
-                display_capacity.Text = get_bus_capacity().ToString();
-                display_priceperkm.Text = get_bus_priceperday().ToString();
+                display_booking_registrationnumber.Text = get_bus_registration_number();
+               display_booking_capacity.Text = get_bus_capacity().ToString();
+                display_booking_priceperkm.Text = get_bus_priceperday().ToString();
                 //display_bus_reservation_count.Text = get_bus_reservation_count();
             }
         }

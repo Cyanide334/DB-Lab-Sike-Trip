@@ -51,21 +51,8 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_return_time_from_db(Session["TourID"].ToString());
         }
-        protected string get_tour_departure_date()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_departure_date_from_db(Session["TourID"].ToString());
-        }
-        protected string get_tour_departure_date()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_departure_date_from_db(Session["TourID"].ToString());
-        }
-        protected string get_tour_departure_date()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_departure_date_from_db(Session["TourID"].ToString());
-        }
+      
+     
 
 
 

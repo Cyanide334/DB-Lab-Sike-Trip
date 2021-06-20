@@ -1601,7 +1601,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "select bus_number from Tours where TourID = '" + tid + "'";
+                string qry = "select bus_number from Tours where TourID = '" + bid + "'";
 
                 cmd = new SqlCommand(qry, con);
                 string value = (string)cmd.ExecuteScalar();
