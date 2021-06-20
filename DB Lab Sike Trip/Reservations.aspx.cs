@@ -32,6 +32,26 @@ namespace DB_Lab_Sike_Trip
             }
             
         }
+
+        protected bool valid_input(string input)
+        {
+            myDAL obj = new myDAL();
+            string s = Session["Username"].ToString();
+            int val = obj.check_service_id(input, s);
+            if (val == 1)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        protected void delete_reservation(string input)
+        {
+            myDAL obj = new myDAL();
+            obj.cancel_reservation_from_db(input);
+        }
+        
         protected void cancel_reservation(object sender, EventArgs e)
         {
             if (Session["Username"] == null)
@@ -40,7 +60,15 @@ namespace DB_Lab_Sike_Trip
             }
             else
             {
-                load_reservations();
+                if (valid_input(service_input.Text))
+                {
+                    delete_reservation(service_input.Text);
+                    Response.Redirect("Home.aspx");
+                }
+                else 
+                {
+                    errorbox.InnerText = "Enter a valid Service ID!";
+                }
             }
 
         }

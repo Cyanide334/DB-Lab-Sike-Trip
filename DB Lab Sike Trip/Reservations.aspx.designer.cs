@@ -24,13 +24,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.GridView LogTable;
 
         /// <summary>
-        /// Ddate control.
+        /// errorbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Ddate;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorbox;
+
+        /// <summary>
+        /// service_input control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox service_input;
 
         /// <summary>
         /// cancelReservationBtn control.
