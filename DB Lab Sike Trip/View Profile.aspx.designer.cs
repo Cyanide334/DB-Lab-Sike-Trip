@@ -60,15 +60,6 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.Button ViewProfileFollowButton;
 
         /// <summary>
-        /// ViewProfileMessageButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewProfileMessageButton;
-
-        /// <summary>
         /// display_name control.
         /// </summary>
         /// <remarks>

@@ -95,8 +95,8 @@
                      <asp:textBox runat="server" id="display_username" style="border: none"></asp:textBox>
 
                       <p class="text-muted font-size-sm" id="City_And_Country_display"></p>
-                         <asp:Button ID="ViewProfileFollowButton" Text="Follow" runat="server" class="btn btn-danger"></asp:Button>
-                     <asp:Button ID="ViewProfileMessageButton" Text="Message" runat="server" class="btn btn-outline-danger"></asp:Button>
+                         <asp:Button ID="ViewProfileFollowButton" Text="View Reservations" runat="server" class="btn btn-danger" OnClick ="goto_reservations"></asp:Button>
+                     
                     </div>
                   </div>
                 </div>

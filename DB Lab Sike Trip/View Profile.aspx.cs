@@ -85,5 +85,10 @@ namespace DB_Lab_Sike_Trip
         {
             Response.Redirect("Login.aspx");
         }
+        protected void goto_reservations(object sender, EventArgs e)
+        {
+            Response.Redirect("Reservations.aspx");
+        }
+      
     }
 }

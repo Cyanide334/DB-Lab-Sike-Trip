@@ -9,6 +9,11 @@
               align-items: flex-start;
             
             }
+            .ServiceLogTable{
+                margin:20px;
+                align-items:center;
+                overflow:scroll;
+            }
             .tab{
               cursor: pointer;
               padding:10px 20px;
@@ -94,19 +99,21 @@
           <div class="panels">
               <div class="panel" id="view_log-panel">
                 <div class="panel-title">Service Log</div>
-                  <asp:GridView ID="LogTable" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None">
-                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                        <EditRowStyle BackColor="#999999" />
-                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                  </asp:GridView>
+                  <div class ="ServiceLogTable">
+                      <asp:GridView ID="LogTable" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                      </asp:GridView>
+                  </div>
 
               </div>
               <div class="panel" id="edit_services-panel">
