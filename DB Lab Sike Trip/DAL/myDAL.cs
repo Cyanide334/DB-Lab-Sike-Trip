@@ -1592,12 +1592,12 @@ namespace DB_Lab_Sike_Trip.DAL
         //bus make
         //get bus number
 
-        public string return_bus_number_from_db(string _tid)
+        public string return_bus_number_from_db(string _bid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
             SqlCommand cmd;
-            int tid = Convert.ToInt16(_tid);
+            int bid = Convert.ToInt16(_bid);
 
             try
             {

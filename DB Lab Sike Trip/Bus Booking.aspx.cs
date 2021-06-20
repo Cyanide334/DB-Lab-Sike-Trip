@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DB_Lab_Sike_Trip;
 using DB_Lab_Sike_Trip.DAL;
+using DB_Lab_Sike_Trip;
+
 
 namespace DB_Lab_Sike_Trip
 {
@@ -73,7 +74,7 @@ namespace DB_Lab_Sike_Trip
         {
             if (Session["BusId"] == null)
             {
-                //DisplayBus.Visible = false;
+                DisplayBusBooking.Visible = false;
 
             }
             // if a bus is clicked then display appropriate info of it

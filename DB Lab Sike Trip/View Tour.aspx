@@ -193,7 +193,7 @@
                     <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Tour Guide Name</h6>
+                      <h6 class="mb-0">Tour Guide</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                      <asp:textBox runat="server" id="display_tour_guide" style="border: none"  ReadOnly="True"></asp:textBox> 

@@ -33,31 +33,31 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox display_model;
 
         /// <summary>
-        /// display_registrationnumber control.
+        /// display_booking_registrationnumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_registrationnumber;
+        protected global::System.Web.UI.WebControls.TextBox display_booking_registrationnumber;
 
         /// <summary>
-        /// display_capacity control.
+        /// display_booking_capacity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_capacity;
+        protected global::System.Web.UI.WebControls.TextBox display_booking_capacity;
 
         /// <summary>
-        /// display_priceperkm control.
+        /// display_booking_priceperkm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_priceperkm;
+        protected global::System.Web.UI.WebControls.TextBox display_booking_priceperkm;
 
         /// <summary>
         /// bus_booking_days control.

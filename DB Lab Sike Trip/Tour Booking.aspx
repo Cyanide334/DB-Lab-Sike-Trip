@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Tour Booking.aspx.cs" Inherits="DB_Lab_Sike_Trip.Tour_Booking" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script src="tourbookingscript.js"></script>
+      </asp:Content>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
@@ -196,7 +199,7 @@
                       <h6 class="mb-0">Tour ID</h6>
                     </div>
                     <div class="col-sm-9 text-secondary" id="TourId">
-                <asp:textBox runat="server" id="display_tourid" style="border: none"  ReadOnly="True"></asp:textBox> 
+                <asp:textBox runat="server" id="display_tourid" style="border: none" ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
              <hr>
@@ -205,7 +208,8 @@
                       <h6 class="mb-0">Price</h6>
                     </div>
                     <div class="col-sm-9 text-secondary" id="TourPrice">
-                <asp:textBox runat="server" id="display_calculated_price" style="border: none"  ReadOnly="True"></asp:textBox> 
+                        <%--OnClick--%>
+                <asp:textBox runat="server" id="display_calculated_price" style="border: none" OnClick="return display_calculated_price()" ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
             <hr>--%>

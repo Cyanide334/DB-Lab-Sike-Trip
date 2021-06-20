@@ -57,6 +57,17 @@
         box-shadow: none!important;
     }
     
+    /* .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
+      }*/
+
  </style>
 </asp:Content>
 
@@ -89,7 +100,6 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-<%--                    <img src="assets\img\testimonials\testimonials-2.jpg" alt="Admin" class="rounded-circle" width="150">--%>
                      <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-2.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
                       <h4>Sike! Bus</h4>
@@ -97,12 +107,12 @@
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
                       <asp:Button ID="book_btn" Text="Book" runat="server"  CssClass="btn btn-danger" Width="100px"  OnClick="BookButton_Click"/>
 
-                          <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
-                          <section id="contact" class="contact">      
+                         <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
+                      <%--    <section id="contact" class="contact">      
                  <div id ="showBookButton" runat="server" visible ="true">
                            <p class="text-secondary mb-1"> You have not booked any buses</p>
                      </div>          
-            </section>
+            </section>--%>
 
                     </div>
                   </div>
@@ -166,5 +176,14 @@
         </div>
     </div>
     </section>
+        </section>
+
+            <section id="btn" class="contact">  
+                       <div id ="showBookButton" runat="server" visible ="true">
+                           <p class="text-secondary mb-1">You have not booked any buses</p>
+                    <asp:Button ID="ViewBusBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
+                </div>
+                </section>
+
      </form>
 </asp:Content>

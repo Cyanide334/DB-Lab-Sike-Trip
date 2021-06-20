@@ -87,28 +87,42 @@
                     <h4 class="text-right">Edit Tour Service</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Name</label><asp:TextBox ID="editTourServiceName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Service Provider</label><asp:TextBox ID="txtName" runat="server" placeholder="Service Provider" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Tour Name</label><asp:TextBox ID="TourName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Departure</label><asp:TextBox ID="editTourServiceDeparture" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Destination</label><asp:TextBox ID="editTourServiceDestination" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Departure</label><asp:TextBox ID="Departure" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Destination</label><asp:TextBox ID="Destination" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
+                </div>
+                 <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Departure Date</label><asp:TextBox ID="Ddate" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Departure Time</label><asp:TextBox ID="Dtime" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
-                    
-                    <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="editTourServiceNumberOfDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
-                    
+                    <div class="col-md-6"><label class="labels">Arrival Date</label><asp:TextBox ID="Adate" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Arrival Time</label><asp:TextBox ID="Atime" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Return Date</label><asp:TextBox ID="Rdate" runat="server" placeholder="departure" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Return Time</label><asp:TextBox ID="Rtime" runat="server" placeholder="destination" CssClass="form-control"></asp:TextBox></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="numDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Available Seats</label><asp:TextBox ID="AvailableSeats" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>     
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="PPS" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Reservation Count</label><asp:TextBox ID="ReservationCount" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Departure Date</label><asp:TextBox ID="TextBox1" runat="server" placeholder="Departure Date" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Arrival Date</label><asp:TextBox ID="TextBox2" runat="server" placeholder="Arrival Date" CssClass="form-control"></asp:TextBox></div>
-                </div>
+          
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Tour Guide Name</label><asp:TextBox ID="editTourServiceGuide" runat="server" placeholder="Tour Guide Name" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Bus License Number</label><asp:TextBox ID="editTourServiceBusLicense" runat="server" placeholder="Bus License Number" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Tour Guide </label><asp:TextBox ID="TourGuide" runat="server" placeholder="Tour Guide Name" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Bus License Number</label><asp:TextBox ID="BusNum" runat="server" placeholder="Bus License Number" CssClass="form-control"></asp:TextBox></div>
                 </div>
-                <div class="mt-5 text-center"><asp:Button ID="editTourServiceSave" Text="Save Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px"/></div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Reference Image Path</label><asp:TextBox ID="ReferenceImage" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
+                </div>
+                <div class="mt-5 text-center"><asp:Button ID="editTourServiceSave" Text="Save Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClick="editTourSaveButton_Click"/></div>
             </div>
                 </form>
         </div>
