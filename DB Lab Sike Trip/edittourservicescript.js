@@ -4,6 +4,7 @@ var numbers = /^[0-9]+$/;
 var dateformat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;//dd/mm/yyyy
 var timeformat = /^(\d{1,2}):(\d{2})([ap]m)?$/;//hh:mm a/pm
 var busformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
+
 erroredittour.hidden = true;
 
 function validate() {
@@ -22,7 +23,7 @@ function validate() {
     var priceperseat = document.getElementById('HomeContent_PPS').value;//numbers
     var tourguide = document.getElementById('HomeContent_TourGuide').value;//names
     var busnumber = document.getElementById('HomeContent_BusNum').value;//busformat
-
+    
     erroredittour.hidden = false;
 
     //departure can have only alphabets
@@ -41,14 +42,6 @@ function validate() {
         }
     }
 
-    //departuredate 
-    if (departuredate != "") {
-        if (!departuredate.match(dateformat)) {
-            erroredittour.innerText = 'Please enter dd/mm/yyyy format in the departure date.';
-            return false;
-        }
-    }
-
     //departuretime
     if (departuretime != "") {
         if (!departuretime.match(timeformat)) {
@@ -57,9 +50,55 @@ function validate() {
         }
     }
 
+    //departuredate
+    if (departuredate != "") {
+        if (departuredate.match(dateformat))
+        {
+            regs = departuredate.match(dateformat);
+                    // day value between 1 and 31
+                    if (regs[1] < 1 || regs[1] > 31) {
+                        erroredittour.innerText = 'Invalid value for day: ' + regs[1];
+                        return false;
+                    }
+                    // month value between 1 and 12
+                    if (regs[2] < 1 || regs[2] > 12) {
+                        erroredittour.innerText = 'Invalid value for month: ' + regs[2];
+                        return false;
+                    }
+                    // year value
+                    if (regs[3] < (new Date()).getFullYear()) {
+                        erroredittour.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                        return false;
+                    }
+        }
+        else
+        {
+            erroredittour.innerText = 'Please enter dd/mm/yyyy format in the departure date.';
+            return false;
+        }
+    }
+
     //arrivaldate
     if (arrivaldate != "") {
-        if (!arrivaldate.match(dateformat)) {
+        if (arrivaldate.match(dateformat)) {
+            regs = arrivaldate.match(dateformat);
+            // day value between 1 and 31
+            if (regs[1] < 1 || regs[1] > 31) {
+                erroredittour.innerText = 'Invalid value for day: ' + regs[1];
+                return false;
+            }
+            // month value between 1 and 12
+            if (regs[2] < 1 || regs[2] > 12) {
+                erroredittour.innerText = 'Invalid value for month: ' + regs[2];
+                return false;
+            }
+            // year value
+            if (regs[3] < (new Date()).getFullYear()) {
+                erroredittour.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                return false;
+            }
+        }
+        else {
             erroredittour.innerText = 'Please enter dd/mm/yyyy format in the arrival date.';
             return false;
         }
@@ -75,8 +114,26 @@ function validate() {
 
     //returndate
     if (returndate != "") {
-        if (!returndate.match(dateformat)) {
-            errorsignup.innerText = 'Please enter dd/mm/yyyy format in the return date.';
+        if (returndate.match(dateformat)) {
+            regs = returndate.match(dateformat);
+            // day value between 1 and 31
+            if (regs[1] < 1 || regs[1] > 31) {
+                erroredittour.innerText = 'Invalid value for day: ' + regs[1];
+                return false;
+            }
+            // month value between 1 and 12
+            if (regs[2] < 1 || regs[2] > 12) {
+                erroredittour.innerText = 'Invalid value for month: ' + regs[2];
+                return false;
+            }
+            // year value
+            if (regs[3] < (new Date()).getFullYear()) {
+                erroredittour.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                return false;
+            }
+        }
+        else {
+            erroredittour.innerText = 'Please enter dd/mm/yyyy format in the return date.';
             return false;
         }
     }

@@ -2,7 +2,11 @@
 var names = /^[a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
 var busregformat = /^[a-zA-Z0-9._][a-zA-Z]+[0-9]*$/
-var buslicformat = /^(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$/;//HR-0619850034761 or HR06 19850034761
+var buslicformat = "^(([A-Z]{2}[0-9]{2})"
+    + "( )|([A-Z]{2}-[0-9]"
+    + "{2}))((19|20)[0-9]"
+    + "[0-9])[0-9]{7}$";
+    ///^(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$/;//HR-0619850034761 or HR06 19850034761
 
 erroreditbus.hidden = true;
 
@@ -44,7 +48,7 @@ function validate() {
     //licnumber
     if (licnumber != "") {
         if (!licnumber.match(buslicformat)) {
-            erroreditbus.innerText = 'Please enter AB-0123456789000 or AB01 23456789000 format in the license number.';
+            erroreditbus.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.';
             return false;
         }
     }

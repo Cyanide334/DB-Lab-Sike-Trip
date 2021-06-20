@@ -42,9 +42,27 @@ function validate() {
         }
     }
 
-    //departuredate 
+    //departuredate
     if (departuredate != "") {
-        if (!departuredate.match(dateformat)) {
+        if (departuredate.match(dateformat)) {
+            regs = departuredate.match(dateformat);
+            // day value between 1 and 31
+            if (regs[1] < 1 || regs[1] > 31) {
+                createtourservice.innerText = 'Invalid value for day: ' + regs[1];
+                return false;
+            }
+            // month value between 1 and 12
+            if (regs[2] < 1 || regs[2] > 12) {
+                createtourservice.innerText = 'Invalid value for month: ' + regs[2];
+                return false;
+            }
+            // year value
+            if (regs[3] < (new Date()).getFullYear()) {
+                createtourservice.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                return false;
+            }
+        }
+        else {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the departure date.';
             return false;
         }
@@ -60,7 +78,25 @@ function validate() {
 
     //arrivaldate
     if (arrivaldate != "") {
-        if (!arrivaldate.match(dateformat)) {
+        if (arrivaldate.match(dateformat)) {
+            regs = arrivaldate.match(dateformat);
+            // day value between 1 and 31
+            if (regs[1] < 1 || regs[1] > 31) {
+                createtourservice.innerText = 'Invalid value for day: ' + regs[1];
+                return false;
+            }
+            // month value between 1 and 12
+            if (regs[2] < 1 || regs[2] > 12) {
+                createtourservice.innerText = 'Invalid value for month: ' + regs[2];
+                return false;
+            }
+            // year value
+            if (regs[3] < (new Date()).getFullYear()) {
+                createtourservice.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                return false;
+            }
+        }
+        else {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the arrival date.';
             return false;
         }
@@ -76,7 +112,25 @@ function validate() {
 
     //returndate
     if (returndate != "") {
-        if (!returndate.match(dateformat)) {
+        if (returndate.match(dateformat)) {
+            regs = returndate.match(dateformat);
+            // day value between 1 and 31
+            if (regs[1] < 1 || regs[1] > 31) {
+                createtourservice.innerText = 'Invalid value for day: ' + regs[1];
+                return false;
+            }
+            // month value between 1 and 12
+            if (regs[2] < 1 || regs[2] > 12) {
+                createtourservice.innerText = 'Invalid value for month: ' + regs[2];
+                return false;
+            }
+            // year value
+            if (regs[3] < (new Date()).getFullYear()) {
+                createtourservice.innerText = 'Invalid value for year: ' + regs[3] + ' - must be after or on ' + (new Date()).getFullYear();
+                return false;
+            }
+        }
+        else {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the return date.';
             return false;
         }
