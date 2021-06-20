@@ -306,6 +306,8 @@
     <Content Include="loginscript.js" />
     <Content Include="noframework.waypoints.js" />
     <Content Include="Reservations.aspx" />
+    <Content Include="Search Bus.aspx" />
+    <Content Include="Search Tours.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -493,6 +495,20 @@
     </Compile>
     <Compile Include="Reservations.aspx.designer.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search Bus.aspx.cs">
+      <DependentUpon>Search Bus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search Bus.aspx.designer.cs">
+      <DependentUpon>Search Bus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search Tours.aspx.cs">
+      <DependentUpon>Search Tours.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search Tours.aspx.designer.cs">
+      <DependentUpon>Search Tours.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services.aspx.cs">
       <DependentUpon>Services.aspx</DependentUpon>

@@ -52,7 +52,7 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
      </div>
-<div class="row">
+    <div class="row">
         <div class="row mt-2">
                 <div class="col-md-12"><label class="labels"></label><asp:TextBox ID="Ddate" runat="server" placeholder="Enter Service ID" CssClass="form-control"></asp:TextBox></div>
                 <div class="col-md-12"><asp:Button ID="cancelReservationBtn" Text="Cancel Reservation" runat="server"  CssClass="btn btn-primary profile-button" Width="200px" Height="40px" OnClientClick="return validate()" OnClick="cancel_reservation"/></div>         
