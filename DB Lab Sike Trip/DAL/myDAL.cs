@@ -1956,6 +1956,113 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
 
+        //CREATE A BUS
+        public void create_bus(string manufacturer, string model,string reg, string license, string capacity, string pricePerDay, string reference_image)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+
+            try
+            {
+
+                cmd = new SqlCommand("dbo.createBus", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@manufacturer", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@model", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@reg", SqlDbType.VarChar, 20);
+                cmd.Parameters.Add("@license", SqlDbType.VarChar, 20);
+                cmd.Parameters.Add("@capacity", SqlDbType.Int);
+                cmd.Parameters.Add("@priceperday", SqlDbType.Int);
+                cmd.Parameters.Add("@refimage", SqlDbType.VarChar, 100);
+
+                cmd.Parameters["@manufacturer"].Value = manufacturer;
+                cmd.Parameters["@model"].Value = model;
+                cmd.Parameters["@reg"].Value = reg;
+                cmd.Parameters["@license"].Value = license;
+                cmd.Parameters["@capaciy"].Value = Convert.ToInt32(capacity);
+                cmd.Parameters["@priceperday"].Value = Convert.ToInt32(pricePerDay);
+                cmd.Parameters["@refimage"].Value = reference_image;
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+        }
+
+
+        // CREATE A TOUR
+
+        public void create_tour(string departure, string destination, string DD, string DT, string AD, string AT, string RD, string RT, string price, string numDays, string tourGuide, string busNo, string capacity, string refimg)
+        {
+
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+
+            try
+            {
+
+                cmd = new SqlCommand("dbo.createBus", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@Departure", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@Destination", SqlDbType.VarChar, 30);
+                cmd.Parameters.Add("@DepartureDate", SqlDbType.Date);
+                cmd.Parameters.Add("@DepartureTime",SqlDbType.Time);
+                cmd.Parameters.Add("@ArrivalDate", SqlDbType.Date);
+                cmd.Parameters.Add("@ArrivalTime", SqlDbType.Time);
+                cmd.Parameters.Add("@ReturnDate", SqlDbType.Date);
+                cmd.Parameters.Add("@ReturnTime", SqlDbType.Time);
+                cmd.Parameters.Add("@Price", SqlDbType.Int);
+                cmd.Parameters.Add("@NumberOfDays", SqlDbType.Int);
+                cmd.Parameters.Add("@Tourguide", SqlDbType.VarChar,30);
+                cmd.Parameters.Add("@BusNumber", SqlDbType.VarChar, 20);
+                cmd.Parameters.Add("@Capacity", SqlDbType.Int);
+                cmd.Parameters.Add("@ReferenceImage", SqlDbType.VarChar, 100);
+
+                cmd.Parameters["@Departure"].Value = departure;
+                cmd.Parameters["@Destination"].Value = destination;
+                cmd.Parameters["@DepartureDate"].Value = DD;
+                cmd.Parameters["@DepartureTime"].Value = DT;
+                cmd.Parameters["@ArrivalDate"].Value = AD;
+                cmd.Parameters["@ArrivalTime"].Value = AT;
+                cmd.Parameters["@ReturnDate"].Value = RD;
+                cmd.Parameters["@ReturnTime"].Value = RT;
+                cmd.Parameters["@DepartureDate"].Value = DD;
+                cmd.Parameters["@Price"].Value =Convert.ToInt32(price);
+                cmd.Parameters["@NumberOfDays"].Value = Convert.ToInt32(numDays);
+                cmd.Parameters["@Tourguide"].Value = tourGuide;
+                cmd.Parameters["@BusNumber"].Value = busNo;
+                cmd.Parameters["@Capacity"].Value = Convert.ToInt32(capacity);
+                cmd.Parameters["@ReferenceImage"].Value = refimg;
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return;
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+            }
+
+
+
+
+
+        }
+
     }
 
 
