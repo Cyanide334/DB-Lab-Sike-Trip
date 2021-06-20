@@ -47,17 +47,18 @@ namespace DB_Lab_Sike_Trip
             }
             else
             {
+                if (a == true)
+                {
+                    Session["Admin"] = name;
+                }
+                else
+                {
+                    Session["Admin"] = null;
+                }
                 Session["Username"] = name;
                 Response.Redirect("View Profile.aspx");
             }
-            if (a == true)
-            {
-                Session["Admin"] = name;
-            }
-            else
-            {
-                Session["Admin"] = null;
-            }
+           
 
         }
 

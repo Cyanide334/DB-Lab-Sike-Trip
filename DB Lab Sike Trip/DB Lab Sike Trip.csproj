@@ -305,6 +305,7 @@
     <Content Include="forms\Readme.txt" />
     <Content Include="loginscript.js" />
     <Content Include="noframework.waypoints.js" />
+    <Content Include="Reservations.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -485,6 +486,13 @@
     </Compile>
     <Compile Include="Edit Tour Service.aspx.designer.cs">
       <DependentUpon>Edit Tour Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations.aspx.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reservations.aspx.designer.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services.aspx.cs">
       <DependentUpon>Services.aspx</DependentUpon>
