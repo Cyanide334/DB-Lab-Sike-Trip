@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="View Bus.aspx.cs" Inherits="DB_Lab_Sike_Trip.View_Bus" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="View Bus.aspx.cs" Inherits="DB_Lab_Sike_Trip.View_Bus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <style type="text/css">
@@ -76,7 +77,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
-        <form id="ViewBusForm" form action="/" runat="server">
+        <form id="ViewBusForm"  runat="server">
             <%--have to fix this--%>
 <%--    <section id ="DisplayBus" class="viewProfile" visible = "true" runat ="server">--%> 
     <section class="viewProfile">
@@ -94,12 +95,12 @@
                       <h4>Sike! Bus</h4>
                       <p class="text-secondary mb-1">Press Book to Proceed</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
+                      <asp:Button ID="book_btn" Text="Book" runat="server"  CssClass="btn btn-danger" Width="100px"  OnClick="BookButton_Click"/>
 
                           <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
                           <section id="contact" class="contact">      
                  <div id ="showBookButton" runat="server" visible ="true">
                            <p class="text-secondary mb-1"> You have not booked any buses</p>
-                       <asp:Button ID="ViewBusBookButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"></asp:Button>
                      </div>          
             </section>
 
@@ -113,19 +114,19 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Bus Make</h6>
+                      <h6 class="mb-0">Manufacturer</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <asp:textBox runat="server" id="display_busmake" style="border: none"  ReadOnly="True"></asp:textBox> 
+                      <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">License Number</h6>
+                      <h6 class="mb-0">Model</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <asp:textBox runat="server" id="display_licensenumber" style="border: none"  ReadOnly="True"></asp:textBox> 
+                      <asp:textBox runat="server" id="display_model" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
                   <hr>
@@ -149,20 +150,15 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Price per km</h6>
+                      <h6 class="mb-0">Price per day</h6>
                     </div>
+                     
                     <div class="col-sm-9 text-secondary">
                       <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Reservation Count</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <asp:textBox runat="server" id="display_bus_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox> 
-                    </div>
-                  </div>
+                     <hr>
+              
                 </div>
               </div>
             </div>

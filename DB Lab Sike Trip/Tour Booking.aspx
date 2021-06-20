@@ -179,22 +179,19 @@
    <section class="tourbooking">
 <div>
     <div class="testbox">
-    <form id="Form1" action="/" runat="server">
+    <form id="Form1"  runat="server">
             <section id ="DisplayViewTour" class="viewProfile" visible = "true" runat ="server"> <%--it disappers bcz of this--%>
          <header style ="color:Red" id="tourbookingerror" runat="server"></header>
       <div class="banner">
         <h1>Tour Booking Form</h1>
       </div>
         <div class="item">
-        <p>Number of Travellers</p>
-           <asp:TextBox ID="TourBookingTravellers" placeholder="Enter Number of Travellers" runat="server"></asp:TextBox>
+        <p>Number of Seats</p>
+           <asp:TextBox ID="TourBookingSeats" placeholder="Enter Number of Seats" runat="server"></asp:TextBox>
       </div>
-        <div class="item">
-        <p>Credit Card Information</p>
-           <asp:TextBox ID="TourBookingCCnumber" placeholder="Enter Credit Card Number" runat="server"></asp:TextBox>
-      </div>
+  
         <hr>
-              <div class="row">
+          <%--    <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Tour ID</h6>
                     </div>
@@ -211,7 +208,7 @@
                 <asp:textBox runat="server" id="display_calculated_price" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
-            <hr>
+            <hr>--%>
               <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Departure</h6>
@@ -304,10 +301,10 @@
                  </section> 
 
                 <section id="btn" class="testbox">  
-                       <div id ="showBookTourButton" runat="server" visible ="true">
-                           <p class="text-secondary mb-1"> You have not booked any tours</p>
-                    <asp:Button ID="TourBookingButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="TourBookingButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
-                </div>
+                       
+                           
+                   <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="TourBookingButton_Click" ></asp:Button>
+                
                 </section>
     </form>
     </div>

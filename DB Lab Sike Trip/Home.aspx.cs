@@ -88,7 +88,7 @@ namespace DB_Lab_Sike_Trip
             buses.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
                  "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
                  + "<p>" + model + "</p>"
-                 + "<p>" + "Price: " + price + "</p>"
+                 + "<p>" + "Price per day: " + price + "</p>"
                  + "<div class=\"portfolio-links\" runat=\"server\">"
 
                  + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"));

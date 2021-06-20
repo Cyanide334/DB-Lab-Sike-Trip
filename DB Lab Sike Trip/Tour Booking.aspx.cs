@@ -56,7 +56,7 @@ namespace DB_Lab_Sike_Trip
         protected string get_departure_date()
         {
             myDAL obj = new myDAL();
-            return obj.return_departure_date_from_db(Session["Username"].ToString());
+            return obj.return_departure_date_from_db(Session["TourID"].ToString());
         }
 
         //get departure time
@@ -126,7 +126,7 @@ namespace DB_Lab_Sike_Trip
             // if a tout is clicked then display appropriate info of it
             if (Session["TourId"] != null)
             {
-                showBookTourButton.Visible = false;
+                //showBookTourButton.Visible = false;
                 display_departure.Text = get_departure();
                 display_destination.Text = get_destination();
                 display_departure_date.Text = get_departure_date();
@@ -142,7 +142,13 @@ namespace DB_Lab_Sike_Trip
 
         protected void TourBookingButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Tour Booking.aspx");
+
+            string username = Session["Username"].ToString();
+            string tickets = TourBookingSeats.Text;
+            string tourID = Session["TourID"].ToString();
+
+            myDAL obj = new myDAL();
+            obj.TourBooking(username, tourID, tickets);
         }
 
     }

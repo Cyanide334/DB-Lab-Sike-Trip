@@ -110,7 +110,7 @@ namespace DB_Lab_Sike_Trip
            // if a tour is clicked then display appropriate info of it
                 if (Session["TourID"] != null)
             {
-                showBookTourButton.Visible = false;
+               // showBookTourButton.Visible = true;
                 display_departure.Text = get_departure();
                 display_destination.Text = get_destination();
                 display_departure_date.Text = get_departure_date();
@@ -127,6 +127,7 @@ namespace DB_Lab_Sike_Trip
         }
 
             protected void BookButton_Click(object sender, EventArgs e)
+            
             {
                 Response.Redirect("Tour Booking.aspx");
             }

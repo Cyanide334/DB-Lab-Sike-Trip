@@ -62,7 +62,7 @@
                     <div
                         class="d-flex justify-content-between align-items-center"
                     >
-                    >
+                    
                         <h2>View Tour</h2>
                         <ol>
                             <li><a href="Home.aspx">Home</a></li>
@@ -72,7 +72,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
-      <form id="ViewTourForm" form action="/" runat="server">
+      <form id="ViewTourForm"  runat="server">
       <section class="viewProfile" runat="server" id="DisplayTourSection" visible="true"> <%--it disappers bcz of this--%>
     <%--<section class="viewProfile">--%>
             <div class="container">
@@ -87,15 +87,12 @@
                       <h4>Tour Details</h4>
                       <p class="text-secondary mb-1">Press Book to Proceed</p>
                       <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
-
+                        <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click"  Width="100px"/>
                           <%--have to get it to its position and do smthn about not showing the tours if none is chosen--%>
                           <section id="contact" class="contact">      
-                 <div id ="showBookTourButton" runat="server" visible ="true">
-                           <p class="text-secondary mb-1"> You have not booked any tours</p>
-                     <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
-                     </div>          
+                  
             </section>
-
+                          
                     </div>
                   </div>
                 </div>

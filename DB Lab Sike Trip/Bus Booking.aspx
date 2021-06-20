@@ -207,11 +207,11 @@
         </div>
         <div class="item">
           <p>Bus Make</p>
-              <asp:textBox runat="server" id="display_busmake" style="border: none"  ReadOnly="True"></asp:textBox> 
+              <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
           <p>License Number</p>
-          <asp:textBox runat="server" id="display_licensenumber" style="border: none"  ReadOnly="True"></asp:textBox> 
+          <asp:textBox runat="server" id="display_model" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
           <p>Registration Number</p>
@@ -226,19 +226,24 @@
           <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
-          <p>Reservation Count</p>
-        <asp:textBox runat="server" id="display_bus_reservation_count" style="border: none"  ReadOnly="True"></asp:textBox> 
+          <p>Number of days you need the bus booked for? </p>
+        <asp:textBox runat="server" id="bus_booking_days" style="border: none"  ReadOnly="False"></asp:textBox> 
         </div>
+         <div class="item">
+          <p> Please Enter the date of booking in dd/mm/yyyy format</p>
+        <asp:textBox runat="server" id="bus_booking_date" style="border: none"  ReadOnly="False"></asp:textBox> 
+        </div>
+
           <%--<div class="btn-block" id="busbookingbutton">
           <asp:Button ID="btnSave" Text="Send" runat="server" CssClass="aspButton" />
         </div>--%>
 
            <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
                 <section id="bbb" class="btn-block">      
-                 <div id ="showBookingButton" runat="server" visible ="true">
-                           <p class="text-secondary mb-1"> You have not booked any buses</p>
-                       <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"></asp:Button>
-                     </div>          
+                 
+                           
+                      <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" ></asp:Button>
+                              
             </section>
 
             </div> 

@@ -42,40 +42,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tourbookingerror;
 
         /// <summary>
-        /// TourBookingTravellers control.
+        /// TourBookingSeats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TourBookingTravellers;
-
-        /// <summary>
-        /// TourBookingCCnumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TourBookingCCnumber;
-
-        /// <summary>
-        /// display_tourid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_tourid;
-
-        /// <summary>
-        /// display_calculated_price control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_calculated_price;
+        protected global::System.Web.UI.WebControls.TextBox TourBookingSeats;
 
         /// <summary>
         /// display_departure control.
@@ -168,21 +141,12 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox display_tour_guide;
 
         /// <summary>
-        /// showBookTourButton control.
+        /// ViewBusBookingButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookTourButton;
-
-        /// <summary>
-        /// TourBookingButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button TourBookingButton;
+        protected global::System.Web.UI.WebControls.Button ViewBusBookingButton;
     }
 }
