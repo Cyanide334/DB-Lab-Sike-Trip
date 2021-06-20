@@ -13,11 +13,20 @@ namespace DB_Lab_Sike_Trip
 {
     public partial class Admin : System.Web.UI.Page
     {
-        protected void store_id(object sender, EventArgs e)
+        protected void store_tour_id(object sender, EventArgs e)
         {
-            Session["TourID"] = e.ToString();
+            Button btn = (Button)sender;
+            Session["TourID"] = btn.CommandArgument;
+            Response.Redirect("Edit Tour Service.aspx");
         }
 
+
+        protected void store_bus_id(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Session["BusID"] = btn.CommandArgument;
+            Response.Redirect("Edit Bus Service.aspx");
+        }
         protected void display_tour(int id, string departure, string destination, string reference_image, int price)
         {
             /*      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
@@ -39,39 +48,58 @@ namespace DB_Lab_Sike_Trip
 
 
 
+            //trips.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
+            //     "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
+            //     + "<p>" + departure + " to " + destination + "</p>"
+            //     + "<p>" + "Price: " + price + "</p>"
+            //     + "<div class=\"portfolio-links\" runat=\"server\">"
+            //     + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"
+            //    // + "<a href = \"View Tour.aspx\" class=\"portfolio-details-lightbox\" data-glightbox=\"type: external\" title=\"Portfolio Details\"  runat=\"server\" OnClick = \"store_tour_id\" CommandArgument = \"id\" ><i class=\"bx bx-link\"></i></a>"
+            //     + "<asp:Button  Text = \"View Details\" runat = \"server\"  CssClass = \"btn btn-danger\" Width = \"130px\"  OnClick = \"store_tour_id\" CommandArgument = \"1\"/>"
+            //     + "</div></div></div></div>"));
+
             trips.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
-                 "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
-                 + "<p>" + departure + " to " + destination + "</p>"
-                 + "<p>" + "Price: " + price + "</p>"
-                 + "<div class=\"portfolio-links\" runat=\"server\">"
-                 + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"
-                 + "<a href = \"Edit Tour Service.aspx\" class=\"portfolio-details-lightbox\" data-glightbox=\"type: external\" title=\"Portfolio Details\"  runat=\"server\" ><i class=\"bx bx-link\"></i></a>"
-                 + "</div></div></div></div>"));
+            "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
+            + "<p>" + departure + " to " + destination + "</p>"
+            + "<p>" + "Price: " + price + "</p>"
+            + "<div class=\"portfolio-links\" runat=\"server\">"
+            + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"));
 
+            Button btn = new Button();
+            btn.Text = "Edit Service";
+            btn.Width = 130;
+            btn.CssClass = "btn btn-danger";
+            btn.CommandArgument = id.ToString();
+            // btn.Attributes.Add("OnClick", "store_tour_id");
+            btn.Click += new EventHandler(store_tour_id);
+            trips.Controls.Add(btn);
 
-
-
-
+            trips.Controls.Add(new LiteralControl("</div></div></div></div>"));
 
         }
 
         protected void display_bus(int id, string model, int price, string reference_image)
         {
 
-
-
-
-
             buses.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
                  "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
                  + "<p>" + model + "</p>"
-                 + "<p>" + "Price: " + price + "</p>"
+                 + "<p>" + "Price per day: " + price + "</p>"
                  + "<div class=\"portfolio-links\" runat=\"server\">"
-                 + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"
-                 + "<a href = \"Edit Bus Service.aspx\" class=\"portfolio-details-lightbox\" data-glightbox=\"type: external\" title=\"Portfolio Details\"  runat=\"server\" ><i class=\"bx bx-link\"></i></a>"
-                 + "</div></div></div></div>"));
+
+                 + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"));
 
 
+            Button btn = new Button();
+            btn.Text = "Edit Service";
+            btn.Width = 130;
+            btn.CssClass = "btn btn-danger";
+            btn.CommandArgument = id.ToString();
+            // btn.Attributes.Add("OnClick", "store_tour_id");
+            btn.Click += new EventHandler(store_bus_id);
+            buses.Controls.Add(btn);
+
+            buses.Controls.Add(new LiteralControl("</div></div></div></div>"));
 
 
 
@@ -130,13 +158,29 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] != null)
+            if (Session["Username"] == null || Session["Admin"] == null)
             {
-
+                Response.Redirect("Home.aspx");
             }
+            else
+            {
+                load_tours_catalogue();
+                load_buses_catalogue();
+            }
+        }
 
-            load_tours_catalogue();
-            load_buses_catalogue();
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void goto_create_tour(object sender, EventArgs e)
+        {
+            Response.Redirect("Create Tour Service");
+        }
+        protected void goto_create_bus(object sender, EventArgs e)
+        {
+            Response.Redirect("Create Bus Service");
         }
     }
 }

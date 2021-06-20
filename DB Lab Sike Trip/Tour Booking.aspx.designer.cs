@@ -51,6 +51,15 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox TourBookingSeats;
 
         /// <summary>
+        /// display_calculated_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox display_calculated_price;
+
+        /// <summary>
         /// display_departure control.
         /// </summary>
         /// <remarks>

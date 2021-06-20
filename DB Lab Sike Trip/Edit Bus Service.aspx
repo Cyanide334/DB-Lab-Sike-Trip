@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Edit Bus Service.aspx.cs" Inherits="DB_Lab_Sike_Trip.Edit_Bus_Service" %>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script src="editbusservice.js"></script>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
 .editProfile {
@@ -99,7 +103,8 @@
                         <div class="row mt-2">
                             <div class="col-md-6"><label class="labels">Reference Image</label><asp:TextBox ID="ReferenceImage" runat="server" class="form-control" placeholder="Bus Make" value=""></asp:TextBox></div>
                         </div>
-                        <div class="mt-5 text-center"><asp:Button ID="editBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px" OnClick="editBusSaveButton_Click" /></div>
+                        <div class="form-group text-center" id="HomeContent_EditBusServiceError" style="color:red"></div>
+                        <div class="mt-5 text-center"><asp:Button ID="editBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px"  OnClientClick="return validate()" /></div><%--OnClick="editBusSaveButton_Click"--%>
                     </div>
                 </div>
         

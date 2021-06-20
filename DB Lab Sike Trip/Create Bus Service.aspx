@@ -1,4 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Create Bus Service.aspx.cs" Inherits="DB_Lab_Sike_Trip.Create_Bus_Service" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script src="createbusservicescript.js"></script>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
       <style type="text/css">
 .editProfile {
@@ -73,7 +78,7 @@
                 
                 <div class="col-md-5 border-right">
                     <div class="p-3 py-5">
-                        <header style ="color:Red" id="EditBusError" runat="server"></header>
+                        <header style ="color:Red" id="CreateBusError" runat="server"></header>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h4 class="text-right">Create Bus Service</h4>
                         </div>
@@ -92,7 +97,8 @@
                         <div class="row mt-2">
                             <div class="col-md-6"><label class="labels">Reference Image</label><asp:TextBox ID="ReferenceImage" runat="server" class="form-control" placeholder="Relative path of Image" value=""></asp:TextBox></div>
                         </div>
-                        <div class="mt-5 text-center"><asp:Button ID="editBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px" OnClick="editBusSaveButton_Click" /></div>
+                        <div class="form-group text-center" id="HomeContent_CreateBusServiceError" style="color:red"></div>
+                        <div class="mt-5 text-center"><asp:Button ID="createBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px" OnClick="createBusSaveButton_Click" onclientclick="return validate()"/></div>
                     </div>
                 </div>
         
@@ -101,5 +107,4 @@
          </form>
 </section>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
-</asp:Content>
+
