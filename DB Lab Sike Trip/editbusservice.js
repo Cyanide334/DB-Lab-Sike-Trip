@@ -1,8 +1,7 @@
 ﻿var erroreditbus = document.getElementById('HomeContent_EditBusServiceError');
 var names = /^[a-zA-Z]+ [a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
-var busregformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
-var busmodelformat = /^[A-Z]{2}\s[0-9]{4}$/;//AB 1234
+var busregformat = /^[a-zA-Z0-9._][a-zA-Z]+[0-9]*$/
 var buslicformat = /^(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$/;//HR-0619850034761 or HR06 19850034761
 
 erroreditbus.hidden = true;
@@ -10,7 +9,7 @@ erroreditbus.hidden = true;
 function validate() {
 
     var busmanufacturer = document.getElementById('HomeContent_BusManufacturer').value;//names
-    var busmodel = document.getElementById('HomeContent_BusModel').value;//busmodelformat
+    var busmodel = document.getElementById('HomeContent_BusModel').value;//names
     var regnumber = document.getElementById('HomeContent_Rnum').value;//busregformat
     var licnumber = document.getElementById('HomeContent_Lnum').value;//buslicformat
     var capacity = document.getElementById('HomeContent_Capacity').value;//numbers
@@ -28,8 +27,8 @@ function validate() {
 
     //busmodel
     if (busmodel != "") {
-        if (!busmodel.match(busmodelformat)) {
-            erroreditbus.innerText = 'Please enter AB 1234 format in the bus model.';
+        if (!busmodel.match(names)) {
+            erroreditbus.innerText = 'Please enter alphabets only in the bus model.';
             return false;
         }
     }
@@ -37,7 +36,7 @@ function validate() {
     //regnumber
     if (regnumber != "") {
         if (!regnumber.match(busregformat)) {
-            erroreditbus.innerText = 'Please enter ABC 1234 format in the registration number.';
+            erroreditbus.innerText = 'Please enter capital letters and numbers in the registration number.';
             return false;
         }
     }
