@@ -295,6 +295,7 @@
     <Content Include="Edit Profile.aspx" />
     <Content Include="Edit Tour Service.aspx" />
     <Content Include="editprofilescript.js" />
+    <Content Include="edittourservicescript.js" />
     <Content Include="formLand\contact.php" />
     <Content Include="formLand\Readme.txt" />
     <Content Include="forms\contact.php" />

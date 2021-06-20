@@ -1855,35 +1855,6 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
-        //Reservation Count
-        public string return_bus_reservation_count_from_db(string _bid)
-        {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cmd;
-            int bid = Convert.ToInt16(_bid);
-
-            try
-            {
-                string qry = "select ReservationCount from Buses where BusID = '" + bid + "'";
-
-                cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
-                con.Close();
-
-                return value;
-
-            }
-
-            catch (Exception ex)
-            {
-                System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
-
-            }
-
-        }
-
         // Bus refrence image
         public string return_bus_reference_image_from_db(string _bid)
         {

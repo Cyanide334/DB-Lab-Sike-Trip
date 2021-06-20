@@ -8,7 +8,6 @@ profileerror.hidden = true;
 
 function validate()
 {
-
     var profilename = document.getElementById('HomeContent_editProfileName').value;
     var username = document.getElementById('HomeContent_editProfileUsernameForm').value;
     var fpassword = document.getElementById('HomeContent_editProfilePassword').value;
@@ -20,11 +19,6 @@ function validate()
     var ccnum = document.getElementById('HomeContent_editProfileCredit').value;
     
     profileerror.hidden = false;
-
-    if (profilename == "" || username == "" || fpassword == "" || confirmpassword == "" || email == "" || country == "" || city == "" || phoneno == "" || ccnum == "") {
-        //profileerror.innerText = 'Please enter the missing field(s).';
-        return true;
-    }
 
     //full name can have only alphabets 
     if (profilename != "") {
