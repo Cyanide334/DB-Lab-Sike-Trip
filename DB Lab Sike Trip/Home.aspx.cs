@@ -81,10 +81,6 @@ namespace DB_Lab_Sike_Trip
         protected void display_bus(int id, string model, int price, string reference_image)
         {
 
-
-
-
-
             buses.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
                  "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
                  + "<p>" + model + "</p>"

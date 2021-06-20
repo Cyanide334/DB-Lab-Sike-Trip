@@ -3,6 +3,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <style>
+
       .testbox body, div, form, input, select, textarea, p { 
       padding: 0;
       margin: 0;
@@ -167,13 +168,16 @@
       .testbox .aspButton:hover {
       box-shadow: 0 0 18px 0 #d9232d;
       }
-      @media (max-width: 700px) {
-      .testbox .name-item, .city-item {
+      @media (max-width: 700px)
+      {
+      .testbox .name-item, .city-item 
+      {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       }
-      .testbox .name-item input, .city-item input {
+      .testbox .name-item input, .city-item input
+      {
       width: calc(50% - 20px);
       }
       .testbox .city-item select
@@ -202,9 +206,25 @@
     <section>
      <div class="testbox">
       <form ID ="BusBooking" runat="server">
+     <section id ="DisplayBusBooking" class="viewProfile" visible = "true" runat ="server"> <%--it disappers bcz of this--%>
         <div class="banner">
           <h1>Bus Booking Form</h1>
         </div>
+
+           <div class="item">
+        <p>Destination</p>
+           <asp:TextBox ID="BusBookingDestination" placeholder="Enter Destination" runat="server"></asp:TextBox>
+      </div>
+           <div class="item">
+        <p>Destination</p>
+           <asp:TextBox ID="BusBookingDeparture" placeholder="Enter Departure" runat="server"></asp:TextBox>
+      </div>
+        <div class="item">
+        <p>Credit Card Information</p>
+           <asp:TextBox ID="BusBookingCCnumber" placeholder="Enter Credit Card Number" runat="server"></asp:TextBox>
+      </div>
+
+
         <div class="item">
           <p>Bus Make</p>
               <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
@@ -215,15 +235,15 @@
         </div>
         <div class="item">
           <p>Registration Number</p>
-         <asp:textBox runat="server" id="display_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
+         <asp:textBox runat="server" id="display_booking_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
           <p>Capacity</p>
-          <asp:textBox runat="server" id="display_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
+          <asp:textBox runat="server" id="display_booking_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
           <p>Price Per Km</p>
-          <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
+          <asp:textBox runat="server" id="display_booking_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
         <div class="item">
           <p>Number of days you need the bus booked for? </p>

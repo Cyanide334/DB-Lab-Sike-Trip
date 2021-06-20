@@ -24,13 +24,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm ViewBusForm;
 
         /// <summary>
-        /// Image1 control.
+        /// DisplayViewBus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayViewBus;
 
         /// <summary>
         /// book_btn control.
