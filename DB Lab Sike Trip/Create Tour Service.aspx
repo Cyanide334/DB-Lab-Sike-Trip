@@ -76,7 +76,6 @@
     <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         
-        <div class="col-md-5 border-right">
             <form id ="editTourForm" runat ="server">
             <div class="p-3 py-5">
                 <header style ="color:Red" id="CreateTourError" runat="server"></header>
@@ -115,10 +114,9 @@
                 <div class="form-group text-center" id="HomeContent_CreateTourServiceError" style="color:red"></div>
                 <div class="mt-5 text-center"><asp:Button ID="createTourSaveButton" Text="Create Tour" runat="server"  CssClass="btn btn-primary profile-button" Width="130px" Height="40px" OnClick=" createTourSaveButton_Click" OnClientClick="return validate()"/></div>
             </div>
-                </form>
+            </form>
         </div>
         
-    </div>
 </div>
 
 </section>

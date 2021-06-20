@@ -78,12 +78,6 @@
     <section class="editProfile">
     <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-1.jpg" class="rounded-circle" runat="server" />
-                <span class="font-weight-bold">Sike! Tour</span><span class="text-black-50">serviceProvider@bbb.com</span><span> </span></div>
-        </div>
-        <div class="col-md-5 border-right">
             <form id ="editTourForm" runat ="server">
             <div class="p-3 py-5">
                 <header style ="color:Red" id="EditTourError" runat="server"></header>
@@ -131,7 +125,6 @@
                 </form>
         </div>
         
-    </div>
 </div>
 
 </section>
