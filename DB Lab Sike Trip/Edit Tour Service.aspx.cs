@@ -11,11 +11,7 @@ namespace DB_Lab_Sike_Trip
 {
     public partial class Edit_Tour_Service : System.Web.UI.Page
     {
-        protected string get_tour_name()
-        {
-            myDAL obj = new myDAL();
-            return obj.return_tour_name_from_db(Session["TourID"].ToString());
-        }
+ 
         protected string get_tour_departure()
         {
             myDAL obj = new myDAL();
@@ -76,7 +72,7 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_price_of_tour_from_db(Session["TourID"].ToString());
         }
-       
+
         protected string get_tour_tour_guide()
         {
             myDAL obj = new myDAL();
@@ -99,7 +95,7 @@ namespace DB_Lab_Sike_Trip
             if (Session["TourID"] != null)
             {
 
-                TourName.Attributes.Add("placeholder", get_tour_name());
+                
                 Departure.Attributes.Add("placeholder", get_tour_departure());
                 Destination.Attributes.Add("placeholder", get_tour_destination());
                 Ddate.Attributes.Add("placeholder", get_tour_departure_date());
@@ -112,69 +108,86 @@ namespace DB_Lab_Sike_Trip
                 TotalSeats.Attributes.Add("placeholder", get_tour_total_seats().ToString());
                 PPS.Attributes.Add("placeholder", get_tour_price_per_seat().ToString());
                 TourGuide.Attributes.Add("placeholder", get_tour_tour_guide());
-                BusNum.Attributes.Add("placeholder",get_tour_bus_number());
+                BusNum.Attributes.Add("placeholder", get_tour_bus_number());
                 ReferenceImage.Attributes.Add("placeholder", get_tour_reference_image());
             }
         }
 
-       
+
         protected void editTourSaveButton_Click(object sender, EventArgs e)
         {
             bool success = true;
             myDAL obj = new myDAL();
-           
+
+
+            if (Departure.Text != "")
+            {
+                obj.update_tour_departure(Session["TourID"].ToString(), Departure.Text);
+            }
+
+            if (Ddate.Text != "")
+            {
+                obj.update_tour_departure_date(Session["TourID"].ToString(), Ddate.Text );
+            }
+
+            if (Dtime.Text != "")
+            {
+                obj.update_tour_departure_time(Session["TourID"].ToString(), Dtime.Text);
+            }
+
+            if (Adate.Text != "")
+            {
+                obj.update_tour_arrival_date(Session["TourID"].ToString(), Adate.Text);
+            }
+
+            if (Atime.Text != "")
+            {
+                obj.update_tour_arrival_time(Session["TourID"].ToString(), Atime.Text);
+            }
+
+            if (Rdate.Text != "")
+            {
+                obj.update_tour_return_date(Session["TourID"].ToString(), Rdate.Text);
+            }
+
+            if (Rtime.Text != "")
+            {
+                obj.update_tour_return_time(Session["TourID"].ToString(), Rtime.Text);
+            }
+
+            if (numDays.Text != "")
+            {
+                obj.update_tour_numberOfDays(Session["TourID"].ToString(), numDays.Text);
+            }
 
             if (TotalSeats.Text != "")
             {
-                if (obj.update_credit(Session["TourID"].ToString(), TotalSeats.Text) != 0)
-                {
-                    // print error
-                    success = false;
-                    EditTourError.InnerText = "New Capacity of the bus is less than its reservation count";
-                }
+                obj.update_tour_TotalCapacity(Session["TourID"].ToString(), TotalSeats.Text);
             }
 
-
-            if (success == true)
+            if (PPS.Text != "")
             {
-                if (editProfileName.Text != "")
-                {
-                    // myDAL obj = new myDAL();
-                    obj.update_name(Session["Username"].ToString(), editProfileName.Text);
-                }
-
-                if (editProfileCity.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_city(Session["Username"].ToString(), editProfileCity.Text);
-                }
-
-                if (editProfileCountry.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_country(Session["Username"].ToString(), editProfileCountry.Text);
-                }
-
-                if (editProfilePhone.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_phone(Session["Username"].ToString(), editProfilePhone.Text);
-                }
-
-                if (editProfileCredit.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_credit(Session["Username"].ToString(), editProfileCredit.Text);
-                }
-
-                if (editProfilePassword.Text != "")
-                {
-                    // myDAL obj = new myDAL();
-                    obj.update_password(Session["Username"].ToString(), editProfilePassword.Text);
-                }
-
-                Response.Redirect("View Profile.aspx");
+                obj.update_tour_price(Session["TourID"].ToString(), PPS.Text);
             }
+
+            if (TourGuide.Text != "")
+            {
+                obj.update_tour_tour_guide(Session["TourID"].ToString(), TourGuide.Text);
+            }
+
+            if (BusNum.Text != "")
+            {
+                obj.update_tour_bus_number(Session["TourID"].ToString(), BusNum.Text);
+            }
+
+            if (ReferenceImage.Text != "")
+            {
+                obj.update_tour_reference_image(Session["TourID"].ToString(), ReferenceImage.Text);
+            }
+
+
+           
         }
     }
+    
 }
