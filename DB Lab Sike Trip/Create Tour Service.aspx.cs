@@ -26,9 +26,9 @@ namespace DB_Lab_Sike_Trip
             string atime = Atime.Text;
             string rdate = Rdate.Text;
             string rtime = Rtime.Text;
-            int number_of_days = Convert.ToInt32(numDays.Text);
-            int total_seats = Convert.ToInt32(TotalSeats.Text);
-            int pps = Convert.ToInt32(PPS.Text);
+            //int number_of_days = Convert.ToInt32(numDays.Text);
+            //int total_seats = Convert.ToInt32(TotalSeats.Text);
+            //int pps = Convert.ToInt32(PPS.Text);
             string tourguide = TourGuide.Text;
             string busnumber = BusNum.Text;
             string reference_image = ReferenceImage.Text;

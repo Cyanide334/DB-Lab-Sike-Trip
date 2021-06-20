@@ -15,15 +15,6 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// Image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
-
-        /// <summary>
         /// editTourForm control.
         /// </summary>
         /// <remarks>
@@ -139,6 +130,15 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PPS;
+
+        /// <summary>
+        /// ReservationCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ReservationCount;
 
         /// <summary>
         /// TourGuide control.

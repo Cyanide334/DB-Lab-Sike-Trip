@@ -49,13 +49,13 @@
             }
             #view_log:checked ~ .panels #view_log-panel,
             #edit_services:checked ~ .panels #edit_services-panel,
-            #create_services:checked ~ .panels #create_services-panel,
+            #create_services:checked ~ .panels #create_services-panel
             {
               display:block
             }
             #view_log:checked ~ .tabs #view_log-tab,
             #edit_services:checked ~ .tabs #edit_services-tab,
-            #create_services:checked ~ .tabs #create_services-tab,
+            #create_services:checked ~ .tabs #create_services-tab
             {
               background:#fffffff6;
               color:#d9232d;
@@ -79,6 +79,7 @@
                 </div>
             </section>
       <!-- End Breadcrumbs -->
+     <form runat="server">
         <div class="warpper">
           <input class="radio" id="view_log" name="group" type="radio" checked>
           <input class="radio" id="edit_services" name="group" type="radio">
@@ -97,7 +98,7 @@
               </div>
               <div class="panel" id="edit_services-panel">
                                     <!-- ======= Catalogue Section ======= -->
-
+                 
                            <!-- ======= Portfolio Section ======= -->
                         <section id="portfolio" class="portfolio" runat="server">
         
@@ -131,13 +132,16 @@
       
                           </div>
                         </section>
+                      
                               <!-- End Portfolio Section -->
               </div>
               <div class="panel" id="create_services-panel">
                 <div class="panel-title">Create a New Service</div>
                   <div class="row mt-2">
-                      <div class="mt-5 text-center"><asp:Button ID="createTour" runat="server" class="btn btn-primary profile-button" Text="Create Tour Service" Width="130px" Height="40px" OnClick="goto_create_tour" /></div>
-                      <div class="mt-5 text-center"><asp:Button ID="createBus" runat="server" class="btn btn-primary profile-button" Text="Create Bus Service" Width="130px" Height="40px" OnClick="goto_create_bus" /></div>
+                                
+                          <div class="mt-5 text-center"><asp:Button ID="createTour" runat="server" class="btn btn-primary profile-button" Text="Create Tour Service" Width="130px" Height="40px" OnClick="goto_create_tour" /></div>
+                          <div class="mt-5 text-center"><asp:Button ID="createBus" runat="server" class="btn btn-primary profile-button" Text="Create Bus Service" Width="130px" Height="40px" OnClick="goto_create_bus" /></div>
+                      
                   </div>
                         
                 <p>We recommend that you complete Learn HTML before learning CSS.</p>
@@ -145,7 +149,7 @@
           </div>
         </div>
 
-
+         </form>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
 </asp:Content>

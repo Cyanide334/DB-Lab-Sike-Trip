@@ -36,7 +36,7 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_bus_capacity_from_db(Session["BusID"].ToString());
         }
-       
+
         protected int get_bus_price_per_day()
         {
             myDAL obj = new myDAL();
@@ -47,7 +47,7 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_bus_reference_image_from_db(Session["BusID"].ToString());
         }
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -61,7 +61,7 @@ namespace DB_Lab_Sike_Trip
                 Capacity.Attributes.Add("placeholder", get_bus_capacity().ToString());
                 PPD.Attributes.Add("placeholder", get_bus_price_per_day().ToString());
                 ReferenceImage.Attributes.Add("placeholder", get_bus_reference_image());
-              
+
             }
         }
         protected void editBusSaveButton_Click(object sender, EventArgs e)
@@ -76,53 +76,54 @@ namespace DB_Lab_Sike_Trip
                     EditBusError.InnerText = "Registration Number already present in database!";
                     success = false;
                 }
-               
-        //    }
 
-            if (Lnum.Text != "")
-            {
-                if (obj.update_bus_license(Session["BusID"].ToString(), Lnum.Text) != 0)
+                //    }
+
+                if (Lnum.Text != "")
                 {
-                    // print error
-                    success = false;
-                    EditBusError.InnerText = "License Number already present in database!";
-                }
-            }
-
-            if (success == true)
-            {
-
-                if (BusManufacturer.Text != "")
-                {
-                    // myDAL obj = new myDAL();
-                    obj.update_bus_manufacturer(Session["BusID"].ToString(), BusManufacturer.Text);
+                    if (obj.update_bus_license(Session["BusID"].ToString(), Lnum.Text) != 0)
+                    {
+                        // print error
+                        success = false;
+                        EditBusError.InnerText = "License Number already present in database!";
+                    }
                 }
 
-                if (BusModel.Text != "")
+                if (success == true)
                 {
-                    // myDAL obj = new myDAL();
-                    obj.update_bus_model(Session["BusID"].ToString(), BusModel.Text);
+
+                    if (BusManufacturer.Text != "")
+                    {
+                        // myDAL obj = new myDAL();
+                        obj.update_bus_manufacturer(Session["BusID"].ToString(), BusManufacturer.Text);
+                    }
+
+                    if (BusModel.Text != "")
+                    {
+                        // myDAL obj = new myDAL();
+                        obj.update_bus_model(Session["BusID"].ToString(), BusModel.Text);
+                    }
+
+                    if (PPD.Text != "")
+                    {
+                        //myDAL obj = new myDAL();
+                        obj.update_bus_pricePerDay(Session["BusID"].ToString(), PPD.Text);
+                    }
+
+                    if (ReferenceImage.Text != "")
+                    {
+                        //myDAL obj = new myDAL();
+                        obj.update_bus_referenceImage(Session["BusID"].ToString(), ReferenceImage.Text);
+                    }
+
+                    if (Capacity.Text != "")
+                    {
+                        //myDAL obj = new myDAL();
+                        obj.update_bus_capacity(Session["BusID"].ToString(), Capacity.Text);
+                    }
+
+
                 }
-
-                if (PPD.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_bus_pricePerDay(Session["BusID"].ToString(), PPD.Text);
-                }
-
-                if (ReferenceImage.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_bus_referenceImage(Session["BusID"].ToString(), ReferenceImage.Text);
-                }
-
-                if (Capacity.Text != "")
-                {
-                    //myDAL obj = new myDAL();
-                    obj.update_bus_capacity(Session["BusID"].ToString(), Capacity.Text);
-                }
-
-
             }
         }
     }

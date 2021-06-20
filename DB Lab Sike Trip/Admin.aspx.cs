@@ -158,7 +158,7 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] == null || Session["Admin"] == null)
+            if (Session["Username"] == null && Session["Admin"] == null)
             {
                 Response.Redirect("Home.aspx");
             }

@@ -71,7 +71,6 @@
             <div class="container rounded bg-white mt-5 mb-5">
             <div class="row">
                 
-                <div class="col-md-5 border-right">
                     <div class="p-3 py-5">
                         <header style ="color:Red" id="CreateBusError" runat="server"></header>
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -96,7 +95,6 @@
                     </div>
                 </div>
         
-    </div>
              </div>
          </form>
 </section>
