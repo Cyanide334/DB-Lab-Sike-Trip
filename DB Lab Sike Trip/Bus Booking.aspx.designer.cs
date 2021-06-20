@@ -15,22 +15,22 @@ namespace DB_Lab_Sike_Trip
     {
 
         /// <summary>
-        /// display_busmake control.
+        /// display_manufacturer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_busmake;
+        protected global::System.Web.UI.WebControls.TextBox display_manufacturer;
 
         /// <summary>
-        /// display_licensenumber control.
+        /// display_model control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_licensenumber;
+        protected global::System.Web.UI.WebControls.TextBox display_model;
 
         /// <summary>
         /// display_registrationnumber control.
@@ -60,22 +60,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox display_priceperkm;
 
         /// <summary>
-        /// display_bus_reservation_count control.
+        /// bus_booking_days control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox display_bus_reservation_count;
+        protected global::System.Web.UI.WebControls.TextBox bus_booking_days;
 
         /// <summary>
-        /// showBookingButton control.
+        /// bus_booking_date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookingButton;
+        protected global::System.Web.UI.WebControls.TextBox bus_booking_date;
 
         /// <summary>
         /// ViewBusBookingButton control.
