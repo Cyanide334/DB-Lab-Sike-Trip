@@ -2095,6 +2095,32 @@ namespace DB_Lab_Sike_Trip.DAL
             }
             return ds;
         }
+        public DataSet get_reservations(string username)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            DataSet ds = new DataSet();
+            try
+            {
+                string qry = "select * from serviceLog where username = '" + username + "'";
+                cmd = new SqlCommand(qry, con);
+                cmd.CommandType = CommandType.Text;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(ds);
+                }
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                con.Close();
+                return null;
+            }
+            return ds;
+        }
     }
 
 

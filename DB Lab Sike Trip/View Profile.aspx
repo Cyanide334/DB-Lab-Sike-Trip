@@ -78,7 +78,7 @@
             </section>
 
       <!-- End Breadcrumbs -->
-      <form id="ViewProfileForm" form action="/" runat="server">
+      <form id="ViewProfileForm" runat="server">
     <section class="viewProfile" runat="server" id="DisplayProfileSection" visible="true">
         
             <div class="container">
@@ -95,7 +95,7 @@
                      <asp:textBox runat="server" id="display_username" style="border: none"></asp:textBox>
 
                       <p class="text-muted font-size-sm" id="City_And_Country_display"></p>
-                         <asp:Button ID="ViewProfileFollowButton" Text="View Reservations" runat="server" class="btn btn-danger" OnClick ="goto_reservations"></asp:Button>
+                         <asp:Button ID="ViewProfileReservationsButton" Text="View Reservations" runat="server" class="btn btn-danger" OnClick ="goto_reservations"></asp:Button>
                      
                     </div>
                   </div>
