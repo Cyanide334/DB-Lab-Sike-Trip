@@ -24,22 +24,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm editTourForm;
 
         /// <summary>
-        /// EditTourError control.
+        /// CreateTourError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl EditTourError;
-
-        /// <summary>
-        /// TourName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TourName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CreateTourError;
 
         /// <summary>
         /// Departure control.
@@ -132,13 +123,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox TotalSeats;
 
         /// <summary>
-        /// TextBox1 control.
+        /// PPS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox PPS;
 
         /// <summary>
         /// TourGuide control.
@@ -168,12 +159,12 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.TextBox ReferenceImage;
 
         /// <summary>
-        /// createTourServiceSave control.
+        /// createTourSaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button createTourServiceSave;
+        protected global::System.Web.UI.WebControls.Button createTourSaveButton;
     }
 }

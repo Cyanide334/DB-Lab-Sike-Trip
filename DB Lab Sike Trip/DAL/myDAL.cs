@@ -1260,6 +1260,38 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
+
+        public string return_arrival_date_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select ArrivalDate from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = cmd.ExecuteScalar().ToString();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
+
+
         //arrival time
         public string return_arrival_time_from_db(string _tid)
         {
@@ -1305,6 +1337,36 @@ namespace DB_Lab_Sike_Trip.DAL
 
                 cmd = new SqlCommand(qry, con);
                 string value =cmd.ExecuteScalar().ToString();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+        
+        // return time
+        public string return_return_time_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
+
+            try
+            {
+
+                string qry = "select ReturnTime from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = cmd.ExecuteScalar().ToString();
                 con.Close();
 
                 return value;
