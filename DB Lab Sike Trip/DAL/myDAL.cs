@@ -1982,7 +1982,7 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@model"].Value = model;
                 cmd.Parameters["@reg"].Value = reg;
                 cmd.Parameters["@license"].Value = license;
-                cmd.Parameters["@capaciy"].Value = Convert.ToInt32(capacity);
+                cmd.Parameters["@capacity"].Value = Convert.ToInt32(capacity);
                 cmd.Parameters["@priceperday"].Value = Convert.ToInt32(pricePerDay);
                 cmd.Parameters["@refimage"].Value = reference_image;
                 cmd.ExecuteNonQuery();
@@ -2012,7 +2012,7 @@ namespace DB_Lab_Sike_Trip.DAL
             try
             {
 
-                cmd = new SqlCommand("dbo.createBus", con);
+                cmd = new SqlCommand("dbo.createTour", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add("@Departure", SqlDbType.VarChar, 30);

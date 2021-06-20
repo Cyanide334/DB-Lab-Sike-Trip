@@ -28,10 +28,7 @@ namespace DB_Lab_Sike_Trip
             
             myDAL obj = new myDAL();
 
-            //string outputString = "";
-            //int rtn = 10;
-            //obj.create_bus(manufacturer, model, rnum, lnum, capacity, ppd, reference_image,ref rtn);
-            //displayString(rtn, ref outputString, username);
+            obj.create_bus(manufacturer, model, rnum, lnum, capacity, ppd, reference_image);
             
         }
     }
