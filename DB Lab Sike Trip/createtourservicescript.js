@@ -70,7 +70,29 @@ function validate() {
 
     //departuretime
     if (departuretime != "") {
-        if (!departuretime.match(timeformat)) {
+        if (departuretime.match(timeformat)) {
+            regs = departuretime.match(timeformat);
+            if (regs[3]) {
+                // 12-hour value between 1 and 12
+                if (regs[1] < 1 || regs[1] > 12) {
+                    createtourservice.innerText = 'Invalid value for hour: ' + regs[1];
+                    return false;
+                }
+            }
+            else {
+                // 24-hour value between 0 and 23
+                if (regs[1] > 23) {
+                    createtourservice.innerText = 'Invalid value for hours: ' + regs[1];
+                    return false;
+                }
+            }
+            // minute value between 0 and 59
+            if (regs[2] > 59) {
+                createtourservice.innerText = 'Invalid value for minutes: ' + regs[2];
+                return false;
+            }
+        }
+        else {
             createtourservice.innerText = 'Please enter hh:mma/pm format in the departure time.';
             return false;
         }
@@ -104,8 +126,30 @@ function validate() {
 
     //arrivaltime
     if (arrivaltime != "") {
-        if (!arrivaltime.match(timeformat)) {
-            createtourservice.innerText = 'Please enter hh:mm a/pm format in the arrival time.';
+        if (arrivaltime.match(timeformat)) {
+            regs = arrivaltime.match(timeformat);
+            if (regs[3]) {
+                // 12-hour value between 1 and 12
+                if (regs[1] < 1 || regs[1] > 12) {
+                    createtourservice.innerText = 'Invalid value for hour: ' + regs[1];
+                    return false;
+                }
+            }
+            else {
+                // 24-hour value between 0 and 23
+                if (regs[1] > 23) {
+                    createtourservice.innerText = 'Invalid value for hours: ' + regs[1];
+                    return false;
+                }
+            }
+            // minute value between 0 and 59
+            if (regs[2] > 59) {
+                createtourservice.innerText = 'Invalid value for minutes: ' + regs[2];
+                return false;
+            }
+        }
+        else {
+            createtourservice.innerText = 'Please enter hh:mma/pm format in the arrival time.';
             return false;
         }
     }
@@ -138,8 +182,30 @@ function validate() {
 
     //returntime
     if (returntime != "") {
-        if (!returntime.match(timeformat)) {
-            createtourservice.innerText = 'Please enter hh:mm a/pm format in the return time.';
+        if (returntime.match(timeformat)) {
+            regs = returntime.match(timeformat);
+            if (regs[3]) {
+                // 12-hour value between 1 and 12
+                if (regs[1] < 1 || regs[1] > 12) {
+                    createtourservice.innerText = 'Invalid value for hour: ' + regs[1];
+                    return false;
+                }
+            }
+            else {
+                // 24-hour value between 0 and 23
+                if (regs[1] > 23) {
+                    createtourservice.innerText = 'Invalid value for hours: ' + regs[1];
+                    return false;
+                }
+            }
+            // minute value between 0 and 59
+            if (regs[2] > 59) {
+                createtourservice.innerText = 'Invalid value for minutes: ' + regs[2];
+                return false;
+            }
+        }
+        else {
+            createtourservice.innerText = 'Please enter hh:mma/pm format in the return time.';
             return false;
         }
     }
