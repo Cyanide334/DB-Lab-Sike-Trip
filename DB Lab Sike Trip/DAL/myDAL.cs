@@ -913,7 +913,35 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
+       
+        //get tour guide name
+        public string return_tour_guide_name_from_db(string _tid)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            int tid = Convert.ToInt16(_tid);
 
+            try
+            {
+                string qry = "select tourguide from Tours where TourID = '" + tid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
 
         //returns number of available tours
         public int get_tours_from_db()
@@ -1207,7 +1235,7 @@ namespace DB_Lab_Sike_Trip.DAL
         }
 
         //Reservation Count
-        public string return_bus_reservation_count_from_db(string _bid)
+        public int return_bus_reservation_count_from_db(string _bid)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -1235,35 +1263,8 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
-        //get tour guide name
-        public string return_tour_guide_name_from_db(string _tid)
-        {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cmd;
-            int tid = Convert.ToInt16(_tid);
-
-            try
-            {
-                string qry = "select tourguide from Tours where TourID = '" + tid + "'";
-
-                cmd = new SqlCommand(qry, con);
-                string value = (string)cmd.ExecuteScalar();
-                con.Close();
-
-                return value;
-
-            }
-
-            catch (Exception ex)
-            {
-                System.Web.HttpContext.Current.Response.Write(ex.Message);
-                return null;
-
-            }
-
-        }
-
+   
+       
 
 
 

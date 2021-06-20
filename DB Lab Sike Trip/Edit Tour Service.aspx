@@ -83,6 +83,7 @@
         <div class="col-md-5 border-right">
             <form id ="editTourForm" runat ="server">
             <div class="p-3 py-5">
+                <header style ="color:Red" id="EditTourError" runat="server"></header>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Edit Tour Service</h4>
                 </div>
@@ -107,14 +108,10 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="numDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Available Seats</label><asp:TextBox ID="AvailableSeats" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>     
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="PPS" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Reservation Count</label><asp:TextBox ID="ReservationCount" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
-                </div>
+                    <div class="col-md-6"><label class="labels">Total Seats</label><asp:TextBox ID="TotalSeats" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>     
+                    <div class="col-md-6"><label class="labels">Price Per Seat</label><asp:TextBox ID="TextBox1" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>
 
-          
+                </div>     
                 <div class="row mt-2">
                     <div class="col-md-6"><label class="labels">Tour Guide </label><asp:TextBox ID="TourGuide" runat="server" placeholder="Tour Guide Name" CssClass="form-control"></asp:TextBox></div>
                     <div class="col-md-6"><label class="labels">Bus License Number</label><asp:TextBox ID="BusNum" runat="server" placeholder="Bus License Number" CssClass="form-control"></asp:TextBox></div>

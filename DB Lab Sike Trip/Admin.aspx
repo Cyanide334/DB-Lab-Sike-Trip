@@ -48,17 +48,15 @@
               display:none;
             }
             #view_log:checked ~ .panels #view_log-panel,
-            #edit_tour:checked ~ .panels #edit_tour-panel,
-            #create_tour:checked ~ .panels #create_tour-panel,
-            #edit_bus:checked ~ .panels #edit_bus-panel,
-            #create_bus:checked ~ .panels #create_bus-panel{
+            #edit_services:checked ~ .panels #edit_services-panel,
+            #create_services:checked ~ .panels #create_services-panel,
+            {
               display:block
             }
-           #view_log:checked ~ .tabs #view_log-tab,
-            #edit_tour:checked ~ .tabs #edit_tour-tab,
-            #create_tour:checked ~ .tabs #create_tour-tab,
-            #edit_bus:checked ~ .tabs #edit_bus-tab,
-            #create_bus:checked ~ .tabs #create_bus-tab{
+            #view_log:checked ~ .tabs #view_log-tab,
+            #edit_services:checked ~ .tabs #edit_services-tab,
+            #create_services:checked ~ .tabs #create_services-tab,
+            {
               background:#fffffff6;
               color:#d9232d;
               border-top: 3px solid #d9232d;
@@ -83,24 +81,21 @@
       <!-- End Breadcrumbs -->
         <div class="warpper">
           <input class="radio" id="view_log" name="group" type="radio" checked>
-          <input class="radio" id="edit_tour" name="group" type="radio">
-          <input class="radio" id="create_tour" name="group" type="radio">
-          <input class="radio" id="edit_bus" name="group" type="radio">
-          <input class="radio" id="create_bus" name="group" type="radio">
+          <input class="radio" id="edit_services" name="group" type="radio">
+          <input class="radio" id="create_services" name="group" type="radio">
           
           <div class="tabs">
               <label class="tab" id="view_log-tab" for="view_log">View Log</label>
-              <label class="tab" id="edit_tour-tab" for="edit_tour">Edit Tours</label>
-              <label class="tab" id="create_tour-tab" for="create_tour">Create Tour</label>
-              <label class="tab" id="edit_bus-tab" for="edit_bus">Edit Buses</label>
-              <label class="tab" id="create_bus-tab" for="create_bus">Create Buses</label>
+              <label class="tab" id="edit_services-tab" for="edit_services">Edit Services</label>
+              <label class="tab" id="create_services-tab" for="create_services">Create Services</label>
+
           </div>
           <div class="panels">
               <div class="panel" id="view_log-panel">
                 <div class="panel-title">Service Log</div>
                 <p>Without CSS, every web page would be drab plain text and images that flowed straight down the page. With CSS, you can add color and background images and change the layout of your page — your web pages can feel like works of art!</p>
               </div>
-              <div class="panel" id="edit_tour-panel">
+              <div class="panel" id="edit_services-panel">
                                     <!-- ======= Catalogue Section ======= -->
 
                            <!-- ======= Portfolio Section ======= -->
@@ -138,18 +133,10 @@
                         </section>
                               <!-- End Portfolio Section -->
               </div>
-              <div class="panel" id="create_tour-panel">
+              <div class="panel" id="create_services-panel">
                 <div class="panel-title">Create a New Tour</div>
                 <p>We recommend that you complete Learn HTML before learning CSS.</p>
-              </div>
-              <div class="panel" id="edit_bus-panel">
-                <div class="panel-title">All Buses</div>
-                <p>We recommend that you complete Learn HTML before learning CSS.</p>
-              </div>
-              <div class="panel" id="create_bus-panel">
-                <div class="panel-title">Create a new Bus</div>
-                <p>We recommend that you complete Learn HTML before learning CSS.</p>
-              </div>
+              </div> 
           </div>
         </div>
 
