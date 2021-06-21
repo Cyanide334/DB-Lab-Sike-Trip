@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Search Bus.aspx.cs" Inherits="DB_Lab_Sike_Trip.Search_Bus" %>
+<asp:Content ID="Content4" ContentPlaceHolderID="scripts" runat="server">
+    <script src="searchbusscript.js"></script>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <script src="searchbusscript.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
         <!-- ======= Breadcrumbs ======= -->
@@ -42,13 +48,10 @@
                 </div>
               </div>
             <div class="row mt-3">
-            <div class="col-md-6 form-group mt-3 mt-md-0 text-center" id="searchtourerror" style="color:red">
-               
-            </div>
-            </div>
-            <div class="row mt-3">
             <div class="col-md-6 text-center">
-               <asp:Button ID="searchToursBtn" Text="Search" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="search_buses"  />
+                 <div class="form-group mt-3 mt-md-0 text-center" id="SearchBusError" style="color: red"></div>
+                <br>
+               <asp:Button ID="searchToursBtn" Text="Search" runat="server"  CssClass="btn btn-danger" Width="100px" OnClick="search_buses"  OnClientClick="return validate()"/>
             </div>
             </div>
 
@@ -74,5 +77,4 @@
           <!-- End Portfolio Section -->
           <!-- End Portfolio Section -->
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
-</asp:Content>
+
