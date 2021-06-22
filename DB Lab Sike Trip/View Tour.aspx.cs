@@ -105,7 +105,7 @@ namespace DB_Lab_Sike_Trip
                 if (Session["TourID"] == null)
                 {
                     DisplayTourSection.Visible = false;
-
+                    Response.Redirect("Home.aspx#portfolio");
                 }
            // if a tour is clicked then display appropriate info of it
                 if (Session["TourID"] != null)

@@ -71,6 +71,7 @@ namespace DB_Lab_Sike_Trip
             if (Session["BusId"] == null)
             {
                 // DisplayBusBooking.Visible = false;
+                Response.Redirect("Home.aspx#portfolio");
 
             }
             // if a bus is clicked then display appropriate info of it
