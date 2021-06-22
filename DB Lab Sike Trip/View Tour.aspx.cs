@@ -98,9 +98,15 @@ namespace DB_Lab_Sike_Trip
                 myDAL obj = new myDAL();
                 return obj.return_tour_guide_name_from_db(Session["TourId"].ToString());
             }
-            
-        
-            protected void Page_Load(object sender, EventArgs e)
+
+        //get reference image
+        protected string get_reference_image()
+        {
+            myDAL obj = new myDAL();
+            return obj.return_tour_reference_image_from_db(Session["TourId"].ToString());
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
             {
                 if (Session["TourID"] == null)
                 {
@@ -122,6 +128,7 @@ namespace DB_Lab_Sike_Trip
                 dsiplay_number_of_days.Text = get_number_of_days().ToString();
                 display_bus_number.Text = get_bus_number();
                 display_tour_guide.Text = get_tour_guide_name();
+                TourImage.ImageUrl = get_reference_image();
 
             }
         }

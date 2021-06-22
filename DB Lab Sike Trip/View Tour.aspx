@@ -82,13 +82,13 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                        <asp:Image ID="Image1" ImageUrl="assets\img\testimonials\testimonials-3.jpg" class="rounded-circle" width="180" runat="server" />
+                        <asp:Image ID="TourImage" ImageUrl="assets\img\testimonials\testimonials-3.jpg" class="rounded-circle" width="180" runat="server" />
                       <div class="mt-3">
                       <h4>Tour Details</h4>
                       <p class="text-secondary mb-1">Press Book to Proceed</p>
                         <asp:Button ID="ViewTourBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click"  Width="100px"/>
                           <%--have to get it to its position and do smthn about not showing the tours if none is chosen--%>
-                          <section id="contact" class="contact">      
+                          <section id="contact" class="contact">
                   
             </section>
                           
