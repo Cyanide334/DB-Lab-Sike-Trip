@@ -65,7 +65,114 @@
               background:#fffffff6;
               color:#d9232d;
               border-top: 3px solid #d9232d;
+            } 
+            .createBtn {
+              padding: 0;
             }
+
+            .createBtn ul {
+              margin: 0;
+              padding: 0;
+              display: flex;
+              list-style: none;
+              align-items: center;
+            }
+
+            .createBtn li {
+              position: relative;
+            }
+
+            .createBtn a {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 10px 0 10px 30px;
+              font-family: "Poppins", sans-serif;
+              font-size: 15px;
+              font-weight: 500;
+              color: #556270;
+              white-space: nowrap;
+              transition: 0.3s;
+            }
+
+            .createBtn a i {
+              font-size: 12px;
+              line-height: 0;
+              margin-left: 5px;
+            }
+
+            .createBtn a:hover, .createBtn .active, .createBtn li:hover > a {
+              color: #d9232d;
+            }
+
+            .createBtn .getstarted {
+              background: #d9232d;
+              padding: 8px 25px;
+              margin-left: 10px;
+              border-radius: 4px;
+              font-weight: 400;
+              color: #fff;
+            }
+
+            .createBtn .getstarted:hover {
+              color: #fff;
+              background: #e1444d;
+            }
+
+            .createBtn .dropdown ul {
+              display: block;
+              position: absolute;
+              left: 14px;
+              top: calc(100% + 30px);
+              margin: 0;
+              padding: 10px 0;
+              z-index: 99;
+              opacity: 0;
+              visibility: hidden;
+              background: #fff;
+              box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+              transition: 0.3s;
+            }
+
+            .createBtn .dropdown ul li {
+              min-width: 200px;
+            }
+
+            .createBtn .dropdown ul a {
+              padding: 10px 20px;
+              font-size: 15px;
+              text-transform: none;
+              font-weight: 400;
+            }
+
+            .createBtn .dropdown ul a i {
+              font-size: 12px;
+            }
+
+            .createBtn .dropdown ul a:hover, .createBtn .dropdown ul .active:hover, .createBtn .dropdown ul li:hover > a {
+              color: #d9232d;
+            }
+
+            .createBtn .dropdown:hover > ul {
+              opacity: 1;
+              top: 100%;
+              visibility: visible;
+            }
+
+            .createBtn .dropdown .dropdown ul {
+              top: 0;
+              left: calc(100% - 30px);
+              visibility: hidden;
+            }
+
+            .createBtn .dropdown .dropdown:hover > ul {
+              opacity: 1;
+              top: 0;
+              left: 100%;
+              visibility: visible;
+            }
+            
+}
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">
@@ -124,17 +231,10 @@
         
                           <div class="container" >
                               <div class="section-title">
-                                    <h2>Sike! Trips</h2>
+                                    <h2>Sike! Trip</h2>
                                      <p>Trips & Tours</p>
                                   </div>
-                            <div class="row">
-                              <div class="col-lg-12 d-flex justify-content-center">
-                                <ul id="portfolio-flters">
-                                  <li data-filter="*" class="filter-active">All</li>
-                                </ul>
-                              </div>
-                            </div>
-        
+
                             <div class="row portfolio-container" runat="server" id="trips">
                             </div>
       
@@ -145,6 +245,7 @@
         
                           <div class="container" >
                               <div class="section-title">
+                                  <h2>Sike! Trip</h2>
                                      <p>Buses</p>
                                   </div>  
                             <div class="row portfolio-container" runat="server" id="buses">
@@ -159,9 +260,25 @@
                 <div class="panel-title">Create a New Service</div>
                   <div class="row mt-2">
                                 
-                          <div class="mt-5 text-center"><asp:Button ID="createTour" runat="server" class="btn btn-primary profile-button" Text="Create Tour Service" Width="130px" Height="40px" OnClick="goto_create_tour" /></div>
+                          <%--<div class="mt-5 text-center"><asp:Button ID="createTour" runat="server" class="btn btn-primary profile-button" Text="Create Tour Service" Width="130px" Height="40px" OnClick="goto_create_tour" /></div>
                           <div class="mt-5 text-center"><asp:Button ID="createBus" runat="server" class="btn btn-primary profile-button" Text="Create Bus Service" Width="130px" Height="40px" OnClick="goto_create_bus" /></div>
+                      --%>
+                      <nav id="createBtn" class="createBtn">
+                    <ul>
+                        <br><br><br>
+                        <li>
+                            <a href="Create Bus Service.aspx"  class="getstarted">Create a Bus</a>
+                        </li>
+                    
+                       
+                        <li>
+                            <a href="Create Tour Service.aspx"  class="getstarted">Create a Tour</a>
+                        </li>
+                    </ul>
+                          </nav>
                       
+                      
+
                   </div>
                         
               </div> 

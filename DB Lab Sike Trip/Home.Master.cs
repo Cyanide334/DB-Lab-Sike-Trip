@@ -20,6 +20,10 @@ namespace DB_Lab_Sike_Trip
                 MasterLoginReference.InnerText = "Logout";
                 
             }
+            if(Session["Admin"] != null)
+            {
+                AdminPanel.Visible = true;
+            }
         }
     }
 }
