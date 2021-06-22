@@ -68,10 +68,6 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] == null)
-            {
-                Response.Redirect("Login.aspx");
-            }
             if (Session["BusId"] == null)
             {
                 // DisplayBusBooking.Visible = false;
@@ -93,6 +89,7 @@ namespace DB_Lab_Sike_Trip
             }
         }
 
+     
         protected void BookButton_Click(object sender, EventArgs e)
         {
 
@@ -101,10 +98,13 @@ namespace DB_Lab_Sike_Trip
             string startdate = bus_booking_date.Text;
             string number_of_days = bus_booking_days.Text;
 
+           
             myDAL obj = new myDAL();
-            obj.busBooking(username, busID, startdate, number_of_days);
-
-            Response.Redirect("Reservations.aspx");
+            int val = obj.busBooking(username, busID, startdate, number_of_days);
+            if (val == 1)
+            {
+                bus_booking_date.Text = "Bus already booked in this interval!"; 
+            }
         }
 
     }
