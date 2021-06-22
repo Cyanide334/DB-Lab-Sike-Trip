@@ -1,7 +1,7 @@
 ﻿var erroreditbus = document.getElementById('HomeContent_EditBusServiceError');
 var names = /^[a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
-var busregformat = /^[a-zA-Z0-9._][a-zA-Z]+[0-9]*$/
+var busregformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
 var buslicformat = "^(([A-Z]{2}[0-9]{2})"
     + "( )|([A-Z]{2}-[0-9]"
     + "{2}))((19|20)[0-9]"
@@ -40,7 +40,7 @@ function validate() {
     //regnumber
     if (regnumber != "") {
         if (!regnumber.match(busregformat)) {
-            erroreditbus.innerText = 'Please enter capital letters and numbers in the registration number.';
+            erroreditbus.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.' ;
             return false;
         }
     }
@@ -48,7 +48,7 @@ function validate() {
     //licnumber
     if (licnumber != "") {
         if (!licnumber.match(buslicformat)) {
-            erroreditbus.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.';
+            erroreditbus.innerText = 'Please enter capital letters and numbers in the registration number.';
             return false;
         }
     }
