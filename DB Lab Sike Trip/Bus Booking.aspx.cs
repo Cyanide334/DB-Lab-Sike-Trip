@@ -109,6 +109,8 @@ namespace DB_Lab_Sike_Trip
             {
                 bus_booking_date.Text = "Bus already booked in this interval!"; 
             }
+
+            Response.Redirect("Reservations.aspx");
         }
 
     }
