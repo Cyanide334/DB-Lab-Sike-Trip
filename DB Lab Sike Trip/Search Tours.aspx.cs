@@ -93,35 +93,36 @@ namespace DB_Lab_Sike_Trip
                     destination = reader.GetString(2);
                     reference_image = reader.GetString(3);
                     price = reader.GetInt32(4);
-                    if (inputDestination.Text == "")
+                    if (inputDeparture.Text != "" && inputDestination.Text != "")
                     {
-                        if (inputDeparture.Text == departure)
+                        if (inputDeparture.Text == departure && inputDestination.Text == destination)
                         {
-                            if (Session["Departure"].ToString() == departure)
-                            {
-                                display_tour(id, departure, destination, reference_image, price);
-                            }
-
-                        }
-                        else if (inputDeparture.Text == "")
-                        {
-
-                            if (inputDestination.Text == destination)
-                            {
-                                display_tour(id, departure, destination, reference_image, price);
-                            }
-
-                        }
-                        else if (inputDeparture.Text == departure && inputDestination.Text == destination)
-                        {
-
                             display_tour(id, departure, destination, reference_image, price);
-
+                        }
+                    }
+                    else if (inputDestination.Text == "" && inputDeparture.Text == "")
+                    {             
+                          display_tour(id, departure, destination, reference_image, price);                        
+                     }
+                    else if (inputDeparture.Text == "")
+                    {
+                        if (inputDestination.Text == destination)
+                        {
+                            display_tour(id, departure, destination, reference_image, price);
                         }
 
                     }
-                }
+                    else if (inputDestination.Text == "")
+                    {
+                        if (inputDeparture.Text == departure)
+                        {
+                            display_tour(id, departure, destination, reference_image, price);
+                        }
 
+                    }
+
+                }
+                
             }
         }
 

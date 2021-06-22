@@ -14,7 +14,7 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span id="welcomespan" runat="server">SIKE! TRIP</span></h2>
               <p class="animate__animated animate__fadeInUp">We will provide the best tour packages!</p>
-              <a href="Tour Booking.aspx" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
+              <a href="#TourCatalogueform" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
               <p class="animate__animated animate__fadeInUp">
                 We provide the best bus service on the most popular routes!
               </p>
-               <a href="Bus Booking.aspx" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
+               <a href="#TourCatalogueform" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
             </div>
           </div>
         </div>
@@ -37,8 +37,8 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Fulfillment</h2>
-              <p class="animate__animated animate__fadeInUp">You will be spiritually enlightened!</p>
-              <a href="Tour Booking.aspx" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
+              <p class="animate__animated animate__fadeInUp">Get the right tour for you</p>
+              <a href="Search Tours.aspx" class="btn-get-started animate__animated animate__fadeInUp scrollto">Search Now</a>
             </div>
           </div>
         </div>
@@ -101,22 +101,14 @@
 
     <!-- ======= Catalogue Section ======= -->
 
-       <!-- ======= Portfolio Section ======= -->
-    <form runat="server">
-    <section id="portfolio" class="portfolio" runat="server">
+    <form runat="server" id="TourCatalogueform">
+    <section id="TourCatalogue1" class="portfolio" runat="server">
         
       <div class="container" >
           <div class="section-title">
                 <h2>Sike! Trip</h2>
                  <p>Trips & Tours</p>
               </div>
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-            </ul>
-          </div>
-        </div>
        
         <div class="row portfolio-container" runat="server" id="trips">
             
@@ -127,7 +119,7 @@
       </div>
     </section>
       <!-- buses section -->
-          <section id="Section1" class="portfolio" runat="server">
+          <section id="BusCatalogue" class="portfolio" runat="server">
         
       <div class="container" >
           <div class="section-title">

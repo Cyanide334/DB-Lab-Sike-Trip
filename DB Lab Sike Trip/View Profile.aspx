@@ -96,7 +96,7 @@
 
                       <p class="text-muted font-size-sm" id="City_And_Country_display"></p>
                          <asp:Button ID="ViewProfileReservationsButton" Text="View Reservations" runat="server" class="btn btn-danger" OnClick ="goto_reservations"></asp:Button>
-                         <asp:Button ID="EditProfileBtn" Text="Edit Profile" runat="server" class="btn btn-danger" OnClick ="goto_edit_profile"></asp:Button>
+                         <asp:Button ID="EditProfileBtn" Text="Edit Profile" runat="server" class="btn btn-outline-danger" OnClick ="goto_edit_profile"></asp:Button>
 
                     </div>
                   </div>

@@ -1256,7 +1256,7 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd = new SqlCommand(qry, con);
                 DateTime value = (DateTime)cmd.ExecuteScalar();
                 con.Close();
-                string formattedDate = value.ToString("dd/mm/yyyy"); // format date to dd//mm//yyyy format
+                string formattedDate = value.ToString("dd/MM/yyyy"); // format date to dd//mm//yyyy format
                 return formattedDate;
                
 
@@ -1945,7 +1945,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
                 cmd.Parameters["@username"].Value = username;
                 cmd.Parameters["@busID"].Value = Convert.ToInt32(busID);
-                cmd.Parameters["@startdate"].Value = startdate;
+                cmd.Parameters["@startdate"].Value =startdate;
                 cmd.Parameters["@days"].Value = Convert.ToInt32(days);
 
                 var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
@@ -2136,6 +2136,59 @@ namespace DB_Lab_Sike_Trip.DAL
             }
             return ds;
         }
+
+        public DataSet get_tours_table()
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("select * from Tours", con);
+                cmd.CommandType = CommandType.Text;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(ds);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                con.Close();
+                return null;
+            }
+            return ds;
+        }
+
+        public DataSet get_buses_table()
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            DataSet ds = new DataSet();
+            try
+            {
+                cmd = new SqlCommand("select * from Buses", con);
+                cmd.CommandType = CommandType.Text;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(ds);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                con.Close();
+                return null;
+            }
+            return ds;
+        }
+
         public int check_service_id(string input,string username)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -2191,6 +2244,72 @@ namespace DB_Lab_Sike_Trip.DAL
                     returnParameter.Direction = ParameterDirection.ReturnValue;
 
                     
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    return (int)cmd.Parameters["@ReturnVal"].Value;
+
+                }
+
+                catch (Exception ex)
+                {
+                    System.Web.HttpContext.Current.Response.Write(ex.Message);
+                    return -1;
+                }
+            }
+        }
+
+        public int delete_tour_from_db(string input)
+        {
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                SqlCommand cmd;
+                try
+                {
+
+                    cmd = new SqlCommand("dbo.deleteTourService", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@TourID", SqlDbType.Int);
+                    cmd.Parameters["@TourID"].Value = Convert.ToInt32(input);
+
+                    var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    returnParameter.Direction = ParameterDirection.ReturnValue;
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    return (int)cmd.Parameters["@ReturnVal"].Value;
+
+                }
+
+                catch (Exception ex)
+                {
+                    System.Web.HttpContext.Current.Response.Write(ex.Message);
+                    return -1;
+                }
+            }
+        }
+
+        public int delete_bus_from_db(string input)
+        {
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                SqlCommand cmd;
+                try
+                {
+
+                    cmd = new SqlCommand("dbo.deleteBusService", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@BusID", SqlDbType.Int);
+                    cmd.Parameters["@BusID"].Value = Convert.ToInt32(input);
+
+                    var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    returnParameter.Direction = ParameterDirection.ReturnValue;
+
                     cmd.ExecuteNonQuery();
                     con.Close();
 

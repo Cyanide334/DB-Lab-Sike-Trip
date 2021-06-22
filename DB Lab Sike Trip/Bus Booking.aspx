@@ -286,7 +286,7 @@
                 <section id="bbb" class="btn-block">      
                   <div class="form-group mt-3 mt-md-0 text-center" id="BookBusError" style="color: red"></div>     
                     <br>
-                      <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" onClientClick="return validate()"></asp:Button>
+                      <asp:Button ID="ViewBusBookingButton" Text="Confirm Bus Booking" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" onClientClick="return validate()"></asp:Button>
                               
             </section>
          </section>

@@ -54,13 +54,15 @@
             }
             #view_log:checked ~ .panels #view_log-panel,
             #edit_services:checked ~ .panels #edit_services-panel,
-            #create_services:checked ~ .panels #create_services-panel
+            #create_services:checked ~ .panels #create_services-panel,
+            #delete_services:checked ~ .panels #delete_services-panel
             {
               display:block
             }
             #view_log:checked ~ .tabs #view_log-tab,
             #edit_services:checked ~ .tabs #edit_services-tab,
-            #create_services:checked ~ .tabs #create_services-tab
+            #create_services:checked ~ .tabs #create_services-tab,
+            #delete_services:checked ~ .tabs #delete_services-tab
             {
               background:#fffffff6;
               color:#d9232d;
@@ -196,11 +198,13 @@
           <input class="radio" id="view_log" name="group" type="radio" checked>
           <input class="radio" id="edit_services" name="group" type="radio">
           <input class="radio" id="create_services" name="group" type="radio">
+          <input class="radio" id="delete_services" name="group" type="radio">
           
           <div class="tabs">
               <label class="tab" id="view_log-tab" for="view_log">View Log</label>
               <label class="tab" id="edit_services-tab" for="edit_services">Edit Services</label>
               <label class="tab" id="create_services-tab" for="create_services">Create Services</label>
+              <label class="tab" id="delete_services-tab" for="delete_services">Delete Services</label>
 
           </div>
           <div class="panels">
@@ -282,6 +286,75 @@
                   </div>
                         
               </div> 
+          <div class="panel" id="delete_services-panel">
+                <div class="panel-title">Tour Services</div>
+                  <div class ="ServiceLogTable">
+                      <asp:GridView ID="TourTable" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                      </asp:GridView>
+                  </div>
+              <div class="row">
+                    <header runat="server" id="errorboxTour"></header>
+                        <div class="row mt-2">
+                            <nav id="deleteTour" class="createBtn">
+                
+                            <ul>
+                                <li>
+                                   <div class="col-md-12"><label class="labels"></label><asp:TextBox ID="tour_input" runat="server" placeholder="Enter Tour ID" CssClass="form-control cancelBox" Width ="300px"></asp:TextBox></div>
+                                </li>
+                                <li>
+                                     <div class="col-md-12"><asp:Button ID="deleteTourBtn" Text="Delete Tour" runat="server"  CssClass="btn btn-danger " Width="200px" Height="40px" OnClientClick="return validate()" OnClick="delete_tour"/></div>         
+                                </li>
+                            </ul>
+                                </nav>
+                            </div>
+        
+
+                        </div>
+              <div class ="ServiceLogTable">
+                      <asp:GridView ID="BusTable" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                            <EditRowStyle BackColor="#999999" />
+                            <FooterStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#d9232d" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                      </asp:GridView>
+                  </div>
+              <div class="row">
+                    <header runat="server" id="errorboxBus"></header>
+                        <div class="row mt-2">
+                            <nav id="deleteBus" class="createBtn">
+                
+                            <ul>
+                                <li>
+                                   <div class="col-md-12"><label class="labels"></label><asp:TextBox ID="bus_input" runat="server" placeholder="Enter Bus ID" CssClass="form-control cancelBox" Width ="300px"></asp:TextBox></div>
+                                </li>
+                                <li>
+                                     <div class="col-md-12"><asp:Button ID="deleteBusBtn" Text="Delete Bus" runat="server"  CssClass="btn btn-danger " Width="200px" Height="40px" OnClientClick="return validate()" OnClick="delete_bus"/></div>         
+                                </li>
+                            </ul>
+                                </nav>
+                            </div>
+        
+
+                        </div>
+              </div>
           </div>
         </div>
 

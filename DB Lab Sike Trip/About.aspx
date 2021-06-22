@@ -41,13 +41,13 @@
                             </p>
                             <ul>
                                 <li>
+                                    <i class="ri-check-double-line"></i> Trips
+                                </li>
+                                <li>
                                     <i class="ri-check-double-line"></i> Buses
                                 </li>
                                 <li>
-                                    <i class="ri-check-double-line"></i> Meals
-                                </li>
-                                <li>
-                                    <i class="ri-check-double-line"></i> Hotels
+                                    <i class="ri-check-double-line"></i> Tour Guides & Drivers
                                 </li>
                             </ul>
                             <p class="fst-italic">

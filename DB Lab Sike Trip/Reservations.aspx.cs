@@ -66,7 +66,7 @@ namespace DB_Lab_Sike_Trip
                         errorbox.InnerText = "You cannot cancel a reservation after 24 hours!";
                     }
                     else {
-                        Response.Redirect("Home.aspx");
+                        Response.Redirect("Reservations.aspx");
                     }
                 }
                 else 

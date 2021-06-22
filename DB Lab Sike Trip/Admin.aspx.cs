@@ -167,6 +167,68 @@ namespace DB_Lab_Sike_Trip
 
 
         }
+
+        protected void load_tours()
+        {
+            myDAL obj = new myDAL();
+
+
+
+            TourTable.DataSource = obj.get_tours_table();
+            TourTable.DataBind();
+
+
+        }
+        protected void load_buses()
+        {
+            myDAL obj = new myDAL();
+
+
+
+            BusTable.DataSource = obj.get_buses_table();
+            BusTable.DataBind();
+
+
+        }
+
+        protected void delete_tour(object sender, EventArgs e)
+        {
+            myDAL obj = new myDAL();
+            string input = tour_input.Text;
+            int val = obj.delete_tour_from_db(input);
+            if (val == 1)
+            {
+                errorboxTour.InnerText = "This TourID Does not exist. Please enter a valid ID!";
+            }
+            else if (val == 2)
+            {
+                errorboxTour.InnerText = "You cannot Delete this Tour as it is underway!";
+            }
+            else
+            {
+                Response.Redirect("Admin.aspx");
+            }
+        }
+
+        protected void delete_bus(object sender, EventArgs e)
+        {
+            myDAL obj = new myDAL();
+            string input = bus_input.Text;
+            int val = obj.delete_bus_from_db(input);
+            if (val == 1)
+            {
+                errorboxBus.InnerText = "This BusID Does not exist. Please enter a valid ID!";
+            }
+            else if (val == 2)
+            {
+                errorboxBus.InnerText = "You cannot Delete this bus as it is being used";
+            }
+            else
+            {
+                Response.Redirect("Admin.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Admin"] == null)
@@ -178,6 +240,8 @@ namespace DB_Lab_Sike_Trip
                 load_tours_catalogue();
                 load_buses_catalogue();
                 load_service_log();
+                load_tours();
+                load_buses();
             }
             
         }
@@ -195,5 +259,7 @@ namespace DB_Lab_Sike_Trip
         {
             Response.Redirect("Create Bus Service");
         }
+
+      
     }
 }

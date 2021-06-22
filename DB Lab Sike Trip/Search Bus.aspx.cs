@@ -60,7 +60,7 @@ namespace DB_Lab_Sike_Trip
             int max;
             if (inputMaxPrice.Text == "")
             {
-                max = 0;
+                max = Int32.MaxValue;
             }
             else
             {

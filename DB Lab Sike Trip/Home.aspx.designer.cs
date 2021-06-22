@@ -78,13 +78,22 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.WebControls.Image Image6;
 
         /// <summary>
-        /// portfolio control.
+        /// TourCatalogueform control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl portfolio;
+        protected global::System.Web.UI.HtmlControls.HtmlForm TourCatalogueform;
+
+        /// <summary>
+        /// TourCatalogue1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TourCatalogue1;
 
         /// <summary>
         /// trips control.
@@ -96,13 +105,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl trips;
 
         /// <summary>
-        /// Section1 control.
+        /// BusCatalogue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Section1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BusCatalogue;
 
         /// <summary>
         /// buses control.
