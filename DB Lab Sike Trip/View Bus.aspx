@@ -104,7 +104,6 @@
                     <div class="mt-3">
                       <h4>Sike! Bus</h4>
                       <p class="text-secondary mb-1">Press Book to Proceed</p>
-                      <p class="text-muted font-size-sm">spUserName1234@bbb.com</p>
                       <asp:Button ID="book_btn" Text="Book" runat="server"  CssClass="btn btn-danger" Width="100px"  OnClick="BookButton_Click"/>
 
                          <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
@@ -176,14 +175,7 @@
         </div>
     </div>
     </section>
-        </section>
 
-            <section id="btn" class="contact">  
-                       <div id ="showBookButton" runat="server" visible ="true">
-                           <p class="text-secondary mb-1">You have not booked any buses</p>
-                    <asp:Button ID="ViewBusBookButton" Text="Book" runat="server" CssClass="btn btn-danger" OnClick="BookButton_Click" PostBackUrl="Home.aspx"/></asp:Button>
-                </div>
-                </section>
 
      </form>
 </asp:Content>

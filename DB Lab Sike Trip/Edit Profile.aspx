@@ -101,7 +101,7 @@
                      
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels"><h6>Password</h6></label><asp:TextBox ID="editProfilePassword" runat="server"  class="form-control" TextMode="password" placeholder="Enter Password"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels"><h6>Password</h6></label><asp:TextBox ID="editProfilePassword" runat="server"  class="form-control" TextMode="password" placeholder="Enter New Password"></asp:TextBox></div>
                     <div class="col-md-6"><label class="labels"><h6>Confirm Password</h6></label><asp:TextBox ID="editProfileConfirmPassword" runat="server"  class="form-control" TextMode="password" placeholder="Confirm Password"></asp:TextBox></div>
                     <div class="col-md-12"><label class="labels"><h6>Phone Number</h6></label><asp:TextBox ID="editProfilePhone" runat="server"  class="form-control"></asp:TextBox></div>
                     <div class="col-md-12"><label class="labels"><h6>Credit Card </h6></label><asp:TextBox ID="editProfileCredit" runat="server"  class="form-control"></asp:TextBox></div>

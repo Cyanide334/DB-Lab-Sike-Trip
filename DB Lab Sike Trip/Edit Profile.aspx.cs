@@ -78,6 +78,10 @@ namespace DB_Lab_Sike_Trip
                 editProfileUsernameForm.Attributes.Add("placeholder", Session["Username"].ToString());
                 editProfileEmailForm.Attributes.Add("placeholder", get_email());
             }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

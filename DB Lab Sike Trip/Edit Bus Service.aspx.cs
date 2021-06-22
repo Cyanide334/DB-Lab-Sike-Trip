@@ -51,6 +51,10 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Admin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (Session["BusID"] != null)
             {
 
@@ -62,6 +66,10 @@ namespace DB_Lab_Sike_Trip
                 PPD.Attributes.Add("placeholder", get_bus_price_per_day().ToString());
                 ReferenceImage.Attributes.Add("placeholder", get_bus_reference_image());
               
+            }
+            else
+            {
+                Response.Redirect("Admin.aspx");
             }
         }
         protected void editBusSaveButton_Click(object sender, EventArgs e)
