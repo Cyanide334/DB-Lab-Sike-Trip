@@ -56,7 +56,12 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
             return obj.return_bus_model_from_db(Session["BusID"].ToString());
         }
-
+        //get reference image
+        protected string get_reference_image()
+        {
+            myDAL obj = new myDAL();
+            return obj.return_bus_reference_image_from_db(Session["BusID"].ToString());
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -76,7 +81,7 @@ namespace DB_Lab_Sike_Trip
                 display_capacity.Text = get_bus_capacity().ToString();
                 display_priceperkm.Text = get_bus_priceperday().ToString();
                 //display_bus_reservation_count.Text = get_bus_reservation_count();
-               
+                BusImage.ImageUrl = get_reference_image();
             }
         }
 

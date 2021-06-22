@@ -159,6 +159,8 @@
       width: calc(50% - 8px);
       }
 
+      .tourbooking {
+          text-decoration-style: solid;
       }
     </style>
 </asp:Content>
