@@ -178,7 +178,7 @@
                     </div>
                 </div>
             </section>
-      <!-- End Breadcrumbs -->
+      <!-- End Breadcrumbs asdjhashdjk-->
 
    <section class="tourbooking">
 <div>
@@ -295,10 +295,8 @@
                     </div>
                   </div>  
                  </section> 
-
-                <section id="btn" class="testbox">  
-                       
-                           
+                <section id="btn" class="testbox">   
+                     <div class="form-group mt-3 mt-md-0 text-center" id="BookTourError" style="color: red"></div>
                    <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="TourBookingButton_Click" ></asp:Button>
                 
                 </section>

@@ -289,6 +289,7 @@
     <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
     <Content Include="assets\vendor\waypoints\noframework.waypoints.js" />
     <Content Include="Bus Booking.aspx" />
+    <Content Include="busbookingscript.js" />
     <Content Include="Create Bus Service.aspx" />
     <Content Include="Create Tour Service.aspx" />
     <Content Include="createbusservicescript.js" />
@@ -305,6 +306,11 @@
     <Content Include="forms\Readme.txt" />
     <Content Include="loginscript.js" />
     <Content Include="noframework.waypoints.js" />
+    <Content Include="Reservations.aspx" />
+    <Content Include="Search Bus.aspx" />
+    <Content Include="Search Tours.aspx" />
+    <Content Include="searchbusscript.js" />
+    <Content Include="searchtourscript.js" />
     <Content Include="Services.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -485,6 +491,27 @@
     </Compile>
     <Compile Include="Edit Tour Service.aspx.designer.cs">
       <DependentUpon>Edit Tour Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations.aspx.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reservations.aspx.designer.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search Bus.aspx.cs">
+      <DependentUpon>Search Bus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search Bus.aspx.designer.cs">
+      <DependentUpon>Search Bus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search Tours.aspx.cs">
+      <DependentUpon>Search Tours.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search Tours.aspx.designer.cs">
+      <DependentUpon>Search Tours.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services.aspx.cs">
       <DependentUpon>Services.aspx</DependentUpon>

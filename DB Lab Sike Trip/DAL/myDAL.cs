@@ -162,18 +162,18 @@ namespace DB_Lab_Sike_Trip.DAL
             {
 
                 string uid = username;
-                
-               string qry = "select FullName from Users where Username = '" + uid +"'";
 
-               cmd = new SqlCommand(qry, con);
-               string value = (string)cmd.ExecuteScalar();
-               con.Close();
+                string qry = "select FullName from Users where Username = '" + uid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
 
                 return value;
 
             }
 
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
                 return null;
@@ -305,7 +305,7 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
-     
+
         public string return_credit_from_db(string username)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -407,7 +407,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
             try
             {
-                string qry = "update Users set FullName = '" + new_name + "' where Username = '" + username + "'" ;
+                string qry = "update Users set FullName = '" + new_name + "' where Username = '" + username + "'";
 
                 cmd = new SqlCommand(qry, con);
                 cmd.ExecuteNonQuery();
@@ -417,7 +417,7 @@ namespace DB_Lab_Sike_Trip.DAL
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-               
+
             }
         }
 
@@ -534,7 +534,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
                 cmd.ExecuteNonQuery();
                 return (int)cmd.Parameters["@ReturnVal"].Value;
-           
+
 
             }
 
@@ -1345,7 +1345,7 @@ namespace DB_Lab_Sike_Trip.DAL
                 string qry = "select ReturnDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value =cmd.ExecuteScalar().ToString();
+                string value = cmd.ExecuteScalar().ToString();
                 con.Close();
 
                 return value;
@@ -1360,7 +1360,7 @@ namespace DB_Lab_Sike_Trip.DAL
             }
 
         }
-        
+
         // return time
         public string return_return_time_from_db(string _tid)
         {
@@ -1623,7 +1623,7 @@ namespace DB_Lab_Sike_Trip.DAL
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
                 return null;
-                
+
             }
 
         }
@@ -1892,12 +1892,12 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
         //LOG UPDATE FUNCTIONS
-        public void busBooking(string username, string busID, string startdate, string days) 
+        public void busBooking(string username, string busID, string startdate, string days)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
             SqlCommand cmd;
-            
+
 
             try
             {
@@ -1963,7 +1963,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
         //CREATE A BUS
-        public void create_bus(string manufacturer, string model,string reg, string license, string capacity, string pricePerDay, string reference_image)
+        public void create_bus(string manufacturer, string model, string reg, string license, string capacity, string pricePerDay, string reference_image)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -2024,14 +2024,14 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters.Add("@Departure", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@Destination", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@DepartureDate", SqlDbType.Date);
-                cmd.Parameters.Add("@DepartureTime",SqlDbType.Time);
+                cmd.Parameters.Add("@DepartureTime", SqlDbType.Time);
                 cmd.Parameters.Add("@ArrivalDate", SqlDbType.Date);
                 cmd.Parameters.Add("@ArrivalTime", SqlDbType.Time);
                 cmd.Parameters.Add("@ReturnDate", SqlDbType.Date);
                 cmd.Parameters.Add("@ReturnTime", SqlDbType.Time);
                 cmd.Parameters.Add("@Price", SqlDbType.Int);
                 cmd.Parameters.Add("@NumberOfDays", SqlDbType.Int);
-                cmd.Parameters.Add("@Tourguide", SqlDbType.VarChar,30);
+                cmd.Parameters.Add("@Tourguide", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@BusNumber", SqlDbType.VarChar, 20);
                 cmd.Parameters.Add("@Capacity", SqlDbType.Int);
                 cmd.Parameters.Add("@ReferenceImage", SqlDbType.VarChar, 100);
@@ -2045,7 +2045,7 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@ReturnDate"].Value = RD;
                 cmd.Parameters["@ReturnTime"].Value = RT;
                 cmd.Parameters["@DepartureDate"].Value = DD;
-                cmd.Parameters["@Price"].Value =Convert.ToInt32(price);
+                cmd.Parameters["@Price"].Value = Convert.ToInt32(price);
                 cmd.Parameters["@NumberOfDays"].Value = Convert.ToInt32(numDays);
                 cmd.Parameters["@Tourguide"].Value = tourGuide;
                 cmd.Parameters["@BusNumber"].Value = busNo;
@@ -2080,7 +2080,7 @@ namespace DB_Lab_Sike_Trip.DAL
             {
                 cmd = new SqlCommand("select * from serviceLog", con);
                 cmd.CommandType = CommandType.Text;
-                using(SqlDataAdapter da = new SqlDataAdapter(cmd))
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     da.Fill(ds);
                 }
@@ -2095,6 +2095,99 @@ namespace DB_Lab_Sike_Trip.DAL
             }
             return ds;
         }
+        public int check_service_id(string input,string username)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            try
+            {
+
+                cmd = new SqlCommand("dbo.checkServiceLog", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@serviceID", SqlDbType.Int);
+                cmd.Parameters["@serviceID"].Value = Convert.ToInt32(input);
+
+                cmd.Parameters.Add("@username", SqlDbType.VarChar, 30);
+                cmd.Parameters["@username"].Value = username;
+
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+
+
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return -1;
+            }
+        }
+
+        public void cancel_reservation_from_db(string input)
+        {
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                SqlCommand cmd;
+                try
+                {
+
+                    cmd = new SqlCommand("dbo.cancelReservation", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@serviceID", SqlDbType.Int);
+                    cmd.Parameters["@serviceID"].Value = Convert.ToInt32(input);
+
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+
+                catch (Exception ex)
+                {
+                    System.Web.HttpContext.Current.Response.Write(ex.Message);
+
+                }
+            }
+        }
+
+        public DataSet get_reservations(string username)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+            DataSet ds = new DataSet();
+            try
+            {
+                string qry = "select * from serviceLog where username = '" + username + "'";
+                cmd = new SqlCommand(qry, con);
+                cmd.CommandType = CommandType.Text;
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(ds);
+                }
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                con.Close();
+                return null;
+            }
+            return ds;
+        }
+
+
     }
 
 

@@ -70,22 +70,21 @@
                         <li><a href="About.aspx">About</a></li>
                         <li><a href="Services.aspx">Services</a></li>
                         <li><a href="Contact.aspx">Contact</a></li>
-                        <li class="dropdown"><a href="#"><span>More Features</span> <i class="bi bi-chevron-down"></i></a>
+                        <li class="dropdown"><a href="#"><span>Search</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="Searcg Tours.aspx">Search for Tours</a></li>
+                                <li><a href="Search Bus.aspx">Search for Buses</a></li>
+                            </ul>
+                         </li>
+                         <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="View Profile.aspx">View Profile</a></li>
                                 <li><a href="Edit Profile.aspx">Edit Profile</a></li>
-                                <li><a href="View Bus.aspx">View Bus Service</a></li>
-                                <li><a href="Edit Bus Service.aspx">Edit Bus Service</a></li>
-                                <li><a href="View Tour.aspx">View Tour Service</a></li>
-                                <li><a href="Edit Tour Service.aspx">Edit Tour Service</a></li>
+                                <li><a href="Reservations.aspx">View Reservations</a></li>
+
                             </ul>
                          </li>
-                        <li class="dropdown"><a href="#"><span>Booking</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="Bus Booking.aspx">Bus Booking</a></li>
-                                <li><a href="Tour Booking.aspx">Tour Booking</a></li>
-                            </ul>
-                         </li>
+                        <li><a href="Admin.aspx" runat="server" id ="AdminPanel" visible ="false">Admin Panel</a></li>
                         <li><a id="MasterLoginReference" href="Login.aspx" runat="server">Login</a></li>
                         <li>
                             <a href="Signup.aspx" class="getstarted" runat="server" id="MasterSignUp">Sign up</a>
@@ -183,15 +182,31 @@
                         </div>
 
                         <div class="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Search</h4>
+                            <%--<h4>Search</h4>
                         
                             <form method="post">
                                 <input type="email" name="email" /><input
                                     type="submit"
                                     value="Search"
                                 />
-                            </form>
+                            </form>--%>
+                            <br><br>
+                    <nav id="navbar" class="navbar">
+                    <ul>
+                        
+                        <li>
+                            <a href="Search Bus.aspx"  class="getstarted">Search for Bus</a>
+                        </li>
+                    </ul>
+                        <nav id="navbar" class="navbar">
+                    <ul>
+                        <br><br><br><br>
+                        <li>
+                            <a href="Search Tours.aspx"  class="getstarted">Search for Tour</a>
+                        </li>
+                    </ul>
                         </div>
+
                     </div>
                 </div>
             </div>

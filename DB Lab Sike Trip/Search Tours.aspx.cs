@@ -95,30 +95,28 @@ namespace DB_Lab_Sike_Trip
                     price = reader.GetInt32(4);
                     if (inputDestination.Text == "")
                     {
-                        if (Session["Departure"] != null)
+                        if (inputDeparture.Text == departure)
                         {
                             if (Session["Departure"].ToString() == departure)
                             {
-                                display_tour(id, departure, destination, reference_image, price);
-                            }
+                            display_tour(id, departure, destination, reference_image, price);
                         }
+                       
                     }
-                    if (inputDeparture.Text == "")
+                    else if (inputDeparture.Text == "")
                     {
-                        if (Session["Destination"] != null)
-                        {
-                            if (Session["Destination"].ToString() == destination)
-                            {
-                                display_tour(id, departure, destination, reference_image, price);
-                            }
-                        }
-                    }
-                    else if(Session["Destination"] != null && Session["Departure"] != null)
-                    {
-                        if (Session["Departure"].ToString() == departure && Session["Destination"].ToString() == destination)
+                       
+                        if (inputDestination.Text == destination)
                         {
                             display_tour(id, departure, destination, reference_image, price);
                         }
+                        
+                    }
+                    else if(inputDeparture.Text == departure && inputDestination.Text == destination)
+                    {
+                       
+                        display_tour(id, departure, destination, reference_image, price);
+                    
                     }
 
                 }
