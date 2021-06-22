@@ -2131,7 +2131,7 @@ namespace DB_Lab_Sike_Trip.DAL
             }
         }
 
-        public void cancel_reservation_from_db(string input)
+        public int cancel_reservation_from_db(string input)
         {
             {
                 SqlConnection con = new SqlConnection(conString);
@@ -2146,16 +2146,21 @@ namespace DB_Lab_Sike_Trip.DAL
                     cmd.Parameters.Add("@serviceID", SqlDbType.Int);
                     cmd.Parameters["@serviceID"].Value = Convert.ToInt32(input);
 
+                    var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    returnParameter.Direction = ParameterDirection.ReturnValue;
 
+                    
                     cmd.ExecuteNonQuery();
                     con.Close();
+
+                    return (int)cmd.Parameters["@ReturnVal"].Value;
 
                 }
 
                 catch (Exception ex)
                 {
                     System.Web.HttpContext.Current.Response.Write(ex.Message);
-
+                    return -1;
                 }
             }
         }

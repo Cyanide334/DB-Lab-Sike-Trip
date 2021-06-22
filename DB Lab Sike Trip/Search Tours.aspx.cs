@@ -80,6 +80,7 @@ namespace DB_Lab_Sike_Trip
         {
             myDAL obj = new myDAL();
 
+
             SqlDataReader reader = obj.get_tours();
             int id, price;
             string departure, destination, reference_image;
@@ -96,30 +97,32 @@ namespace DB_Lab_Sike_Trip
                     {
                         if (inputDeparture.Text == departure)
                         {
-                            display_tour(id, departure, destination, reference_image, price);
+                            if (Session["Departure"].ToString() == departure)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
+
                         }
-                       
-                    }
-                    else if (inputDeparture.Text == "")
-                    {
-                       
-                        if (inputDestination.Text == destination)
+                        else if (inputDeparture.Text == "")
                         {
-                            display_tour(id, departure, destination, reference_image, price);
+
+                            if (inputDestination.Text == destination)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
+
                         }
-                        
-                    }
-                    else if(inputDeparture.Text == departure && inputDestination.Text == destination)
-                    {
-                       
-                        display_tour(id, departure, destination, reference_image, price);
-                    
-                    }
+                        else if (inputDeparture.Text == departure && inputDestination.Text == destination)
+                        {
 
+                            display_tour(id, departure, destination, reference_image, price);
+
+                        }
+
+                    }
                 }
+
             }
-
-
         }
 
         protected void Page_Load(object sender, EventArgs e)

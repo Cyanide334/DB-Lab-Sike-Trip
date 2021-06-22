@@ -46,10 +46,10 @@ namespace DB_Lab_Sike_Trip
                 return false;
         }
 
-        protected void delete_reservation(string input)
+        protected int delete_reservation(string input)
         {
             myDAL obj = new myDAL();
-            obj.cancel_reservation_from_db(input);
+           return obj.cancel_reservation_from_db(input);
         }
         
         protected void cancel_reservation(object sender, EventArgs e)
@@ -62,8 +62,12 @@ namespace DB_Lab_Sike_Trip
             {
                 if (valid_input(service_input.Text))
                 {
-                    delete_reservation(service_input.Text);
-                    Response.Redirect("Home.aspx");
+                    if (delete_reservation(service_input.Text) == 1) {
+                        errorbox.InnerText = "You cannot cancel a reservation after 24 hours!";
+                    }
+                    else {
+                        Response.Redirect("Home.aspx");
+                    }
                 }
                 else 
                 {

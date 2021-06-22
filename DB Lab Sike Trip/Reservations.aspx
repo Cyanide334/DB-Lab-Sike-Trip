@@ -160,9 +160,10 @@
             </asp:GridView>
      </div>
 <div class="row">
+    <header runat="server" id="errorbox"></header>
         <div class="row mt-2">
             <nav id="cancel" class="cancel">
-                <div runat="server" id="errorbox"></div>
+                
             <ul>
                 <li>
                    <div class="col-md-12"><label class="labels"></label><asp:TextBox ID="service_input" runat="server" placeholder="Enter Service ID" CssClass="form-control cancelBox" Width ="300px"></asp:TextBox></div>
