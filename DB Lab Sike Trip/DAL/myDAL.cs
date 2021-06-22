@@ -1892,7 +1892,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
         //LOG UPDATE FUNCTIONS
-        public void busBooking(string username, string busID, string startdate, string days)
+        public int busBooking(string username, string busID, string startdate, string days)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -1915,15 +1915,19 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@startdate"].Value = startdate;
                 cmd.Parameters["@days"].Value = Convert.ToInt32(days);
 
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
+              
                 cmd.ExecuteNonQuery();
                 con.Close();
-                return;
+                return (int)cmd.Parameters["@ReturnVal"].Value;
             }
 
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-
+                return -1;
             }
 
         }
@@ -1947,15 +1951,19 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@username"].Value = username;
                 cmd.Parameters["@tourID"].Value = Convert.ToInt32(TourID);
                 cmd.Parameters["@tickets"].Value = Convert.ToInt32(tickets);
+
+
+               
+
                 cmd.ExecuteNonQuery();
                 con.Close();
-                return;
+                //return (int)cmd.Parameters["@ReturnVal"].Value;
             }
 
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
-
+               // return -1;
             }
 
         }
@@ -2195,6 +2203,8 @@ namespace DB_Lab_Sike_Trip.DAL
 
     }
 
+
+    
 
 
 

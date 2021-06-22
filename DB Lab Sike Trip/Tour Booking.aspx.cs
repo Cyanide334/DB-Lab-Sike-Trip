@@ -161,8 +161,8 @@ namespace DB_Lab_Sike_Trip
 
             myDAL obj = new myDAL();
             obj.TourBooking(username, tourID, tickets);
-           // DisplayStringsOnForm(rtn, outputS, tourID);
-
+            // DisplayStringsOnForm(rtn, outputS, tourID);
+            
         }
 
     }
