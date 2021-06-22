@@ -62,7 +62,7 @@ namespace DB_Lab_Sike_Trip
         {
             if (Session["BusID"] == null)
             {
-                DisplayViewBus.Visible = false;
+                //DisplayViewBus.Visible = false;
 
             }
             // if a bus is clicked then display appropriate info of it

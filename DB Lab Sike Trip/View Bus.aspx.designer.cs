@@ -24,13 +24,13 @@ namespace DB_Lab_Sike_Trip
         protected global::System.Web.UI.HtmlControls.HtmlForm ViewBusForm;
 
         /// <summary>
-        /// DisplayViewBus control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayViewBus;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// book_btn control.
@@ -40,15 +40,6 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button book_btn;
-
-        /// <summary>
-        /// showBookButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookButton;
 
         /// <summary>
         /// display_manufacturer control.
@@ -94,5 +85,23 @@ namespace DB_Lab_Sike_Trip
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox display_priceperkm;
+
+        /// <summary>
+        /// showBookButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showBookButton;
+
+        /// <summary>
+        /// ViewBusBookButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewBusBookButton;
     }
 }
