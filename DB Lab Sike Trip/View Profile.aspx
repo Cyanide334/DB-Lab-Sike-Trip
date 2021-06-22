@@ -92,11 +92,12 @@
                     <asp:Image ID="Image1" ImageUrl="https://i1.sndcdn.com/avatars-sd3AZunCX4tETjpu-5hWeSA-t500x500.jpg" class="rounded-circle" width="150" runat="server" />
                     <div class="mt-3">
 
-                     <asp:textBox runat="server" id="display_username" style="border: none"></asp:textBox>
+                     <asp:textBox runat="server" id="display_username" style="border: none" ReadOnly="true" Width=""></asp:textBox>
 
                       <p class="text-muted font-size-sm" id="City_And_Country_display"></p>
                          <asp:Button ID="ViewProfileReservationsButton" Text="View Reservations" runat="server" class="btn btn-danger" OnClick ="goto_reservations"></asp:Button>
-                     
+                         <asp:Button ID="EditProfileBtn" Text="Edit Profile" runat="server" class="btn btn-danger" OnClick ="goto_edit_profile"></asp:Button>
+
                     </div>
                   </div>
                 </div>

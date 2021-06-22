@@ -68,6 +68,10 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (Session["BusId"] == null)
             {
                 // DisplayBusBooking.Visible = false;
@@ -99,6 +103,8 @@ namespace DB_Lab_Sike_Trip
 
             myDAL obj = new myDAL();
             obj.busBooking(username, busID, startdate, number_of_days);
+
+            Response.Redirect("Reservations.aspx");
         }
 
     }

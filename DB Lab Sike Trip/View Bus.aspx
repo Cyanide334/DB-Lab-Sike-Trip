@@ -166,7 +166,7 @@
                       <asp:textBox runat="server" id="display_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
                     </div>
                   </div>
-                     <hr>
+                    
               
                 </div>
               </div>

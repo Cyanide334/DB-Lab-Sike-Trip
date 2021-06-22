@@ -17,7 +17,11 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
            return  obj.return_name_from_db(Session["Username"].ToString());
         }
-
+        protected string get_username()
+        {
+            myDAL obj = new myDAL();
+            return obj.return_username_from_db(Session["Username"].ToString());
+        }
         // get Email
         protected string get_email()
         {
@@ -77,6 +81,7 @@ namespace DB_Lab_Sike_Trip
                 display_city.Text = get_city();
                 display_country.Text = get_country();
                 display_dob.Text = get_dob();
+                display_username.Text = get_username();
                
             }
         }
@@ -90,6 +95,10 @@ namespace DB_Lab_Sike_Trip
         {
             Response.Redirect("Reservations.aspx");
         }
-      
+        protected void goto_edit_profile(object sender, EventArgs e)
+        {
+            Response.Redirect("Edit Profile.aspx");
+        }
+
     }
 }

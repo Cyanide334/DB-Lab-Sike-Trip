@@ -182,6 +182,37 @@ namespace DB_Lab_Sike_Trip.DAL
 
         }
 
+        public string return_username_from_db(string username)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand cmd;
+
+
+            try
+            {
+
+                string uid = username;
+
+                string qry = "select username from Users where Username = '" + uid + "'";
+
+                cmd = new SqlCommand(qry, con);
+                string value = (string)cmd.ExecuteScalar();
+                con.Close();
+
+                return value;
+
+            }
+
+            catch (Exception ex)
+            {
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return null;
+
+            }
+
+        }
+
         public string return_email_from_db(string username)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -1223,10 +1254,11 @@ namespace DB_Lab_Sike_Trip.DAL
                 string qry = "select DepartureDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = cmd.ExecuteScalar().ToString();
+                DateTime value = (DateTime)cmd.ExecuteScalar();
                 con.Close();
-
-                return value.ToString();
+                string formattedDate = value.ToString("dd/mm/yyyy"); // format date to dd//mm//yyyy format
+                return formattedDate;
+               
 
             }
 
@@ -1283,10 +1315,11 @@ namespace DB_Lab_Sike_Trip.DAL
                 string qry = "select ArrivalDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = cmd.ExecuteScalar().ToString();
+                DateTime value = (DateTime)cmd.ExecuteScalar();
                 con.Close();
-
-                return value;
+                string formattedDate = value.ToString("dd/MM/yyyy"); // format date to dd//mm//yyyy format
+                return formattedDate;
+                
 
             }
 
@@ -1345,10 +1378,10 @@ namespace DB_Lab_Sike_Trip.DAL
                 string qry = "select ReturnDate from Tours where TourID = '" + tid + "'";
 
                 cmd = new SqlCommand(qry, con);
-                string value = cmd.ExecuteScalar().ToString();
+                DateTime value = (DateTime)cmd.ExecuteScalar();
                 con.Close();
-
-                return value;
+                string formattedDate = value.ToString("dd/MM/yyyy"); // format date to dd//mm//yyyy format
+                return formattedDate;
 
             }
 

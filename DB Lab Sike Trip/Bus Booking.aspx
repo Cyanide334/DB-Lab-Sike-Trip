@@ -213,41 +213,70 @@
         <div class="banner">
           <h1>Bus Booking Form</h1>
         </div>
-
-        <div class="item">
-          <p>Bus Make</p>
-              <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-        <div class="item">
-          <p>License Number</p>
-          <asp:textBox runat="server" id="display_model" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-        <div class="item">
-          <p>Registration Number</p>
-         <asp:textBox runat="server" id="display_booking_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-        <div class="item">
-          <p>Capacity</p>
-          <asp:textBox runat="server" id="display_booking_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-        <div class="item">
-          <p>Price Per Km</p>
-          <asp:textBox runat="server" id="display_booking_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-
-         <div class="item">
-          <p>Credit Card</p>
-          <asp:textBox runat="server" id="creditcard" style="border: none"  ReadOnly="True"></asp:textBox> 
-        </div>
-
-        <div class="item">
-          <p>Number of days you need the bus booked for? </p>
+          <div class="item">
+          <p>Number of days you need the bus booked for </p>
         <asp:textBox runat="server" id="bus_booking_days" style="border: none"  ReadOnly="False"></asp:textBox> 
         </div>
+           <hr>
          <div class="item">
           <p> Please Enter the date of booking in dd/mm/yyyy format</p>
         <asp:textBox runat="server" id="bus_booking_date" style="border: none"  ReadOnly="False"></asp:textBox> 
         </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Bus Make</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+              <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">License Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+          <asp:textBox runat="server" id="display_model" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Registration Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+         <asp:textBox runat="server" id="display_booking_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Capacity</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+          <asp:textBox runat="server" id="display_booking_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Price per Km</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+          <asp:textBox runat="server" id="display_booking_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+           <hr>
+        <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Credit Card</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+          <asp:textBox runat="server" id="creditcard" style="border: none"  ReadOnly="True"></asp:textBox> 
+        </div>
+            </div>
+       
 
           <%--<div class="btn-block" id="busbookingbutton">
           <asp:Button ID="btnSave" Text="Send" runat="server" CssClass="aspButton" />
