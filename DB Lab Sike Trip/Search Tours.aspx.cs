@@ -11,23 +11,16 @@ using System.Data.SqlClient;
 
 namespace DB_Lab_Sike_Trip
 {
-    public partial class Home1 : System.Web.UI.Page
+    public partial class Search_Tours : System.Web.UI.Page
     {
         protected void store_tour_id(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Session["TourID"] =  btn.CommandArgument;
+            Session["TourID"] = btn.CommandArgument;
             Response.Redirect("View Tour.aspx");
         }
 
-
-        protected void store_bus_id(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            Session["BusID"] = btn.CommandArgument;
-            Response.Redirect("View Bus.aspx");
-        }
-        protected void display_tour(int id, string departure, string destination, string reference_image, int price) 
+        protected void display_tour(int id, string departure, string destination, string reference_image, int price)
         {
             /*      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
@@ -64,7 +57,7 @@ namespace DB_Lab_Sike_Trip
             + "<p>" + "Price: " + price + "</p>"
             + "<div class=\"portfolio-links\" runat=\"server\">"
             + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"));
-          
+
             Button btn = new Button();
             btn.Text = "View Details";
             btn.Width = 130;
@@ -73,44 +66,24 @@ namespace DB_Lab_Sike_Trip
             // btn.Attributes.Add("OnClick", "store_tour_id");
             btn.Click += new EventHandler(store_tour_id);
             trips.Controls.Add(btn);
-
-            trips.Controls.Add(new LiteralControl( "</div></div></div></div>"));
+            trips.Controls.Add(new LiteralControl("</div></div></div></div>"));
 
         }
 
-        protected void display_bus(int id, string model, int price, string reference_image)
+        protected void search_tours(object sender, EventArgs e)
         {
-
-            buses.Controls.Add(new LiteralControl("<div class=\"col-lg-4 col-md-6 portfolio-item filter-card\"> <div class=\"portfolio-wrap\">" +
-                 "<img src = \"" + reference_image + "\"" + "class=\"img-fluid\"/> <div class=\"portfolio-info\">"
-                 + "<p>" + model + "</p>"
-                 + "<p>" + "Price per day: " + price + "</p>"
-                 + "<div class=\"portfolio-links\" runat=\"server\">"
-
-                 + "<a href =\"" + reference_image + "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>"));
-
-
-                Button btn = new Button();
-                btn.Text = "View Details";
-                btn.Width = 130;
-                btn.CssClass = "btn btn-danger";
-                btn.CommandArgument = id.ToString();
-                // btn.Attributes.Add("OnClick", "store_tour_id");
-                 btn.Click += new EventHandler(store_bus_id);
-                buses.Controls.Add(btn);
-
-            buses.Controls.Add(new LiteralControl("</div></div></div></div>"));
-
+            Session["Destination"] = inputDestination.Text;
+            Session["Departure"] = inputDeparture.Text;
         }
 
         protected void load_tours_catalogue()
         {
             myDAL obj = new myDAL();
 
-          
+
             SqlDataReader reader = obj.get_tours();
             int id, price;
-            string departure, destination, reference_image; 
+            string departure, destination, reference_image;
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -120,53 +93,47 @@ namespace DB_Lab_Sike_Trip
                     destination = reader.GetString(2);
                     reference_image = reader.GetString(3);
                     price = reader.GetInt32(4);
+                    if (inputDestination.Text == "")
+                    {
+                        if (Session["Departure"] != null)
+                        {
+                            if (Session["Departure"].ToString() == departure)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
+                        }
+                    }
+                    if (inputDeparture.Text == "")
+                    {
+                        if (Session["Destination"] != null)
+                        {
+                            if (Session["Destination"].ToString() == destination)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
+                        }
+                    }
+                    else if(Session["Destination"] != null && Session["Departure"] != null)
+                    {
+                        if (Session["Departure"].ToString() == departure && Session["Destination"].ToString() == destination)
+                        {
+                            display_tour(id, departure, destination, reference_image, price);
+                        }
+                    }
 
-                    display_tour(id, departure, destination, reference_image, price);
                 }
             }
 
-            
-        }
 
-
-        protected void load_buses_catalogue()
-        {
-            myDAL obj = new myDAL();
-
-
-            SqlDataReader reader = obj.get_buses();
-            int id, price;
-            string model, reference_image;
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    id = reader.GetInt32(0);
-                    model = reader.GetString(1);
-                    price = reader.GetInt32(2);
-                    reference_image = reader.GetString(3);
-
-                    display_bus(id, model, price, reference_image);
-                }
-          }
-
-            
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] != null)
-            {
-                welcomespan.InnerText = "SIKE! TRIP, " + Session["Username"].ToString() + '!';
-            }
-            
+
+            portfolio.Visible = true;
             load_tours_catalogue();
-            load_buses_catalogue();
+
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
