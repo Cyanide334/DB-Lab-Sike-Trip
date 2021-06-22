@@ -66,23 +66,24 @@ namespace DB_Lab_Sike_Trip
             // btn.Attributes.Add("OnClick", "store_tour_id");
             btn.Click += new EventHandler(store_tour_id);
             trips.Controls.Add(btn);
-
             trips.Controls.Add(new LiteralControl("</div></div></div></div>"));
 
         }
 
         protected void search_tours(object sender, EventArgs e)
         {
+            Session["Destination"] = inputDestination.Text;
+            Session["Departure"] = inputDeparture.Text;
+        }
 
-
+        protected void load_tours_catalogue()
+        {
             myDAL obj = new myDAL();
 
 
             SqlDataReader reader = obj.get_tours();
             int id, price;
             string departure, destination, reference_image;
-
-
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -94,29 +95,34 @@ namespace DB_Lab_Sike_Trip
                     price = reader.GetInt32(4);
                     if (inputDestination.Text == "")
                     {
-                        if (departure == inputDeparture.Text)
+                        if (Session["Departure"] != null)
                         {
-                            display_tour(id, departure, destination, reference_image, price);
+                            if (Session["Departure"].ToString() == departure)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
                         }
                     }
-                    else if(inputDeparture.Text == "")
+                    if (inputDeparture.Text == "")
                     {
-                        if (destination == inputDestination.Text)
+                        if (Session["Destination"] != null)
                         {
-                            display_tour(id, departure, destination, reference_image, price);
+                            if (Session["Destination"].ToString() == destination)
+                            {
+                                display_tour(id, departure, destination, reference_image, price);
+                            }
                         }
                     }
-                    else
+                    else if(Session["Destination"] != null && Session["Departure"] != null)
                     {
-                        if (destination == inputDestination.Text && departure == inputDeparture.Text)
+                        if (Session["Departure"].ToString() == departure && Session["Destination"].ToString() == destination)
                         {
                             display_tour(id, departure, destination, reference_image, price);
                         }
                     }
-                                       
+
                 }
             }
-            portfolio.Visible = true;
 
 
         }
@@ -124,7 +130,9 @@ namespace DB_Lab_Sike_Trip
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            portfolio.Visible = false;
+            portfolio.Visible = true;
+            load_tours_catalogue();
+
         }
 
     }

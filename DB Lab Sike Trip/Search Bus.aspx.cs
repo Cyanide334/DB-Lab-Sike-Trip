@@ -13,7 +13,7 @@ namespace DB_Lab_Sike_Trip
 {
     public partial class Search_Bus : System.Web.UI.Page
     {
-  
+
 
         protected void store_bus_id(object sender, EventArgs e)
         {
@@ -49,12 +49,18 @@ namespace DB_Lab_Sike_Trip
 
         protected void search_buses(object sender, EventArgs e)
         {
-            myDAL obj = new myDAL();
+            Session["Minimum"] = inputMaxPrice.Text;
+            Session["Maximum"] = inputMinPrice.Text;
+        }
+
+
+        protected void load_buses_catalogue()
+        {
             int min;
             int max;
-            if(inputMaxPrice.Text == "")
+            if (inputMaxPrice.Text == "")
             {
-                max = Int32.MaxValue;
+                max = 0;
             }
             else
             {
@@ -68,6 +74,8 @@ namespace DB_Lab_Sike_Trip
             {
                 min = int.Parse(inputMinPrice.Text);
             }
+            myDAL obj = new myDAL();
+
 
             SqlDataReader reader = obj.get_buses();
             int id, price;
@@ -80,22 +88,41 @@ namespace DB_Lab_Sike_Trip
                     model = reader.GetString(1);
                     price = reader.GetInt32(2);
                     reference_image = reader.GetString(3);
-                    
-                    if (price <= max && price >= min)
+                    if (min == 0)
                     {
-                        display_bus(id, model, price, reference_image);
+                        if (max != 0 && price <= max)
+                        {
+                            display_bus(id, model, price, reference_image);
+                        }
                     }
-                    
-                    
+                    if (max == 0) //price <= max && price >= min
+                    {
+                        if (min != 0 && price >= min)
+                        {
+                            display_bus(id, model, price, reference_image);
+                        }
+                    }
+                    else
+                    {
+                        if (min != 0 && max != 0)
+                        {
+                            if (price <= max && price >= min)
+                            {
+                                display_bus(id, model, price, reference_image);
+                            }
+                        }
+                    }
                 }
             }
-            portfolio.Visible = true;
+
 
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            portfolio.Visible = false;
+            portfolio.Visible = true;
+            load_buses_catalogue();
         }
     }
 }

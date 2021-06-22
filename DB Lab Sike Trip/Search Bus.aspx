@@ -8,10 +8,10 @@
                     <div
                         class="d-flex justify-content-between align-items-center"
                     >
-                        <h2>Search Tours</h2>
+                        <h2>Search Bus</h2>
                         <ol>
                             <li><a href="Home.aspx">Home</a></li>
-                            <li>Search Tours</li>
+                            <li>Search Bus</li>
                         </ol>
                     </div>
                 </div>
