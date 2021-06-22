@@ -92,6 +92,10 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Admin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (Session["TourID"] != null)
             {
 
@@ -111,6 +115,11 @@ namespace DB_Lab_Sike_Trip
                 BusNum.Attributes.Add("placeholder", get_tour_bus_number());
                 ReferenceImage.Attributes.Add("placeholder", get_tour_reference_image());
             }
+            else
+            {
+                Response.Redirect("Admin.aspx");
+            }
+
         }
 
 

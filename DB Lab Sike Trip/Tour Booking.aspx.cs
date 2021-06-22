@@ -125,10 +125,14 @@ namespace DB_Lab_Sike_Trip
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (Session["TourId"] == null)
             {
-               // DisplayViewTour.Visible = false;
-
+                // DisplayViewTour.Visible = false;
+                Response.Redirect("Home.aspx#portfolio");
             }
             // if a tout is clicked then display appropriate info of it
             if (Session["TourId"] != null)

@@ -64,6 +64,7 @@ namespace DB_Lab_Sike_Trip
             if (Session["Username"] == null)
             {
                 DisplayProfileSection.Visible = false;
+                Response.Redirect("Login.aspx");
              
             }
             // if a user is logged in, display appropriate info of them
