@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Bus Booking.aspx.cs" Inherits="DB_Lab_Sike_Trip.BusBooking" %>
+ <asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="server">
+    <script src="busbookingscript.js"></script>
+      </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -252,9 +255,9 @@
 
            <%--have to get it to its position and do smthn about not showing the buses if none is chosen--%>
                 <section id="bbb" class="btn-block">      
-                 
-                           
-                      <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" ></asp:Button>
+                  <div class="form-group mt-3 mt-md-0 text-center" id="BookBusError" style="color: red"></div>     
+                    <br>
+                      <asp:Button ID="ViewBusBookingButton" Text="Book" runat="server" class="btn btn-danger" CssClass="btn btn-danger" OnClick="BookButton_Click" onClientClick="return validate()"></asp:Button>
                               
             </section>
          </section>
