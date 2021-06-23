@@ -106,7 +106,7 @@
                 </div>     
                 <div class="row mt-2">
                     <div class="col-md-6"><label class="labels">Tour Guide </label><asp:TextBox ID="TourGuide" runat="server" placeholder="Tour Guide Name,empty if none" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Bus Number</label><asp:TextBox ID="BusNum" runat="server" placeholder="Tour Bus Number" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Bus Number</label><asp:TextBox ID="BusNum" runat="server" placeholder="Tour Bus Number: ABC 1234" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Reference Image Path</label><asp:TextBox ID="ReferenceImage" runat="server" placeholder="Relative Path of Image" CssClass="form-control"></asp:TextBox></div>

@@ -86,8 +86,8 @@
                             <div class="col-md-6"><label class="labels">Model</label><asp:TextBox ID="BusModel" runat="server" class="form-control" value="" placeholder="Bus Model"></asp:TextBox></div>
                         </div>
                          <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Registration Number</label><asp:TextBox ID="Rnum" runat="server" class="form-control" placeholder="Registration Number" value=""></asp:TextBox></div>
-                            <div class="col-md-6"><label class="labels">License Number</label><asp:TextBox ID="Lnum" runat="server" class="form-control" value="" placeholder="License Number"></asp:TextBox></div>
+                            <div class="col-md-6"><label class="labels">Registration Number</label><asp:TextBox ID="Rnum" runat="server" class="form-control" placeholder="Registration Number : AB12 11111111111" value=""></asp:TextBox></div>
+                            <div class="col-md-6"><label class="labels">License Number</label><asp:TextBox ID="Lnum" runat="server" class="form-control" value="" placeholder="License Number: ABC 1234"></asp:TextBox></div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Capacity</label><asp:TextBox ID="Capacity" runat="server" class="form-control" placeholder="Capacity" value=""></asp:TextBox></div>

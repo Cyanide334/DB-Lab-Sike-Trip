@@ -3,7 +3,7 @@
 var names = /^[a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
 var dateformat = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;//dd/mm/yyyy
-var timeformat = /^(\d{1,2}):(\d{2})([ap]m)?$/;//hh:mm a/pm
+var timeformat = /^(\d{1,2}):(\d{2})$/;//hh:mm
 var busformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
 
 createtourservice.hidden = true;
@@ -33,6 +33,10 @@ function validate() {
             return false;
         }
     }
+    else {
+        createtourservice.innerText = 'Please enter departure location';
+        return false;
+    }
 
     //destination can have only alphabets
     if (destination != "") {
@@ -40,6 +44,10 @@ function validate() {
             createtourservice.innerText = 'Please enter alphabets only in the destination.';
             return false;
         }
+    }
+    else {
+        createtourservice.innerText = 'Please enter destination location';
+        return false;
     }
 
     //departuredate
@@ -66,6 +74,10 @@ function validate() {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the departure date.';
             return false;
         }
+    }
+    else {
+        createtourservice.innerText = 'Please enter departure date';
+        return false;
     }
 
     //departuretime
@@ -97,6 +109,9 @@ function validate() {
             return false;
         }
     }
+    else {
+        document.getElementById('HomeContent_Dtime').value = '12:00';
+    }
 
     //arrivaldate
     if (arrivaldate != "") {
@@ -122,6 +137,9 @@ function validate() {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the arrival date.';
             return false;
         }
+    }
+    else {
+        document.getElementById('HomeContent_Adate').value = document.getElementById('HomeContent_Ddate').value;
     }
 
     //arrivaltime
@@ -153,6 +171,9 @@ function validate() {
             return false;
         }
     }
+    else {        
+         document.getElementById('HomeContent_Atime').value = '12:00';  
+    }
 
     //returndate
     if (returndate != "") {
@@ -178,6 +199,10 @@ function validate() {
             createtourservice.innerText = 'Please enter dd/mm/yyyy format in the return date.';
             return false;
         }
+    }
+    else {
+        createtourservice.innerText = 'Please enter Return date';
+        return false;
     }
 
     //returntime
@@ -209,6 +234,9 @@ function validate() {
             return false;
         }
     }
+    else {
+        document.getElementById('HomeContent_Rtime').value = '12:00';
+    }
 
     //numberofdays
     if (numberofdays != "") {
@@ -216,6 +244,10 @@ function validate() {
             createtourservice.innerText = 'Please enter numbers only in the number of days.';
             return false;
         }
+    }
+    else {
+        createtourservice.innerText = 'Please enter number of days';
+        return false;
     }
 
     //totalseats
@@ -225,6 +257,10 @@ function validate() {
             return false;
         }
     }
+    else {
+        createtourservice.innerText = 'Please enter number of seats ';
+        return false;
+    }
 
     //priceperseat
     if (priceperseat != "") {
@@ -232,6 +268,10 @@ function validate() {
             createtourservice.innerText = 'Please enter numbers only in the price per seat.';
             return false;
         }
+    }
+    else {
+        createtourservice.innerText = 'Please enter price per ticket';
+        return false;
     }
 
     //tourguide can have only alphabets
@@ -241,6 +281,9 @@ function validate() {
             return false;
         }
     }
+    else {
+        document.getElementById('HomeContent_TourGuide').value = null;
+    }
 
     //busnumber
     if (busnumber != "") {
@@ -249,6 +292,11 @@ function validate() {
             return false;
         }
     }
+    else {
+        createtourservice.innerText = 'Please enter Bus Number';
+        return false;
+    }
+
 
     return true;
 }

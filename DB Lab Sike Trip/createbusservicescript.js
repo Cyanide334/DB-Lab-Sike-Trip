@@ -1,8 +1,8 @@
 ﻿var createbusserviceerror = document.getElementById('HomeContent_CreateBusServiceError');
 var names = /^[a-zA-Z]+$/;
 var numbers = /^[0-9]+$/;
-var busregformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
-var buslicformat = "^(([A-Z]{2}[0-9]{2})"
+var buslicformat = /^[A-Z]{3}\s[0-9]{4}$/;//ABC 1234
+var busregformat = "^(([A-Z]{2}[0-9]{2})"
     + "( )|([A-Z]{2}-[0-9]"
     + "{2}))((19|20)[0-9]"
     + "[0-9])[0-9]{7}$";
@@ -28,6 +28,10 @@ function validate() {
             return false;
         }
     }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus Manufacturer.'; return false;
+
+    }
 
     //busmodel
     if (busmodel != "") {
@@ -36,21 +40,33 @@ function validate() {
             return false;
         }
     }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus Model.'; return false;
+
+    }
 
     //regnumber
     if (regnumber != "") {
         if (!regnumber.match(busregformat)) {
-            createbusserviceerror.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.'';
+            createbusserviceerror.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.';
             return false;
         }
+    }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus Registration Number.'; return false;
+
     }
 
     //licnumber
     if (licnumber != "") {
         if (!licnumber.match(buslicformat)) {
-            createbusserviceerror.innerText = 'Please enter capital letters and numbers in the registration number.;
+            createbusserviceerror.innerText = 'Please enter capital letters and numbers in the registration number.';
             return false;
         }
+    }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus License Number.'; return false;
+
     }
 
     //capacity
@@ -60,13 +76,22 @@ function validate() {
             return false;
         }
     }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus Capacity.';
+        return false;
 
+    }
     //priceperday
     if (priceperday != "") {
         if (!priceperday.match(numbers)) {
             createbusserviceerror.innerText = 'Please enter numbers only in the price per day.';
             return false;
         }
+    }
+    else {
+        createbusserviceerror.innerText = 'Please enter Bus Price/Day.';
+        return false;
+
     }
 
     return true;

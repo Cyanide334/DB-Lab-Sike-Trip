@@ -39,13 +39,11 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters.Add("@CreditCardNo", SqlDbType.VarChar, 16);
                 cmd.Parameters.Add("@City", SqlDbType.VarChar, 30);
                 cmd.Parameters.Add("@Country", SqlDbType.VarChar, 30);
-                cmd.Parameters.Add("@TotalBusServicesProvided", SqlDbType.Int);
-                cmd.Parameters.Add("@TotalTourServicesProvided", SqlDbType.Int);
 
 
 
 
-                cmd.Parameters["@UsertType"].Value = 1;
+                cmd.Parameters["@UsertType"].Value = 2;
                 cmd.Parameters["@FullName"].Value = name;
                 cmd.Parameters["@Username"].Value = username;
                 cmd.Parameters["@Password"].Value = password;
@@ -55,15 +53,10 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@DateOfBirth"].Value = DOB;
                 cmd.Parameters["@City"].Value = city;
                 cmd.Parameters["@Country"].Value = country;
-                cmd.Parameters["@TotalBusServicesProvided"].Value = 0;
-                cmd.Parameters["@TotalTourServicesProvided"].Value = 0;
-
 
 
                 var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
                 returnParameter.Direction = ParameterDirection.ReturnValue;
-
-
 
 
                 cmd.ExecuteNonQuery();

@@ -56,22 +56,8 @@ namespace DB_Lab_Sike_Trip
                     signuperror.InnerText = outputS;
 
                 }
-                else if (rtn == 3)
-                {
-                    outputS = "Contact Number already in use!";
-
-                    signuperror.InnerText = outputS;
-
-                }
-                else if (rtn == 4)
-                {
-                    outputS = "Credit Card already in use!";
-
-                    signuperror.InnerText = outputS;
-
-                }
+                
             }
-
 
         }
 

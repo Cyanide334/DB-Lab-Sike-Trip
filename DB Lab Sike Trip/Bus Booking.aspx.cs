@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DB_Lab_Sike_Trip.DAL;
 using DB_Lab_Sike_Trip;
+using System.Drawing;
 
 
 namespace DB_Lab_Sike_Trip
@@ -98,7 +99,7 @@ namespace DB_Lab_Sike_Trip
         {
 
             string username = Session["Username"].ToString();
-            string busID = Session["busID"].ToString();
+            string busID = Session["BusId"].ToString();
             string startdate = bus_booking_date.Text;
             string number_of_days = bus_booking_days.Text;
 
@@ -107,10 +108,14 @@ namespace DB_Lab_Sike_Trip
             int val = obj.busBooking(username, busID, startdate, number_of_days);
             if (val == 1)
             {
-                bus_booking_date.Text = "Bus already booked in this interval!"; 
+                bus_booking_date.Text = "Bus already booked in this interval!";
+                bus_booking_date.ForeColor = Color.Red;
+            }
+            else
+            {
+                Response.Redirect("Reservations.aspx");
             }
 
-            
         }
 
     }

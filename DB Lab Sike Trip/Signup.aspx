@@ -78,10 +78,10 @@
              </div>
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder="Phone Number" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder="03xxyyyyyyy (11 digits)" ></asp:TextBox>
                  </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="Credit Card Number" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="13 digits, No Spaces" ></asp:TextBox>
                 </div>
              </div>
             <div class="row mt-3">

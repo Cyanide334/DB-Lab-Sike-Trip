@@ -32,6 +32,8 @@ namespace DB_Lab_Sike_Trip
             myDAL obj = new myDAL();
 
             obj.create_bus(manufacturer, model, rnum, lnum, capacity, ppd, reference_image);
+
+            Response.Redirect("Admin.aspx");
             
         }
     }

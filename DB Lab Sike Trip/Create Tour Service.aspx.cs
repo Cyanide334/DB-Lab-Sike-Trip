@@ -41,6 +41,7 @@ namespace DB_Lab_Sike_Trip
 
             obj.create_tour(departure, destination, ddate, dtime, adate, atime, rdate, rtime, pps, number_of_days, tourguide, busnumber, total_seats, reference_image);
 
+            Response.Redirect("Admin.aspx");
 
         }
     }
