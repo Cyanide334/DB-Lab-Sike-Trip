@@ -227,7 +227,7 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Bus Make</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary">
               <asp:textBox runat="server" id="display_manufacturer" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>
@@ -236,7 +236,7 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">License Number</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary" >
           <asp:textBox runat="server" id="display_model" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>
@@ -245,7 +245,7 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Registration Number</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary">
          <asp:textBox runat="server" id="display_booking_registrationnumber" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>
@@ -254,16 +254,16 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Capacity</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary">
           <asp:textBox runat="server" id="display_booking_capacity" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>
            <hr>
         <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Price per Km</h6>
+                      <h6 class="mb-0">Price per day</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary" >
           <asp:textBox runat="server" id="display_booking_priceperkm" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>
@@ -272,7 +272,7 @@
                     <div class="col-sm-3">
                       <h6 class="mb-0">Credit Card</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary" id="Tourcredit">
+                    <div class="col-sm-9 text-secondary" >
           <asp:textBox runat="server" id="creditcard" style="border: none"  ReadOnly="True"></asp:textBox> 
         </div>
             </div>

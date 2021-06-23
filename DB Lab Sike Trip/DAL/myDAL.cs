@@ -1938,7 +1938,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
                 cmd.Parameters["@username"].Value = username;
                 cmd.Parameters["@busID"].Value = Convert.ToInt32(busID);
-                cmd.Parameters["@startdate"].Value =startdate;
+                cmd.Parameters["@startdate"].Value = DateTime.ParseExact(startdate,"dd/MM/yyyy",null);
                 cmd.Parameters["@days"].Value = Convert.ToInt32(days);
 
                 var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
