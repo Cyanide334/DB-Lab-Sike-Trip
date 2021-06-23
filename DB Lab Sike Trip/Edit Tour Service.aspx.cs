@@ -125,7 +125,6 @@ namespace DB_Lab_Sike_Trip
 
         protected void editTourSaveButton_Click(object sender, EventArgs e)
         {
-            bool success = true;
             myDAL obj = new myDAL();
 
 

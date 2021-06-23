@@ -44,22 +44,23 @@ function validate()
     }
 
     //password cant be <=8 and >=20
-    if (fpassword.length <= 8) {
-        profileerror.innerText = 'Password should be at least 8 characters long.';
-        return false;
-    }
+    if (fpassword != "") {
+        if (fpassword.length <= 8) {
+            profileerror.innerText = 'Password should be at least 8 characters long.';
+            return false;
+        }
 
-    if (fpassword.length >= 20) {
-        profileerror.innerText = 'Password should be less than 20 characters.';
-        return false;
-    }
+        if (fpassword.length >= 20) {
+            profileerror.innerText = 'Password should be less than 20 characters.';
+            return false;
+        }
 
-    //password must match pwd2
-    if (fpassword != confirmpassword) {
-        profileerror.innerText = 'Password does not match.';
-        return false;
+        //password must match pwd2
+        if (fpassword != confirmpassword) {
+            profileerror.innerText = 'Password does not match.';
+            return false;
+        }
     }
-
     //country 
     if (country != "") {
         if (!country.match(profilenamechar)) {

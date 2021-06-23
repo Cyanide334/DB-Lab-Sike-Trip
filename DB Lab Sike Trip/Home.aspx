@@ -27,7 +27,7 @@
               <p class="animate__animated animate__fadeInUp">
                 We provide the best bus service on the most popular routes!
               </p>
-               <a href="#TourCatalogueform" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
+               <a href="#HomeContent_BusCatalogue" class="btn-get-started animate__animated animate__fadeInUp scrollto">Book Now</a>
             </div>
           </div>
         </div>

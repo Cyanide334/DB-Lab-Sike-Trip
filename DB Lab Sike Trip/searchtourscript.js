@@ -16,6 +16,9 @@ function validate() {
             searchtour.innerText = 'Please enter alphabets only in the departure.';
             return false;
         }
+        departure = departure.toLowerCase();
+        departure = departure.charAt(0).toUpperCase() + departure.slice(1);
+        document.getElementById('HomeContent_inputDeparture').value = departure;
     }
     //destination can have only alphabets
     if (destination != "") {
@@ -23,6 +26,9 @@ function validate() {
             searchtour.innerText = 'Please enter alphabets only in the destination.';
             return false;
         }
+        destination = destination.toLowerCase();
+        destination = destination.charAt(0).toUpperCase() + destination.slice(1);
+        document.getElementById('HomeContent_inputDestination').value = destination;
     }
     return true;
 }

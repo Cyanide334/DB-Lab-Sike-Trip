@@ -174,7 +174,7 @@
               visibility: visible;
             }
             
-}
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HomeContent" runat="server">

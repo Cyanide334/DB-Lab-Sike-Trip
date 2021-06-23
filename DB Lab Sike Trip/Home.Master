@@ -191,22 +191,24 @@
                                 />
                             </form>--%>
                             <br><br>
-                    <nav id="navbar" class="navbar">
+                    <nav id="navbar2" class="navbar">
                     <ul>
                         
                         <li>
                             <a href="Search Bus.aspx"  class="getstarted">Search for Bus</a>
                         </li>
                     </ul>
-                        <nav id="navbar" class="navbar">
+                        </nav>
+                        <nav id="navbar3" class="navbar">
                     <ul>
                         <br><br><br><br>
                         <li>
                             <a href="Search Tours.aspx"  class="getstarted">Search for Tour</a>
                         </li>
                     </ul>
+                            </nav>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>

@@ -405,7 +405,7 @@
     <Content Include="assets\vendor\remixicon\remixicon.ttf" />
     <Content Include="assets\vendor\remixicon\remixicon.woff" />
     <Content Include="assets\vendor\remixicon\remixicon.woff2" />
-    <None Include="Properties\PublishProfiles\SikeTrip - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DBLabSikeTrip20210623170632 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
