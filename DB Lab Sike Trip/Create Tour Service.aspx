@@ -88,15 +88,15 @@
                 </div>
                  <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Departure Date</label><asp:TextBox ID="Ddate" runat="server" placeholder="dd/mm/yyyy" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Departure Time</label><asp:TextBox ID="Dtime" runat="server" placeholder="hh:mma/pm" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Departure Time</label><asp:TextBox ID="Dtime" runat="server" placeholder="hh:mm" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Arrival Date</label><asp:TextBox ID="Adate" runat="server" placeholder="dd/mm/yyyy" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Arrival Time</label><asp:TextBox ID="Atime" runat="server" placeholder="hh:mma/pm" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Arrival Time</label><asp:TextBox ID="Atime" runat="server" placeholder="hh:mm" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Return Date</label><asp:TextBox ID="Rdate" runat="server" placeholder="dd/mm/yyyy" CssClass="form-control"></asp:TextBox></div>
-                    <div class="col-md-6"><label class="labels">Return Time</label><asp:TextBox ID="Rtime" runat="server" placeholder="hh:mma/pm" CssClass="form-control"></asp:TextBox></div>
+                    <div class="col-md-6"><label class="labels">Return Time</label><asp:TextBox ID="Rtime" runat="server" placeholder="hh:mm" CssClass="form-control"></asp:TextBox></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">Number of Days</label><asp:TextBox ID="numDays" runat="server" placeholder="Number of Days" CssClass="form-control"></asp:TextBox></div>

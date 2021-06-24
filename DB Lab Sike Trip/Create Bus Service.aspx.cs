@@ -31,9 +31,19 @@ namespace DB_Lab_Sike_Trip
             
             myDAL obj = new myDAL();
 
-            obj.create_bus(manufacturer, model, rnum, lnum, capacity, ppd, reference_image);
+            int val = obj.create_bus(manufacturer, model, rnum, lnum, capacity, ppd, reference_image);
 
-            Response.Redirect("Admin.aspx");
+            if (val == 1)
+            {
+                CreateBusServiceError.InnerText = "Bus with same Registration number exists already!";
+            }
+            if (val == 2)
+            {
+                CreateBusServiceError.InnerText = "Bus with same Licence number exists already!";
+            }
+            else {
+                Response.Redirect("Admin.aspx");
+            }
             
         }
     }

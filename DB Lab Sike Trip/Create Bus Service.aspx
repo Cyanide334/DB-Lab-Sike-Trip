@@ -96,8 +96,8 @@
                         <div class="row mt-2">
                             <div class="col-md-6"><label class="labels">Reference Image</label><asp:TextBox ID="ReferenceImage" runat="server" class="form-control" placeholder="Relative path of Image" value=""></asp:TextBox></div>
                         </div>
-                        <div class="form-group text-center" id="HomeContent_CreateBusServiceError" style="color:red"></div>
-                        <div class="mt-5 text-center"><asp:Button ID="createBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Save Bus" Width="130px" Height="40px" OnClick="createBusSaveButton_Click" onclientclick="return validate()"/></div>
+                        <div class="form-group text-center" id="CreateBusServiceError" style="color:red" runat="server"></div>
+                        <div class="mt-5 text-center"><asp:Button ID="createBusSaveButton" runat="server" class="btn btn-primary profile-button" Text="Create Bus" Width="130px" Height="40px" OnClick="createBusSaveButton_Click" onclientclick="return validate()"/></div>
                     </div>
                 </div>
         

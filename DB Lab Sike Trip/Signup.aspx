@@ -30,6 +30,7 @@
               <div class="row mt-3">
                     <div class="text-center">
                        <h4> Please Signup Below</h4>
+                         <h6> (*) are required feilds</h6>
                     </div>
               </div>
             <form  ID ="SignUpForm" class="php-email-form_1" runat="server">
@@ -44,28 +45,28 @@
               </div>
               <div class="row mt-3">
                 <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="signUpFullName" placeholder="Fullname" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpFullName" placeholder="Fullname*" ></asp:TextBox>
                 </div>
                   <div class="col-md-6 form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="signUpUsername" placeholder="Username" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpUsername" placeholder="Username*" ></asp:TextBox>
                 </div>
               </div>
                  <div class="row mt-3">
                 <div class="form-group">
-                  <asp:TextBox  runat="server" class="form-control" id="signUpEmail" placeholder="E-mail" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpEmail" placeholder="E-mail*" ></asp:TextBox>
                 </div>
               </div>
                <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                 <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpPassword" placeholder="Password" ></asp:TextBox>
+                 <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpPassword" placeholder="Password*" ></asp:TextBox>
                 </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password" ></asp:TextBox>
+                  <asp:TextBox TextMode="password"  runat="server" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password*" ></asp:TextBox>
                 </div>
                </div>
             <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <asp:TextBox runat=  "server" class="form-control" name="dob" id="dob" placeholder="Date of Birth (not required)" onfocus="(this.type='date')"></asp:TextBox>
+                        <asp:TextBox runat=  "server" class="form-control" name="dob" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')"></asp:TextBox>
                 </div>
             </div>
             <div class="row mt-3">
@@ -78,10 +79,10 @@
              </div>
              <div class="row mt-3">
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-               <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder="03xxyyyyyyy (11 digits)" ></asp:TextBox>
+               <asp:TextBox  runat="server" class="form-control" id="signUpPhoneNumber" placeholder=" Phone Number: 03xxyyyyyyy (11 digits)" ></asp:TextBox>
                  </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="13 digits, No Spaces" ></asp:TextBox>
+                  <asp:TextBox  runat="server" class="form-control" id="signUpCreditCardNumber" placeholder="Credit Card: 13 digits, No Spaces" ></asp:TextBox>
                 </div>
              </div>
             <div class="row mt-3">

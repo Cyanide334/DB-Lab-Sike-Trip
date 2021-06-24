@@ -49,5 +49,22 @@ function validate() {
             return false;
         }
     }
-    return true;
+
+    var booking_days = document.getElementById('HomeContent_bus_booking_days').value;//numbers
+    var price = document.getElementById('HomeContent_display_booking_priceperkm').value//price
+    var creditcard = document.getElementById('HomeContent_creditcard').value//card
+
+    if (creditcard == "") {
+        booktourerror.innerText = 'Please enter a valid credit card by going to "Edit Profile"';
+    }
+    var totprice = parseFloat(price) * parseFloat(booking_days);
+
+    var msg = "Your Credit Card: " + creditcard + " will be charged with : " + totprice;
+
+    var r = confirm(msg);
+    if (r == true) {
+        return true;
+    } else {
+        return false;
+    }
 }

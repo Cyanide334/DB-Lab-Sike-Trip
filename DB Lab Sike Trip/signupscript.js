@@ -30,8 +30,8 @@ function validate() {
 
     errorsignup.hidden = false;
     
-    if (fullname == "" || username == "" || password == "" || pwd2 == "" || useremail == "" || country == "" || city == "" || phonenumber == "" || ccnumber == "") {
-        errorsignup.innerText = 'Please enter the missing field(s).';
+    if (fullname == "" || username == "" || password == "" || pwd2 == "" || useremail == "" ) {
+        errorsignup.innerText = 'Please enter the required field(s).';
         return false;
     }
 

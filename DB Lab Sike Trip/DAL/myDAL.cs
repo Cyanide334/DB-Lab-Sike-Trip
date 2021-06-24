@@ -409,7 +409,7 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd = new SqlCommand(qry, con);
                 DateTime value = (DateTime)cmd.ExecuteScalar();     // cast the return value to DateTime
                 con.Close();
-                string formattedDate = value.ToString("dd/MM/yyyy"); // format date to dd//mm//yyyy format
+                string formattedDate = value.ToString("dd/MM/yyyy"); // format date to dd/mm/yyyy format
                 return formattedDate;
 
             }
@@ -1997,7 +1997,7 @@ namespace DB_Lab_Sike_Trip.DAL
 
 
         //CREATE A BUS
-        public void create_bus(string manufacturer, string model, string reg, string license, string capacity, string pricePerDay, string reference_image)
+        public int create_bus(string manufacturer, string model, string reg, string license, string capacity, string pricePerDay, string reference_image)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
@@ -2025,14 +2025,21 @@ namespace DB_Lab_Sike_Trip.DAL
                 cmd.Parameters["@capacity"].Value = Convert.ToInt32(capacity);
                 cmd.Parameters["@priceperday"].Value = Convert.ToInt32(pricePerDay);
                 cmd.Parameters["@refimage"].Value = reference_image;
+
+                var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+
                 cmd.ExecuteNonQuery();
                 con.Close();
-                return;
+
+                return (int)cmd.Parameters["@ReturnVal"].Value;
+               
             }
 
             catch (Exception ex)
             {
                 System.Web.HttpContext.Current.Response.Write(ex.Message);
+                return -1;
 
             }
 
@@ -2072,13 +2079,12 @@ namespace DB_Lab_Sike_Trip.DAL
 
                 cmd.Parameters["@Departure"].Value = departure;
                 cmd.Parameters["@Destination"].Value = destination;
-                cmd.Parameters["@DepartureDate"].Value = DD;
+                cmd.Parameters["@DepartureDate"].Value = DateTime.ParseExact(DD, "dd/MM/yyyy", null);
                 cmd.Parameters["@DepartureTime"].Value = DT;
-                cmd.Parameters["@ArrivalDate"].Value = AD;
+                cmd.Parameters["@ArrivalDate"].Value = DateTime.ParseExact(AD, "dd/MM/yyyy", null);
                 cmd.Parameters["@ArrivalTime"].Value = AT;
-                cmd.Parameters["@ReturnDate"].Value = RD;
+                cmd.Parameters["@ReturnDate"].Value = DateTime.ParseExact(RD, "dd/MM/yyyy", null);
                 cmd.Parameters["@ReturnTime"].Value = RT;
-                cmd.Parameters["@DepartureDate"].Value = DD;
                 cmd.Parameters["@Price"].Value = Convert.ToInt32(price);
                 cmd.Parameters["@NumberOfDays"].Value = Convert.ToInt32(numDays);
                 cmd.Parameters["@Tourguide"].Value = tourGuide;

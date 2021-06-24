@@ -48,7 +48,7 @@ function validate() {
     //regnumber
     if (regnumber != "") {
         if (!regnumber.match(busregformat)) {
-            createbusserviceerror.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the license number.';
+            createbusserviceerror.innerText = 'Please enter HR-0619850034761 or HR06 19850034761 format in the registration number.';
             return false;
         }
     }
@@ -60,7 +60,7 @@ function validate() {
     //licnumber
     if (licnumber != "") {
         if (!licnumber.match(buslicformat)) {
-            createbusserviceerror.innerText = 'Please enter capital letters and numbers in the registration number.';
+            createbusserviceerror.innerText = 'Please enter capital letters and numbers in the license number.';
             return false;
         }
     }
